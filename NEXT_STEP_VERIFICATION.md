@@ -17,7 +17,10 @@
 - Node 156 项及 pytest 6 项通过；TypeScript 和变更代码 ESLint 通过。
 - 三项本地真实 Groq 验证：财务规划和分析、保留所选证据 / 两轮历史的原事件追问、原事件与风险维度问题。实际使用两阶段请求和真实响应 ID / Token usage；分别 4385、3095、2721 Tokens。记录：docs/question-routing-llm-local.json。
 - 历史版本 7 的四项公网验证保留在 docs/llm-trust-public-verification.json，不当作本轮新发布的公网复测。
-- 生产发布、最新公网复测、公共源码内容一致性与独立克隆启动结果由本轮交付回执记录，未执行的检查不能填写通过。
+- 功能版本 9 原生部署成功；三项公网真实 Groq 场景全部通过，六次提供商响应共 12514 Tokens，实际响应 ID / 时间 / 引用见 docs/question-routing-llm-public.json。包含原来误拦的事件追问及事件 / 风险维度问题。部分模型追问未通过范围检查时由程序明确替换，warnings 留有记录。
+- GitHub 源码已完整上传；规范化行尾后，167 个源码文件的 Git 文件树与版本 9 部署源码完全一致，树 SHA 为 509200764360a23c930f38b872f6bfa02d36c3fa。随后只追加本轮验证文档及 JSON 记录。
+- 独立克隆运行 npm ci 成功（686 个包）；156 项 Node、TypeScript 及八项真实 HTTP 检查通过，无私密配置时使用公开快照 / 规则研究。最初在更深的 Windows 临时目录启动失败；同一克隆移动至较短隔离路径后启动成功，未证明根因，不把所有 Windows 路径都写成通过。
+- 浏览器实际收到 429，显示倒计时、禁用所有研究入口并保留原结果；冷却结束后“开始研究”恢复可用，没有自动重试。完整汇总见 docs/delivery-verification.json。
 
 ## 提交与保留边界
 

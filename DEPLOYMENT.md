@@ -6,7 +6,7 @@
 - 2026-10-08T19:09:25Z：原生部署服务返回 succeeded；访问模式 public。生产构建与本地 HTTP / 浏览器检查通过，未把云端浏览器验收写成已执行。
 - Sites 项目：appgprj_6ac7e1b683388191b105cb2014e84456。首次成功部署：appgdep_6ac7ea59a0a881919e7638c371816432。
 - 公开财报快照保留；Groq 真实模型的服务端 Secrets 已配置，公网真实主链路与共享额度保护已验证。
-- GitHub 仓库：https://github.com/p1gsang/stockinsight-ai 。源码上传与克隆验证结果见本轮交付回执。
+- GitHub 仓库：https://github.com/p1gsang/stockinsight-ai 。完整源码已上传，独立克隆安装、156 项 Node / TypeScript / 八项 HTTP 验证通过；记录见 docs/delivery-verification.json。
 - 真实模型：Groq / openai/gpt-oss-120b，已配置服务端 Secret，完成本地与公网真实调用。
 - 扶摇授权数据：未配置。
 
@@ -48,3 +48,10 @@
 - 部署 `appgdep_6ac81c896d8c8191ba080d86946814be`，succeeded，2026-10-08T22:43:31.476431Z，public，Secrets revision 2。
 - 四项真实 Groq 公网场景及九项授权 / 边界 / 限流检查全部通过，记录见 docs/llm-trust-public-verification.json。
 - 版本 6 曾发生一次原因追问 HTTP 400，修正后在版本 7 完整重新验收。此后的验收材料更新不改变功能；最终文档版本回执随交付提供。
+
+## 后续问题路由改进发布
+
+- 功能版本 9：eeaec8e94be0e6eee66baaccb7d20fe72ef5da5b。
+- 部署 appgdep_6ac824633158819199599ec1cdbd8d01，succeeded，2026-10-08T23:17:01.640265Z；public，Secrets revision 2。
+- 新版三项真实公网 Groq 验证通过：财务规划 / 分析、所选证据事件追问、事件与风险维度入口。记录见 docs/question-routing-llm-public.json。
+- 公共 GitHub 源码提交 fc40b06ef8c59b8a5b72b3ea874523d39e749de1 与该部署的文件树完全一致。最终追加验证材料不修改功能代码，完整验证见 NEXT_STEP_VERIFICATION.md。

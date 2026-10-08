@@ -58,3 +58,5 @@
 ## 后续问题路由与交付检查
 
 Codex 发现固定页面按钮及历史真实模型追问被范围规则误拦；统一页面问题目录、修正财务主题 / 公司比较识别，并校验生成追问，移除项透明提示。新增 94 个问题用例，Node 总计 156 项通过，pytest 6 项通过。三项本地真实 Groq 验证及原始响应元信息见 NEXT_STEP_VERIFICATION.md / docs/question-routing-llm-local.json。新增 HTTP 429 倒计时，禁止自动重复调用。GitHub 交付仓库 URL 为 https://github.com/p1gsang/stockinsight-ai，上传与独立克隆验证以交付回执为准。此段是 AI 自动检查，不代替候选人本人复核。
+
+随后在功能版本 9 完成三项公网真实 Groq 验证，并上传完整 GitHub 源码；规范化行尾后与部署源码文件树一致。独立克隆安装、156 项 Node / TypeScript / 八项 HTTP 检查通过。深层 Windows 临时目录启动失败，移到较短隔离目录后成功；未编造根因或隐藏首次失败。浏览器验证了真实 429 的倒计时、禁用和恢复。原始模型验证及汇总在 docs/question-routing-llm-public.json / docs/delivery-verification.json。

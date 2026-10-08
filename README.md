@@ -162,6 +162,8 @@ python tools/smoke_http.py
 
 本轮三项本地真实 Groq 验收见 [问题路由与模型验证](NEXT_STEP_VERIFICATION.md)。收到 HTTP 429 后，前端按 Retry-After 倒计时、禁用研究入口并保留成功结果；不会自动重试。模型追问也经过范围检查，移除项通过 warnings 明确说明。
 
+本轮三项公网真实 Groq 验收、公共源码与部署文件树一致性、独立克隆安装 / 启动 / HTTP 检查已完成，见 [最新交付验证](docs/delivery-verification.json)。本机过深的临时验证目录曾启动失败，移到较短隔离路径后成功；Windows 推荐使用较短的项目路径，该环境限制没有被隐瞒为普遍通过。
+
 修复版本公网四项真实 Groq 场景与九项授权 / 输入边界 / 限流检查全部通过，包括带证据追问、估值缺失、正确指标数值绑定、其他公司拒绝和伪造证据 HTTP 400。实际响应 ID、时间、模型和 usage 见 [公网验收记录](docs/llm-trust-public-verification.json)；失败与修正见 [研究边界记录](TRUST_BOUNDARIES.md)。
 
 ## 部署、提交及已知限制

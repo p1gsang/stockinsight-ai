@@ -16,6 +16,8 @@
 
 最新追加：94 个问题路由用例全部通过，覆盖 12 个页面快捷入口、先前真实模型返回的追问、其他公司切换、零宽 / 全角变体和禁止建议；另验证所选证据及历史保留、不可用模型追问的透明替换、Retry-After 秒数 / HTTP 日期 / 无效值处理。离线结果见 docs/question-routing-verification.json。三项真实 Groq 本地验证见 docs/question-routing-llm-local.json；不同于普通 npm test，不将规则成功计为模型成功。
 
+功能版本 9 的三项公网真实 Groq 验证也通过，见 docs/question-routing-llm-public.json。新建 GitHub 仓库独立克隆后安装成功，156 项 Node、TypeScript 及八项 HTTP 主链路 / 异常检查通过。浏览器实际验证 429 倒计时、入口禁用、已有结果保留和冷却结束恢复；启动目录限制及源码一致性见 docs/delivery-verification.json。
+
 本轮新增的研究边界回归与真实模型调试见 [TRUST_BOUNDARIES.md](TRUST_BOUNDARIES.md)。下方 HTTP、浏览器及版本 4 的记录来自之前实际执行，不能当作本轮新版的重复验收。
 
 - 同比正负值、缺失、字符串、零或负基数；覆盖代理和归母盈利比率。

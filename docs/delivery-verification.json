@@ -1,0 +1,46 @@
+{
+  "verified_at": "2026-10-08T23:24:51.451896+00:00",
+  "functional_release": {
+    "site_version": 9,
+    "site_commit": "eeaec8e94be0e6eee66baaccb7d20fe72ef5da5b",
+    "deployment_id": "appgdep_6ac824633158819199599ec1cdbd8d01",
+    "deployment_status": "succeeded",
+    "deployment_at": "2026-10-08T23:17:01.640265Z",
+    "url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+    "secrets_revision": 2
+  },
+  "source": {
+    "repository": "https://github.com/p1gsang/stockinsight-ai",
+    "verified_github_commit": "fc40b06ef8c59b8a5b72b3ea874523d39e749de1",
+    "verified_tree": "509200764360a23c930f38b872f6bfa02d36c3fa",
+    "files": 167,
+    "matches_deployed_source": true,
+    "later_changes": "Only verification documents and JSON records are appended after this functional verification."
+  },
+  "checks": {
+    "node_tests": 156,
+    "pytest": 6,
+    "question_routing_cases": 94,
+    "ui_shortcuts": 12,
+    "clone_dependency_install": "686 packages installed successfully using npm ci",
+    "clone_node_tests": 156,
+    "clone_typecheck": "passed",
+    "clone_http_checks": 8,
+    "clone_http_base": "http://127.0.0.1:5321",
+    "public_real_groq_cases": 3,
+    "public_real_groq_responses": 6,
+    "public_real_groq_tokens": 12514,
+    "source_and_build_secret_scan": "passed; compared actual private values without printing them",
+    "browser_429_countdown": "actual 429, all research entry buttons disabled, prior result retained, buttons re-enabled after expiry"
+  },
+  "startup_limitation": "The first deeply nested Windows verification checkout failed to start. Moving that same clone to a shorter isolated path succeeded. Root cause is not proven; do not claim all Windows paths were validated.",
+  "evidence": [
+    "question-routing-verification.json",
+    "question-routing-llm-local.json",
+    "question-routing-llm-public.json"
+  ],
+  "candidate_personal_review": "not completed",
+  "fuyao_authorization": "not configured",
+  "ifind_authorization": "not configured",
+  "gemini_real_validation": "not performed"
+}
