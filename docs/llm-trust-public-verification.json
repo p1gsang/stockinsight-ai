@@ -1,0 +1,315 @@
+{
+  "checked_at": "2026-10-08T22:43:32.161Z",
+  "target": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+  "cases": [
+    {
+      "label": "financial analysis and dimension planning",
+      "question": "美的最近利润增长是否得到现金流支持？",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "selected_ids": [],
+      "history_length": 1,
+      "engine": "llm",
+      "model_state": "active",
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:43:41.512Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-449dcb36-6e1b-4796-9d8d-2a5b18e88947",
+            "called_at": "2026-10-08T22:43:38.274Z",
+            "usage": {
+              "prompt_tokens": 414,
+              "completion_tokens": 196,
+              "total_tokens": 610
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-988a9883-4c70-4694-bf3a-67106775feeb",
+            "called_at": "2026-10-08T22:43:41.512Z",
+            "usage": {
+              "prompt_tokens": 2908,
+              "completion_tokens": 1178,
+              "total_tokens": 4086
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "归母净利润同比呈正向变化，经营现金流同比亦为正向，两者同步提升，现金流在一定程度上支撑利润增长",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-parent_profit-yoy",
+            "E-MD-20260630-ocf-yoy",
+            "E-MD-20260630-cash-coverage"
+          ],
+          "rendered_text": "归母净利润同比呈正向变化，经营现金流同比亦为正向，两者同步提升，现金流在一定程度上支撑利润增长",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+        },
+        {
+          "text": "利润增速快于现金流增速，显示两者增长步调存在差异，提示需关注利润质量",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-growth-tension",
+            "E-MD-20260630-parent_profit-yoy",
+            "E-MD-20260630-ocf-yoy"
+          ],
+          "rendered_text": "利润增速快于现金流增速，显示两者增长步调存在差异，提示需关注利润质量",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "应收账款与存货等营运资金细节缺失，无法进一步解析现金流变化的具体来源",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-accounts_receivable",
+            "E-MD-20260630-inventory",
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "应收账款与存货等营运资金细节缺失，无法进一步解析现金流变化的具体来源",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "是否需要更完整的营运资金信息？",
+        "是否关注利润与现金流的同步程度？",
+        "是否想了解现金覆盖率的具体含义？"
+      ]
+    },
+    {
+      "label": "followup with selected server evidence",
+      "question": "围绕所选现金覆盖证据，差异的可能原因是什么，还需要验证哪些附注？",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "selected_ids": [
+        "E-MD-20260630-cash-coverage"
+      ],
+      "history_length": 2,
+      "engine": "llm",
+      "model_state": "active",
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:44:47.784Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-fdd285d8-0a30-4648-972d-aab6f4ff4edc",
+            "called_at": "2026-10-08T22:44:44.821Z",
+            "usage": {
+              "prompt_tokens": 567,
+              "completion_tokens": 239,
+              "total_tokens": 806
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-1f43e05d-4919-48ea-ab08-db1a9b5063f1",
+            "called_at": "2026-10-08T22:44:47.784Z",
+            "usage": {
+              "prompt_tokens": 1644,
+              "completion_tokens": 1068,
+              "total_tokens": 2712
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "利润增长与经营现金流同步提升但增速不同步，可能源于营运资本变动或一次性项目影响",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "利润增长与经营现金流同步提升但增速不同步，可能源于营运资本变动或一次性项目影响",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "仍需核实应收账款和存货的具体披露以判断其对现金覆盖的贡献",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-accounts_receivable",
+            "E-MD-20260630-inventory"
+          ],
+          "rendered_text": "仍需核实应收账款和存货的具体披露以判断其对现金覆盖的贡献",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "还应检查现金流量表附注中对现金及现金等价物变动的说明",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "还应检查现金流量表附注中对现金及现金等价物变动的说明",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "能否提供应收账款周转的详细说明",
+        "能否提供存货跌价准备的披露",
+        "能否提供现金流量表附注的完整内容"
+      ]
+    },
+    {
+      "label": "valuation unknown without market data",
+      "question": "美的目前估值与同行相比如何？",
+      "dimensions": [
+        "valuation"
+      ],
+      "selected_ids": [],
+      "history_length": 1,
+      "engine": "llm",
+      "model_state": "active",
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:45:51.976Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-cbf37b5b-8091-42b3-9113-58478dd21549",
+            "called_at": "2026-10-08T22:45:50.974Z",
+            "usage": {
+              "prompt_tokens": 413,
+              "completion_tokens": 161,
+              "total_tokens": 574
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-4728bd0c-506d-4f32-90b8-a6c92001adc8",
+            "called_at": "2026-10-08T22:45:51.976Z",
+            "usage": {
+              "prompt_tokens": 1008,
+              "completion_tokens": 254,
+              "total_tokens": 1262
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "现有资料未覆盖美的及其主要同行的估值信息",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-valuation-missing"
+          ],
+          "rendered_text": "现有资料未覆盖美的及其主要同行的估值信息",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "请提供希望对比的具体同行公司名称",
+        "是否有其他渠道获取美的及同行的估值数据",
+        "关注哪类估值指标比较重要"
+      ]
+    },
+    {
+      "label": "explicit numerical question binds metric title and server value",
+      "question": "现金流对归母利润的覆盖代理是多少？",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "selected_ids": [],
+      "history_length": 1,
+      "engine": "llm",
+      "model_state": "active",
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:46:56.849Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-f5d8c1a1-32d0-49f0-9434-716978805212",
+            "called_at": "2026-10-08T22:46:55.191Z",
+            "usage": {
+              "prompt_tokens": 414,
+              "completion_tokens": 179,
+              "total_tokens": 593
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-c32b9c4c-2bc3-4d37-85b3-e1df961d1d54",
+            "called_at": "2026-10-08T22:46:56.849Z",
+            "usage": {
+              "prompt_tokens": 3511,
+              "completion_tokens": 604,
+              "total_tokens": 4115
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "现金流对归母利润的覆盖代理为{{E-MD-20260630-cash-coverage}}",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-cash-coverage"
+          ],
+          "rendered_text": "现金流对归母利润的覆盖代理为1.42倍",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+        }
+      ],
+      "followups": [
+        "是否需要比较不同期间的覆盖水平？",
+        "该代理的计算口径与归母利润是否完全一致？",
+        "是否关注现金覆盖与盈利质量的关联性？"
+      ]
+    }
+  ],
+  "checks": [
+    "public status is configured with shared quota storage and without provider secrets",
+    "unauthorized model access returns 401",
+    "invalid period returns 400",
+    "missing financial credentials returns 503",
+    "investment advice blocked before any model call",
+    "outside-company question is rejected without Midea facts",
+    "forged context receives HTTP 400",
+    "public shared request limiter returns 429 with Retry-After without consuming model quota",
+    "homepage does not contain provider key"
+  ],
+  "finished_at": "2026-10-08T22:46:58.733Z",
+  "passed": true
+}

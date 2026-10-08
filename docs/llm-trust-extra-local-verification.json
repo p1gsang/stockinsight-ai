@@ -1,0 +1,153 @@
+{
+  "target": "local service with actual Groq network requests",
+  "passed": true,
+  "cases": [
+    {
+      "label": "cause followup with production history",
+      "question": "围绕所选现金覆盖证据，差异的可能原因是什么，还需要验证哪些附注？",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend",
+        "events"
+      ],
+      "selected_ids": [
+        "E-MD-20260630-cash-coverage"
+      ],
+      "history_length": 2,
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:41:19.799Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-d48a1eb8-d33a-4fec-9a39-0d029be36e4f",
+            "called_at": "2026-10-08T22:41:17.839Z",
+            "usage": {
+              "prompt_tokens": 560,
+              "completion_tokens": 234,
+              "total_tokens": 794
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-b356d745-9c3f-4f2b-a598-2be95d39a84d",
+            "called_at": "2026-10-08T22:41:19.798Z",
+            "usage": {
+              "prompt_tokens": 1597,
+              "completion_tokens": 833,
+              "total_tokens": 2430
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "现金覆盖率差异的根本原因尚未确认，需要核实营运资金变动的相关附注",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "现金覆盖率差异的根本原因尚未确认，需要核实营运资金变动的相关附注",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "经营性现金流的来源构成尚缺乏明确数据，需补充应收账款的详细披露",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-accounts_receivable"
+          ],
+          "rendered_text": "经营性现金流的来源构成尚缺乏明确数据，需补充应收账款的详细披露",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "存货水平对现金流的影响未能得到验证，需核查存货相关的说明",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-inventory"
+          ],
+          "rendered_text": "存货水平对现金流的影响未能得到验证，需核查存货相关的说明",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "还有哪些财务附注可能影响现金覆盖率的解释？",
+        "是否存在其他一次性项目对现金流产生显著影响？",
+        "需要获取哪些具体的营运资本明细以完成验证？"
+      ]
+    },
+    {
+      "label": "metric binding on explicit numerical question",
+      "question": "现金流对归母利润的覆盖代理是多少？",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "selected_ids": [],
+      "history_length": 1,
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:41:55.014Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-21e775a1-66bf-4386-ab7f-c8d0f1418604",
+            "called_at": "2026-10-08T22:41:53.040Z",
+            "usage": {
+              "prompt_tokens": 414,
+              "completion_tokens": 213,
+              "total_tokens": 627
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-ad53e7cb-f05e-4c8c-9a26-da0a905272c2",
+            "called_at": "2026-10-08T22:41:55.012Z",
+            "usage": {
+              "prompt_tokens": 3500,
+              "completion_tokens": 591,
+              "total_tokens": 4091
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "现金流对归母利润的覆盖代理为{{E-MD-20260630-cash-coverage}}",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-cash-coverage"
+          ],
+          "rendered_text": "现金流对归母利润的覆盖代理为1.42倍",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+        }
+      ],
+      "followups": [
+        "是否关注覆盖水平的历史变化趋势",
+        "该代理是否受少数股东现金流影响",
+        "是否需要进一步了解利润与现金流增速的关系"
+      ]
+    }
+  ]
+}

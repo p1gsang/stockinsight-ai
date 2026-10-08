@@ -1,0 +1,266 @@
+{
+  "checked_at": "2026-10-08T23:10:06.513Z",
+  "target": "local service with real Groq requests",
+  "cases": [
+    {
+      "label": "financial planning and interpretation",
+      "question": "利润增长是否得到了现金流支持？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T23:10:09.511Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-2a74f191-dc38-49ac-a099-1bdce6bd1542",
+            "called_at": "2026-10-08T23:10:07.213Z",
+            "usage": {
+              "prompt_tokens": 412,
+              "completion_tokens": 140,
+              "total_tokens": 552
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-f1968aa8-23d6-4d52-96ad-dcdfd20fe858",
+            "called_at": "2026-10-08T23:10:09.509Z",
+            "usage": {
+              "prompt_tokens": 2896,
+              "completion_tokens": 937,
+              "total_tokens": 3833
+            }
+          }
+        ]
+      },
+      "selected_ids": [],
+      "history_length": 1,
+      "claims": [
+        {
+          "text": "利润增速快于经营现金流增速，二者增长不同步",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-growth-tension"
+          ],
+          "rendered_text": "利润增速快于经营现金流增速，二者增长不同步",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "现金流对归母利润的覆盖水平高于基准，整体现金流充足但口径不完全一致",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-cash-coverage"
+          ],
+          "rendered_text": "现金流对归母利润的覆盖水平高于基准，整体现金流充足但口径不完全一致",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+        },
+        {
+          "text": "缺少应收账款、存货及现金流变化原因的详细数据，需补充营运资金等注释",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-accounts_receivable",
+            "E-MD-20260630-inventory",
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "缺少应收账款、存货及现金流变化原因的详细数据，需补充营运资金等注释",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "请问近期应收账款和存货的变动情况？",
+        "是否有关于现金流变化原因的补充说明？"
+      ],
+      "warnings": [
+        "模型生成的 1 条追问未通过研究范围检查，已移除；无可用追问时显示明确规则提供的核验问题。",
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    },
+    {
+      "label": "previously rejected UI event followup",
+      "question": "归母与扣非利润表现为什么不同？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T23:11:17.170Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-85d14ef7-73c4-440b-a5d8-1e1d264ff100",
+            "called_at": "2026-10-08T23:11:15.217Z",
+            "usage": {
+              "prompt_tokens": 537,
+              "completion_tokens": 174,
+              "total_tokens": 711
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-e8afaddf-a669-4dc9-9f0f-e6c9692e1abe",
+            "called_at": "2026-10-08T23:11:17.169Z",
+            "usage": {
+              "prompt_tokens": 1562,
+              "completion_tokens": 822,
+              "total_tokens": 2384
+            }
+          }
+        ]
+      },
+      "selected_ids": [
+        "E-MD-20260630-cash-coverage"
+      ],
+      "history_length": 2,
+      "claims": [
+        {
+          "text": "现有公开摘要未覆盖归母利润的具体构成，无法确认其与扣非利润差异的来源",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "现有公开摘要未覆盖归母利润的具体构成，无法确认其与扣非利润差异的来源",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "缺少关于非经常性收益和费用的披露，因而不能判断扣非利润与归母利润的差异",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "缺少关于非经常性收益和费用的披露，因而不能判断扣非利润与归母利润的差异",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "未提供营运资本及其变动的注释，无法评估其对两类利润表现的影响",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-accounts_receivable",
+            "E-MD-20260630-inventory"
+          ],
+          "rendered_text": "未提供营运资本及其变动的注释，无法评估其对两类利润表现的影响",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "能否提供营运资本变动的注释？"
+      ],
+      "warnings": [
+        "模型生成的 2 条追问未通过研究范围检查，已移除；无可用追问时显示明确规则提供的核验问题。",
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    },
+    {
+      "label": "previously rejected event dimension shortcut",
+      "question": "美的集团的事件与风险有哪些可验证的证据？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "events"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T23:12:25.368Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-cd23f645-6cce-47cf-8f2c-6b02f408c172",
+            "called_at": "2026-10-08T23:12:23.389Z",
+            "usage": {
+              "prompt_tokens": 417,
+              "completion_tokens": 166,
+              "total_tokens": 583
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-83f59a6f-f98e-476a-8e9f-ac2804f1c01e",
+            "called_at": "2026-10-08T23:12:25.366Z",
+            "usage": {
+              "prompt_tokens": 1318,
+              "completion_tokens": 820,
+              "total_tokens": 2138
+            }
+          }
+        ]
+      },
+      "selected_ids": [],
+      "history_length": 1,
+      "claims": [
+        {
+          "text": "公司披露的外币汇兑损失与衍生工具收益的会计分类差异，暗示利润受汇率波动影响的潜在风险",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-event-fx"
+          ],
+          "rendered_text": "公司披露的外币汇兑损失与衍生工具收益的会计分类差异，暗示利润受汇率波动影响的潜在风险",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "现金流变化的具体原因尚未得到验证，需补充营运资金等附注以厘清其对经营现金流的影响",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "现金流变化的具体原因尚未得到验证，需补充营运资金等附注以厘清其对经营现金流的影响",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "利润增长与现金流增长为何不同步？",
+        "与格力同期相比有什么差异？",
+        "还需要哪些材料才能验证原因？"
+      ],
+      "warnings": [
+        "模型生成的 3 条追问未通过研究范围检查，已移除；无可用追问时显示明确规则提供的核验问题。",
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-10-08T23:12:25.370Z"
+}

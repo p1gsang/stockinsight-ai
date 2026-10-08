@@ -1,0 +1,248 @@
+{
+  "checked_at": "2026-10-08T22:34:40.213Z",
+  "target": "local service with real Groq network requests",
+  "cases": [
+    {
+      "label": "financial analysis and dimension planning",
+      "question": "美的最近利润增长是否得到现金流支持？",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "selected_ids": [],
+      "history_length": 1,
+      "engine": "llm",
+      "model_state": "active",
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:34:43.710Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-710d8bb4-3861-44d3-a69e-cba7edb0a5d6",
+            "called_at": "2026-10-08T22:34:40.811Z",
+            "usage": {
+              "prompt_tokens": 414,
+              "completion_tokens": 162,
+              "total_tokens": 576
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-a1e959f4-9388-4fb5-98ae-4406f374cb42",
+            "called_at": "2026-10-08T22:34:43.708Z",
+            "usage": {
+              "prompt_tokens": 2915,
+              "completion_tokens": 1054,
+              "total_tokens": 3969
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "利润同比略有提升，经营现金流同比也实现正向增长，说明利润提升伴随现金流改善",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-parent_profit-yoy",
+            "E-MD-20260630-ocf-yoy"
+          ],
+          "rendered_text": "利润同比略有提升，经营现金流同比也实现正向增长，说明利润提升伴随现金流改善",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "现金流对利润的覆盖比例为正，显示现金流规模能够支撑利润水平",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-cash-coverage"
+          ],
+          "rendered_text": "现金流对利润的覆盖比例为正，显示现金流规模能够支撑利润水平",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+        },
+        {
+          "text": "利润增速快于现金流增速，二者增长不同步，提示需补充营运资金等信息以评估潜在压力",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-growth-tension"
+          ],
+          "rendered_text": "利润增速快于现金流增速，二者增长不同步，提示需补充营运资金等信息以评估潜在压力",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "现金流的主要来源有哪些",
+        "是否有关于应收账款或存货变化的说明",
+        "未来季度利润与现金流的趋势预期如何"
+      ]
+    },
+    {
+      "label": "followup with selected server evidence",
+      "question": "围绕所选现金覆盖证据，差异的可能原因是什么，还需要验证哪些附注？",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "selected_ids": [
+        "E-MD-20260630-cash-coverage"
+      ],
+      "history_length": 2,
+      "engine": "llm",
+      "model_state": "active",
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:35:47.985Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-b665fa89-9ae6-46c5-8d34-5ca9f4b05f00",
+            "called_at": "2026-10-08T22:35:45.516Z",
+            "usage": {
+              "prompt_tokens": 559,
+              "completion_tokens": 209,
+              "total_tokens": 768
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-ef00d813-c5f5-45f4-8e28-1210d65b4b9d",
+            "called_at": "2026-10-08T22:35:47.984Z",
+            "usage": {
+              "prompt_tokens": 2888,
+              "completion_tokens": 949,
+              "total_tokens": 3837
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "现金覆盖差异的具体成因尚未得到证实，需要补充营运资金等附注信息",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "现金覆盖差异的具体成因尚未得到证实，需要补充营运资金等附注信息",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "应收账款与存货的变动可能影响现金流与利润的匹配，相关附注尚待获取",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-accounts_receivable",
+            "E-MD-20260630-inventory"
+          ],
+          "rendered_text": "应收账款与存货的变动可能影响现金流与利润的匹配，相关附注尚待获取",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "毛利率等成本结构信息缺失，亦应核实以解释现金覆盖差异",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-gross-margin"
+          ],
+          "rendered_text": "毛利率等成本结构信息缺失，亦应核实以解释现金覆盖差异",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "是否有关于营运资金变动的详细披露",
+        "应收账款和存货的周转情况是否在附注中说明",
+        "毛利率的计算口径是否提供"
+      ]
+    },
+    {
+      "label": "valuation unknown without market data",
+      "question": "美的目前估值与同行相比如何？",
+      "dimensions": [
+        "valuation"
+      ],
+      "selected_ids": [],
+      "history_length": 1,
+      "engine": "llm",
+      "model_state": "active",
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-08T22:36:51.477Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-7df60372-ca63-4a32-870e-6ddc5d62169f",
+            "called_at": "2026-10-08T22:36:49.647Z",
+            "usage": {
+              "prompt_tokens": 413,
+              "completion_tokens": 164,
+              "total_tokens": 577
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-f794ddb0-21b2-4a70-8f2f-462ee8209425",
+            "called_at": "2026-10-08T22:36:51.477Z",
+            "usage": {
+              "prompt_tokens": 982,
+              "completion_tokens": 623,
+              "total_tokens": 1605
+            }
+          }
+        ]
+      },
+      "claims": [
+        {
+          "text": "现有资料未覆盖美的估值与同行的比较",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-valuation-missing"
+          ],
+          "rendered_text": "现有资料未覆盖美的估值与同行的比较",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        },
+        {
+          "text": "需补充同一时点的市盈率与市净率等估值指标",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-valuation-missing"
+          ],
+          "rendered_text": "需补充同一时点的市盈率与市净率等估值指标",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字与指标名称绑定校验，并检查已覆盖的同比方向和增速比较表达；其他语义与因果仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "是否希望我们在获取估值数据后再进行分析",
+        "还有其他关注的财务维度吗",
+        "需要了解美的的业务结构吗"
+      ]
+    }
+  ],
+  "checks": [],
+  "finished_at": "2026-10-08T22:36:51.478Z",
+  "passed": true
+}

@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-08T18:57:25.515719+00:00",
+  "mode": "public_report_snapshot",
+  "sources": [
+    {
+      "id": "midea-h1-2026",
+      "code": "000333.SZ",
+      "name": "美的集团",
+      "year": 2026,
+      "page": 2,
+      "published": "2026-08-29",
+      "unit": "千元",
+      "multiplier": 1000,
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+      "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+      "sha256": "9c4f21cebe9b35824276c41b90647bead0fd7948abc300ec1a2db0a7dfcac6f1",
+      "title": "美的集团 2026 年半年度报告摘要",
+      "extraction": "pypdf + required row regex; candidate review pending"
+    },
+    {
+      "id": "midea-h1-2025",
+      "code": "000333.SZ",
+      "name": "美的集团",
+      "year": 2025,
+      "page": 7,
+      "published": "2025-08-30",
+      "unit": "千元",
+      "multiplier": 1000,
+      "url": "https://static.cninfo.com.cn/finalpage/2025-08-30/1224626720.PDF",
+      "retrieved_at": "2026-10-08T18:34:33.000215+00:00",
+      "sha256": "cec88d9c6ded328ac9b467ba55254ab831b906dfc613982f6ac0504fc2055a12",
+      "title": "美的集团 2025 年半年度报告全文",
+      "extraction": "pypdf + required row regex; candidate review pending"
+    },
+    {
+      "id": "gree-h1-2026",
+      "code": "000651.SZ",
+      "name": "格力电器",
+      "year": 2026,
+      "page": 7,
+      "published": "2026-08-27",
+      "unit": "元",
+      "multiplier": 1,
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225515004.PDF",
+      "retrieved_at": "2026-10-08T18:34:38.740561+00:00",
+      "sha256": "50da2e03fddbe9dd424d8fe7881f47fb34efa5d38c96aa9449c12e445c3b2dec",
+      "title": "格力电器 2026 年半年度报告全文",
+      "extraction": "pypdf + required row regex; candidate review pending"
+    }
+  ],
+  "records": [
+    {
+      "company_code": "000333.SZ",
+      "company_name": "美的集团",
+      "period": "2026-06-30",
+      "basis": "H1_YTD",
+      "currency": "CNY",
+      "published_at": "2026-08-29",
+      "source_id": "midea-h1-2026",
+      "source_fields": {
+        "revenue": "营业收入",
+        "parent_profit": "归属于上市公司股东的净利润",
+        "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+        "ocf": "经营活动产生的现金流量净额",
+        "roe": "加权平均净资产收益率"
+      },
+      "source_column": "本报告期",
+      "values": {
+        "revenue": 260042490000.0,
+        "parent_profit": 26446037000.0,
+        "adjusted_profit": 19595179000.0,
+        "ocf": 37552090000.0,
+        "roe": 11.33
+      },
+      "raw_values": {
+        "revenue": 260042490.0,
+        "parent_profit": 26446037.0,
+        "adjusted_profit": 19595179.0,
+        "ocf": 37552090.0,
+        "roe": 11.33
+      }
+    },
+    {
+      "company_code": "000333.SZ",
+      "company_name": "美的集团",
+      "period": "2025-06-30",
+      "basis": "H1_YTD",
+      "currency": "CNY",
+      "published_at": "2026-08-29",
+      "source_id": "midea-h1-2026",
+      "source_fields": {
+        "revenue": "营业收入",
+        "parent_profit": "归属于上市公司股东的净利润",
+        "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+        "ocf": "经营活动产生的现金流量净额",
+        "roe": "加权平均净资产收益率"
+      },
+      "source_column": "上年同期",
+      "values": {
+        "revenue": 251123714000.0,
+        "parent_profit": 26013690000.0,
+        "adjusted_profit": 26235399000.0,
+        "ocf": 37281015000.0,
+        "roe": 11.29
+      },
+      "raw_values": {
+        "revenue": 251123714.0,
+        "parent_profit": 26013690.0,
+        "adjusted_profit": 26235399.0,
+        "ocf": 37281015.0,
+        "roe": 11.29
+      }
+    },
+    {
+      "company_code": "000333.SZ",
+      "company_name": "美的集团",
+      "period": "2025-06-30",
+      "basis": "H1_YTD",
+      "currency": "CNY",
+      "published_at": "2025-08-30",
+      "source_id": "midea-h1-2025",
+      "source_fields": {
+        "revenue": "营业收入",
+        "parent_profit": "归属于上市公司股东的净利润",
+        "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+        "ocf": "经营活动产生的现金流量净额",
+        "roe": "加权平均净资产收益率"
+      },
+      "source_column": "本报告期",
+      "values": {
+        "revenue": 251123714000.0,
+        "parent_profit": 26013690000.0,
+        "adjusted_profit": 26235399000.0,
+        "ocf": 37281015000.0,
+        "roe": 11.29
+      },
+      "raw_values": {
+        "revenue": 251123714.0,
+        "parent_profit": 26013690.0,
+        "adjusted_profit": 26235399.0,
+        "ocf": 37281015.0,
+        "roe": 11.29
+      }
+    },
+    {
+      "company_code": "000333.SZ",
+      "company_name": "美的集团",
+      "period": "2024-06-30",
+      "basis": "H1_YTD",
+      "currency": "CNY",
+      "published_at": "2025-08-30",
+      "source_id": "midea-h1-2025",
+      "source_fields": {
+        "revenue": "营业收入",
+        "parent_profit": "归属于上市公司股东的净利润",
+        "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+        "ocf": "经营活动产生的现金流量净额",
+        "roe": "加权平均净资产收益率"
+      },
+      "source_column": "上年同期",
+      "values": {
+        "revenue": 217274086000.0,
+        "parent_profit": 20804176000.0,
+        "adjusted_profit": 20180878000.0,
+        "ocf": 33488170000.0,
+        "roe": 12.2
+      },
+      "raw_values": {
+        "revenue": 217274086.0,
+        "parent_profit": 20804176.0,
+        "adjusted_profit": 20180878.0,
+        "ocf": 33488170.0,
+        "roe": 12.2
+      }
+    },
+    {
+      "company_code": "000651.SZ",
+      "company_name": "格力电器",
+      "period": "2026-06-30",
+      "basis": "H1_YTD",
+      "currency": "CNY",
+      "published_at": "2026-08-27",
+      "source_id": "gree-h1-2026",
+      "source_fields": {
+        "revenue": "营业收入",
+        "parent_profit": "归属于上市公司股东的净利润",
+        "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+        "ocf": "经营活动产生的现金流量净额",
+        "roe": "加权平均净资产收益率"
+      },
+      "source_column": "本报告期",
+      "values": {
+        "revenue": 89397522501.21,
+        "parent_profit": 13277590882.57,
+        "adjusted_profit": 12706672720.9,
+        "ocf": 18808832392.46,
+        "roe": 8.68
+      },
+      "raw_values": {
+        "revenue": 89397522501.21,
+        "parent_profit": 13277590882.57,
+        "adjusted_profit": 12706672720.9,
+        "ocf": 18808832392.46,
+        "roe": 8.68
+      }
+    },
+    {
+      "company_code": "000651.SZ",
+      "company_name": "格力电器",
+      "period": "2025-06-30",
+      "basis": "H1_YTD",
+      "currency": "CNY",
+      "published_at": "2026-08-27",
+      "source_id": "gree-h1-2026",
+      "source_fields": {
+        "revenue": "营业收入",
+        "parent_profit": "归属于上市公司股东的净利润",
+        "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+        "ocf": "经营活动产生的现金流量净额",
+        "roe": "加权平均净资产收益率"
+      },
+      "source_column": "上年同期",
+      "values": {
+        "revenue": 97324925988.2,
+        "parent_profit": 14412407113.84,
+        "adjusted_profit": 13946409161.52,
+        "ocf": 28328562187.2,
+        "roe": 10.09
+      },
+      "raw_values": {
+        "revenue": 97324925988.2,
+        "parent_profit": 14412407113.84,
+        "adjusted_profit": 13946409161.52,
+        "ocf": 28328562187.2,
+        "roe": 10.09
+      }
+    }
+  ],
+  "conflicts": [],
+  "event": {
+    "date": "2026-08-29",
+    "source_id": "midea-h1-2026",
+    "page": 2,
+    "title": "半年报说明扣非利润与归母利润表现分化",
+    "description": "公司将扣非利润下降主要归因于外币货币性项目汇兑损失与衍生金融工具收益的会计分类差异。该说明属于管理层披露；持续影响仍需核验。"
+  }
+}

@@ -1,0 +1,675 @@
+{
+  "verified_at": "2026-10-08T23:10:38.220Z",
+  "mode": "offline_rules_with_real_public_snapshot",
+  "model_calls": 0,
+  "network_calls": 0,
+  "source_sha256": {
+    "lib/research/planner.mjs": "d48ba3b2d0aa28c00fb29529186527f4981ffe98a6fad4c3a5afc09345be0cf9",
+    "lib/research/question-catalog.mjs": "620d52df60505ddbc88259282be1b75394b88492c2f7cecd6f524626574d982a",
+    "lib/research/service.mjs": "95c73019a84fdcd05b84c4c8b2a1adf17d5f3b9c4ece1fdf5f0da7761537b23b",
+    "tests/fixtures/question-routing.mjs": "0453840e37ce2e0859b51fb5a87d7139e1c884c71828e5bfaedf6a988fd79412"
+  },
+  "total": 94,
+  "passed": 94,
+  "ui_shortcuts": 12,
+  "results": [
+    {
+      "question": "利润增长是否得到了现金流支持？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "最近经营质量有没有改善？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "目前估值与同行相比如何？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "近期股价波动和回撤有多大？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "美的集团的经营质量有哪些可验证的证据？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "美的集团的财务趋势有哪些可验证的证据？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "美的集团的估值有哪些可验证的证据？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "美的集团的行情特征有哪些可验证的证据？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "美的集团的行业位置有哪些可验证的证据？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "美的集团的事件与风险有哪些可验证的证据？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "归母与扣非利润表现为什么不同？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "美的与格力的经营质量和估值有什么差异？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": true
+    },
+    {
+      "question": "利润增长与现金流增长为何不同步？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "与格力同期相比有什么差异？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "还需要哪些材料才能验证原因？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否需要更完整的营运资金信息？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否关注利润与现金流的同步程度？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否想了解现金覆盖率的具体含义？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "能否提供应收账款周转的详细说明",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "能否提供存货跌价准备的披露",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "能否提供现金流量表附注的完整内容",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "请提供希望对比的具体同行公司名称",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否有其他渠道获取美的及同行的估值数据",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "关注哪类估值指标比较重要",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否需要比较不同期间的覆盖水平？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "该代理的计算口径与归母利润是否完全一致？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否关注现金覆盖与盈利质量的关联性？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "现金流的主要来源有哪些",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否有关于应收账款或存货变化的说明",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "未来季度利润与现金流的趋势预期如何",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否有关于营运资金变动的详细披露",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "应收账款和存货的周转情况是否在附注中说明",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "毛利率的计算口径是否提供",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否希望我们在获取估值数据后再进行分析",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "还有其他关注的财务维度吗",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "需要了解美的的业务结构吗",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "还有哪些财务附注可能影响现金覆盖率的解释？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否存在其他一次性项目对现金流产生显著影响？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "需要获取哪些具体的营运资本明细以完成验证？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否关注覆盖水平的历史变化趋势",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "该代理是否受少数股东现金流影响",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否需要进一步了解利润与现金流增速的关系",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "归母净利润同比是多少？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "扣非归母净利润为何下降？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的最新营业收入是多少？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "什么是市盈率？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "加权平均 ROE 如何计算？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "解释指标口径",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "该公司经营情况如何？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "还应检查现金流量表附注中对现金及现金等价物变动的说明",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "是否存在重大非经常性损益？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "能否提供应收账款及存货的最新数据",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "近期是否有重大融资或投资安排",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "管理层对利润增速与现金流增速差异有何说明",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "围绕所选现金覆盖证据，差异的可能原因是什么，还需要验证哪些附注？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "造成这种差异的原因是什么？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "需要哪些附注？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "为什么？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "历史波动率与最大回撤",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的与海尔的利润对比",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的与格力的经营质量与偿债能力如何？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的的海外业务有哪些风险？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的集团事件与风险有哪些证据？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的归母与扣非利润为何分化？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "０００３３３.SZ 的经营情况如何？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的​集团的财务趋势如何？",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "宁德时代的利润增长是否得到现金流支持？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "比亚迪最近利润如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "新希望的营收如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "贵州茅台最近盈利如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "600519 的经营如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "３００７５０ 的现金流如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的与宁德时代的利润相比如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的和腾讯的股价如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的与比亚迪的经营质量对比",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的利润与贵州茅台的收入相比如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "格力电器利润如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "海尔智家的现金流如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "分析美的的现金流，然后切换到宁德时代",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的利润如何？研究对象改为贵州茅台",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的现金流如何？再分析比亚迪的利润",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "美的利润如何？分析宁德时代的现金流",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "宁德​时代的现金流如何？",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "帮我写一首诗",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "查询纽约天气",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "现在该买入美的吗？",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "建议建仓。",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "应该止损吗？",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "应当增持。",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "明天一定会涨吗？",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "给出目标价",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "保证收益百分之十",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "Should I buy this stock?",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    },
+    {
+      "question": "建​仓建议",
+      "expected": "restricted",
+      "actual": "restricted",
+      "passed": true,
+      "ui_shortcut": false
+    }
+  ]
+}
