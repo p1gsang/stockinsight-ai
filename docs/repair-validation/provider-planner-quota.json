@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-09T07:37:58.812Z",
+  "method": "Actual research planner provider quota diagnostic; no raw provider error exposed",
+  "http_status": 429,
+  "quota_kind": "TPD",
+  "limit": "200000",
+  "used": "199310",
+  "requested": "723",
+  "retry_after": "15"
+}

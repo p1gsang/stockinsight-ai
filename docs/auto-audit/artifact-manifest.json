@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-10-09T06:45:52.611887+00:00",
+  "purpose": "Hashes of locally added audit deliverables. Not a signature, release, Git commit, or proof of semantic correctness.",
+  "files": [
+    {
+      "path": "AUTO_AUDIT_REPORT.md",
+      "bytes": 24250,
+      "sha256": "db2841cbe57810b4cd44f7a26ab6e778f904111638b3dfc9a83a3321a0af6dca"
+    },
+    {
+      "path": "HUMAN_REVIEW_CHECKLIST.md",
+      "bytes": 3111,
+      "sha256": "dc65a862dc420d04f238d188ee1626a87ecd384b0e1cf438698cdfe56d9a3006"
+    },
+    {
+      "path": "docs/auto-audit/build.log",
+      "bytes": 1118,
+      "sha256": "b13f0e27edc018ef2ea29f169d1017665bc26568f2602b049411e14b122cba63"
+    },
+    {
+      "path": "docs/auto-audit/deployment-state.json",
+      "bytes": 616,
+      "sha256": "c629a949b859d4db7f1f40a7c977a9d7d9f0cccdbdca9bc5f6349a9de4d30fd5"
+    },
+    {
+      "path": "docs/auto-audit/evidence-delivery.json",
+      "bytes": 210224,
+      "sha256": "488b6891805cb2fbb7f7b3770ff5bf4e0e13019712a0adb3986f12d578fb68d4"
+    },
+    {
+      "path": "docs/auto-audit/evidence-delivery.md",
+      "bytes": 3811,
+      "sha256": "57eedbf4d1f71d11de9cc49dd511f3461f4f8333f7954c7add6aae606d94d4ac"
+    },
+    {
+      "path": "docs/auto-audit/execution-record.json",
+      "bytes": 3000,
+      "sha256": "b4ad3d40d83c2260e21c84b571da976abcb6f62b46ab8806a71dd93f10968ec1"
+    },
+    {
+      "path": "docs/auto-audit/fault-injection.json",
+      "bytes": 11601,
+      "sha256": "13c03d8c083a731f8edd42af75574a4fde3868c06f664c89e75d0e4e59aeea92"
+    },
+    {
+      "path": "docs/auto-audit/financial-verification.json",
+      "bytes": 120639,
+      "sha256": "6430b51f799e2100d9ca4930cd8b4ce0c7860ea8e6e1e63ecd619fa47c11ed41"
+    },
+    {
+      "path": "docs/auto-audit/financial-verification.md",
+      "bytes": 15307,
+      "sha256": "c225403c94e92453cc3afd1c334e96877f5dfdfbf1e770f9e6415008a1c16c78"
+    },
+    {
+      "path": "docs/auto-audit/http-boundaries.json",
+      "bytes": 5512,
+      "sha256": "235a33996d9fa2b1157051446ad94abba1e8639d9f180889f79a38972c1c33f1"
+    },
+    {
+      "path": "docs/auto-audit/http-local.txt",
+      "bytes": 217,
+      "sha256": "359badecad18f1522c1fcf7a9905d718633ff2dc925f028515e9e4b2a2485c26"
+    },
+    {
+      "path": "docs/auto-audit/log-correlation.json",
+      "bytes": 5326,
+      "sha256": "39773fadcd9f90e1f2e108f4f9e0e2c71dde2d4922c5032b97f1a529b4ec26dc"
+    },
+    {
+      "path": "docs/auto-audit/node-tests.tap",
+      "bytes": 35017,
+      "sha256": "0601ea1054bc9c98fe1aacfc411fd468adb75fb6d76c801aab6eac68dd714ea8"
+    },
+    {
+      "path": "docs/auto-audit/public-context-diagnostic.json",
+      "bytes": 81573,
+      "sha256": "845683389d4a0f1c33c80b49030a47fa8e3fe5afe5df9d8747e39738c6224e84"
+    },
+    {
+      "path": "docs/auto-audit/public-llm.json",
+      "bytes": 317801,
+      "sha256": "9011a882c0e7715a0c1bb21668e28373b235ccc4a502d23d759f0c2c9de153db"
+    },
+    {
+      "path": "docs/auto-audit/pytest.txt",
+      "bytes": 100,
+      "sha256": "82570e6925449b091ab5b8d7161f84a144380cd786796b54ea78d0629f2c56ee"
+    },
+    {
+      "path": "docs/auto-audit/ui-checks.json",
+      "bytes": 1741,
+      "sha256": "49e603c821bd7ccac9b2ac3e2abb74480a25a0b7186c36df99fb982b32f30d00"
+    },
+    {
+      "path": "docs/auto-audit/ui-evidence.png",
+      "bytes": 50211,
+      "sha256": "4a6786ce3ff163ee0a97676c85659487922ff587cf534b95299fac00bf5c6ff1"
+    },
+    {
+      "path": "docs/auto-audit/ui-peer.png",
+      "bytes": 52614,
+      "sha256": "70bfb279d3aa49378c7fdcec04591b67095f73f6a2b64ff255954ccd914b09c7"
+    },
+    {
+      "path": "docs/auto-audit/worker-logs-initial.json",
+      "bytes": 1195,
+      "sha256": "2789dc39b4fcf0e8e51318ccc0f3c89080904e3da67266b5a93a387c88d6bdff"
+    },
+    {
+      "path": "docs/auto-audit/worker-logs.json",
+      "bytes": 8291,
+      "sha256": "07669c57b200b274ec0342d7343ae43b0bad8da7f86880c5cf3ddfc4aa0ebef5"
+    },
+    {
+      "path": "tools/audit_evidence_delivery.mjs",
+      "bytes": 32721,
+      "sha256": "3f2b0bcd401bbb1df01c25617413cbdf460fefe73f68ad03e29b235c2e01add6"
+    },
+    {
+      "path": "tools/audit_faults.mjs",
+      "bytes": 4724,
+      "sha256": "c7f22ff15a6edb12937f8e04afa9208fbe0e935f5dc32365d05a8d201baf5f75"
+    },
+    {
+      "path": "tools/audit_financial_independent.py",
+      "bytes": 36978,
+      "sha256": "f35006d289455ccf463614aa381813fa0de3c677db1f23a6a19e239aabd8b495"
+    },
+    {
+      "path": "tools/audit_http_boundaries.mjs",
+      "bytes": 2821,
+      "sha256": "e0adf625690a0adf26548923eb25ed04035e4d3692580724f80eb44b989c0b6f"
+    },
+    {
+      "path": "tools/audit_public_context.mjs",
+      "bytes": 2152,
+      "sha256": "2759de13bc70b6e671ffab3410af55218038dedacef27e4bafd15c2a63183788"
+    },
+    {
+      "path": "tools/audit_public_llm.mjs",
+      "bytes": 5429,
+      "sha256": "6c25e668d043128fd2cce1b31144ee0543a0482dc0a2179156cf047a8013c96d"
+    }
+  ]
+}

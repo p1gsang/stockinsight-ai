@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-10-09T06:44:40.274320+00:00",
+  "method": "Actual CUA browser operations on production IAB tab; recorded observations from this audit tool transcript, not an executable browser replay. No access code entered and no extra LLM request submitted in browser.",
+  "target": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+  "viewport": "desktop",
+  "checks": [
+    {
+      "id": "initial_workbench",
+      "status": "PASS",
+      "observed": "Financial cards render; initial rules text labeled; Groq configured, per-request verification pending."
+    },
+    {
+      "id": "evidence_drill",
+      "status": "PASS",
+      "observed": "Cash coverage drawer shows two original inputs, period, formula, source PDF page 2 links.",
+      "screenshot": "ui-evidence.png"
+    },
+    {
+      "id": "selected_context",
+      "status": "PASS",
+      "observed": "Add-to-context button changes state; selected count becomes one."
+    },
+    {
+      "id": "access_failure",
+      "status": "PASS",
+      "observed": "Starting without access code opens settings, explains missing authorization and retains initial rules results."
+    },
+    {
+      "id": "peer_view",
+      "status": "PASS",
+      "observed": "Midea/Gree same-H1 table; Haier missing; sample not industry rank; valuation unknown.",
+      "screenshot": "ui-peer.png"
+    },
+    {
+      "id": "financial_view",
+      "status": "PASS",
+      "observed": "2024/2025/2026 half-year table and trend charts; no annualized ROE; market unavailable explicitly."
+    }
+  ],
+  "not_proven": [
+    "UI-initiated successful Groq follow-up",
+    "mobile/cross-browser compatibility",
+    "long-duration availability"
+  ]
+}

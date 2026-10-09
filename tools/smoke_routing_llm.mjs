@@ -12,7 +12,7 @@ const report={checked_at:new Date().toISOString(),target:base||"local service wi
 async function save(){await mkdir(path.dirname(output),{recursive:true});await writeFile(output,JSON.stringify(report,null,2)+"\n");}
 async function run(label,payload){
   let result,code=200;
-  if(base){const response=await fetch(new URL("/api/research",base),{method:"POST",headers:{"Content-Type":"application/json","x-research-access":env.RESEARCH_ACCESS_CODE},body:JSON.stringify(payload),signal:AbortSignal.timeout(100000)});code=response.status;result=await response.json();}
+  if(base){const response=await fetch(new URL("/api/research",base),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...payload,access_code:env.RESEARCH_ACCESS_CODE}),signal:AbortSignal.timeout(100000)});code=response.status;result=await response.json();}
   else result=await research(payload,env);
   const entry={label,question:payload.question,http_status:code,status:result.status,engine:result.engine,model_state:result.model_state,dimensions:result.plan?.dimensions,model_usage:result.model_usage,selected_ids:result.selected_ids,history_length:result.history?.length,claims:result.analysis?.claims,followups:result.analysis?.followups,warnings:result.warnings,passed:false};
   assert.ok(!JSON.stringify(entry).includes(env.LLM_API_KEY));assert.ok(!JSON.stringify(entry).includes(env.RESEARCH_ACCESS_CODE));report.cases.push(entry);await save();

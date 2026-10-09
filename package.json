@@ -13,7 +13,7 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "db:local": "node --import ./scripts/sites-env.mjs tools/init_local_db.mjs",
-    "test": "node --test tests/research.test.mjs tests/shared-limits.test.mjs tests/trust-boundaries.test.mjs tests/question-routing.test.mjs tests/semantic-support.test.mjs",
+    "test": "node --test tests/research.test.mjs tests/shared-limits.test.mjs tests/trust-boundaries.test.mjs tests/question-routing.test.mjs tests/semantic-support.test.mjs tests/auto-audit-regression.test.mjs",
     "test:python": "python -m pytest -q",
     "test:http": "python tools/smoke_http.py",
     "typecheck": "tsc --noEmit"

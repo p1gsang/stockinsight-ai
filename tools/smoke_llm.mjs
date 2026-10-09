@@ -15,7 +15,7 @@ const diagnosticFetch=args.includes("--capture")?async(url,init)=>{
 }:undefined;
 async function request(payload,authorized=true) {
   if(!base)return {code:200,body:await research(payload,process.env,diagnosticFetch?{fetcher:diagnosticFetch}:{})};
-  const r=await fetch(new URL("/api/research",base),{method:"POST",headers:{"Content-Type":"application/json",...(authorized?{"x-research-access":access}:{})},body:JSON.stringify(payload),signal:AbortSignal.timeout(100000)});
+  const r=await fetch(new URL("/api/research",base),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...payload,...(authorized?{access_code:access}:{})}),signal:AbortSignal.timeout(100000)});
   const text=await r.text();assert.ok(!text.includes(key),"Provider key leaked in response.");return {code:r.status,body:JSON.parse(text),retryAfter:r.headers.get("retry-after")};
 }
 if(base) {

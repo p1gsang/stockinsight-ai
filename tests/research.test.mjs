@@ -44,20 +44,20 @@ test("Groq requests preserve strict schemas, bounded questions, and compatible t
   const seen=[];await research({question:"现金覆盖代理的数值是多少？"},{...env,LLM_BASE_URL:"https://api.groq.com/openai/v1",LLM_MODEL:"openai/gpt-oss-20b"},{fetcher:async(url,init)=>{
     const body=JSON.parse(init.body);seen.push(body);assert.equal(url,"https://api.groq.com/openai/v1/chat/completions");
     return response({id:"TEST_ONLY",model:body.model,choices:[{finish_reason:"stop",message:{content:JSON.stringify(seen.length===1?{intent:"现金支持",dimensions:["quality","trend"],rationale:"制造企业需核验现金回收。",questions:[]}:{claims:[{text:"原因尚待核验。",claim_type:"UNKNOWN",evidence_ids:["E-MD-20260630-cause"]}],followups:["需要哪些附注？"]})}}]});
-  }});assert.equal(seen.length,2);assert.equal(seen[0].response_format.json_schema.strict,true);assert.equal(seen[0].response_format.json_schema.schema.properties.questions.maxItems,4);assert.equal(seen[1].reasoning_effort,"medium");assert.equal(seen[1].max_completion_tokens,2000);assert.equal(seen[1].max_tokens,undefined);
-  const variants=seen[1].response_format.json_schema.schema.properties.claims.items.anyOf;
-  const claimSchema=variants.find(v=>v.properties.claim_type.enum[0]==="INFERENCE").properties;
-  const unknownSchema=variants.find(v=>v.properties.claim_type.enum[0]==="UNKNOWN").properties;
+  }});assert.equal(seen.length,2);assert.equal(seen[0].response_format.json_schema.strict,true);assert.equal(seen[0].response_format.json_schema.schema.properties.questions.maxItems,4);assert.equal(seen[1].reasoning_effort,"low");assert.equal(seen[1].max_completion_tokens,1300);assert.equal(seen[1].max_tokens,undefined);
+  const item=seen[1].response_format.json_schema.schema.properties.claims.items;
+  assert.equal(item.anyOf,undefined); // Real Groq rejected the prior nested variants.
+  const claimSchema=item.properties;
   assert.equal(new RegExp(claimSchema.text.pattern).test("现金流对归母利润的覆盖代理为{{E-MD-20260630-cash-coverage}}。"),true);
   assert.equal(new RegExp(claimSchema.text.pattern).test("归母净利润同比为{{E-MD-20260630-cash-coverage}}。"),false);
   assert.equal(new RegExp(claimSchema.text.pattern).test("利润增长99%。"),false);
-  assert.ok(!claimSchema.evidence_ids.items.enum.includes("E-MD-20260630-cause"));
-  assert.ok(unknownSchema.evidence_ids.items.enum.includes("E-MD-20260630-cause"));
-  assert.ok(!unknownSchema.evidence_ids.items.enum.includes("E-MD-20260630-cash-coverage"));
-  assert.equal(new RegExp(unknownSchema.text.pattern).test("原因为{{E-MD-20260630-cause}}。"),false);
+  assert.ok(claimSchema.evidence_ids.items.enum.includes("E-MD-20260630-cause"));
+  assert.ok(claimSchema.evidence_ids.items.enum.includes("E-MD-20260630-cash-coverage"));
+  assert.equal(new RegExp(claimSchema.text.pattern).test("原因为{{E-MD-20260630-cause}}。"),false);
   for(const text of ["现金覆盖超过一倍。","上一年已发生。","增长百分之三。"])
-    assert.equal(new RegExp(unknownSchema.text.pattern).test(text),false);
-  assert.equal(new RegExp(unknownSchema.text.pattern).test("股东口径不完全一致，仍需进一步核验。"),true);
+    assert.throws(()=>validateAnalysis({claims:[{text,claim_type:"INFERENCE",evidence_ids:["E-MD-20260630-cash-coverage"]}],followups:["需要哪些附注？"]},evidence()),/数字/);
+  assert.equal(new RegExp(claimSchema.text.pattern).test("季节性影响仍需附注核验。"),true);
+  assert.equal(new RegExp(claimSchema.text.pattern).test("股东口径不完全一致，仍需进一步核验。"),true);
 });
 test("model truncation cannot count as successful JSON output",async()=>{
   await assert.rejects(callJSON(env,[],{},"t",async()=>response({choices:[{finish_reason:"length",message:{content:"{}"}}]})),/截断/);

@@ -1,0 +1,1150 @@
+TAP version 13
+# Subtest: access envelope removes the code before research; exact match and invalid types fail closed
+ok 1 - access envelope removes the code before research; exact match and invalid types fail closed
+  ---
+  duration_ms: 2.0453
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: 美的下周肯定上涨。
+ok 2 - blocks prediction/advice variant: 美的下周肯定上涨。
+  ---
+  duration_ms: 11.4438
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: 美的股价必将下跌。
+ok 3 - blocks prediction/advice variant: 美的股价必将下跌。
+  ---
+  duration_ms: 1.0728
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: 美的下个月会涨。
+ok 4 - blocks prediction/advice variant: 美的下个月会涨。
+  ---
+  duration_ms: 1.2263
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: 美的保证获得正收益。
+ok 5 - blocks prediction/advice variant: 美的保证获得正收益。
+  ---
+  duration_ms: 0.5002
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: 建议做多美的。
+ok 6 - blocks prediction/advice variant: 建议做多美的。
+  ---
+  duration_ms: 0.6009
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: 立即增持美的。
+ok 7 - blocks prediction/advice variant: 立即增持美的。
+  ---
+  duration_ms: 0.638
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: 应该持有美的。
+ok 8 - blocks prediction/advice variant: 应该持有美的。
+  ---
+  duration_ms: 1.3034
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: Midea will definitely rise.
+ok 9 - blocks prediction/advice variant: Midea will definitely rise.
+  ---
+  duration_ms: 0.9366
+  type: 'test'
+  ...
+# Subtest: blocks prediction/advice variant: Risk-free returns guaranteed.
+ok 10 - blocks prediction/advice variant: Risk-free returns guaranteed.
+  ---
+  duration_ms: 0.4265
+  type: 'test'
+  ...
+# Subtest: historical facts and research questions remain allowed
+ok 11 - historical facts and research questions remain allowed
+  ---
+  duration_ms: 0.1227
+  type: 'test'
+  ...
+# Subtest: actual accepted AUD-S01 output is now rejected
+ok 12 - actual accepted AUD-S01 output is now rejected
+  ---
+  duration_ms: 4.291
+  type: 'test'
+  ...
+# Subtest: undefined baseline is rejected while bounded proxy definition is accepted
+ok 13 - undefined baseline is rejected while bounded proxy definition is accepted
+  ---
+  duration_ms: 4.9304
+  type: 'test'
+  ...
+# Subtest: flat schema still rejects UNKNOWN/known ID mixing at the server
+ok 14 - flat schema still rejects UNKNOWN/known ID mixing at the server
+  ---
+  duration_ms: 0.8019
+  type: 'test'
+  ...
+# Subtest: all twelve selected evidence records survive the model evidence cap
+ok 15 - all twelve selected evidence records survive the model evidence cap
+  ---
+  duration_ms: 2.9539
+  type: 'test'
+  ...
+# Subtest: full-report OCF disagreement blocks both primary and bridge; different basis does not conflict
+ok 16 - full-report OCF disagreement blocks both primary and bridge; different basis does not conflict
+  ---
+  duration_ms: 1.0504
+  type: 'test'
+  ...
+# Subtest: SZSE source labels agree with the official source URL
+ok 17 - SZSE source labels agree with the official source URL
+  ---
+  duration_ms: 0.3254
+  type: 'test'
+  ...
+# Subtest: provider errors expose safe code/type, not failed_generation or raw error text
+ok 18 - provider errors expose safe code/type, not failed_generation or raw error text
+  ---
+  duration_ms: 17.092
+  type: 'test'
+  ...
+# Subtest: a bounded repair is a real extra adapter call, fully revalidated and reported
+ok 19 - a bounded repair is a real extra adapter call, fully revalidated and reported
+  ---
+  duration_ms: 1.8468
+  type: 'test'
+  ...
+# Subtest: failed repair remains rejected; prohibited advice never triggers a repair
+ok 20 - failed repair remains rejected; prohibited advice never triggers a repair
+  ---
+  duration_ms: 2.9682
+  type: 'test'
+  ...
+# Subtest: an LLM plan cannot omit the market data explicitly requested by the user
+ok 21 - an LLM plan cannot omit the market data explicitly requested by the user
+  ---
+  duration_ms: 3.5033
+  type: 'test'
+  ...
+# Subtest: selected-company question: 利润增长是否得到了现金流支持？
+ok 22 - selected-company question: 利润增长是否得到了现金流支持？
+  ---
+  duration_ms: 18.0746
+  type: 'test'
+  ...
+# Subtest: selected-company question: 最近经营质量有没有改善？
+ok 23 - selected-company question: 最近经营质量有没有改善？
+  ---
+  duration_ms: 1.5209
+  type: 'test'
+  ...
+# Subtest: selected-company question: 目前估值与同行相比如何？
+ok 24 - selected-company question: 目前估值与同行相比如何？
+  ---
+  duration_ms: 1.3905
+  type: 'test'
+  ...
+# Subtest: selected-company question: 近期股价波动和回撤有多大？
+ok 25 - selected-company question: 近期股价波动和回撤有多大？
+  ---
+  duration_ms: 0.7705
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的集团的经营质量有哪些可验证的证据？
+ok 26 - selected-company question: 美的集团的经营质量有哪些可验证的证据？
+  ---
+  duration_ms: 0.7614
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的集团的财务趋势有哪些可验证的证据？
+ok 27 - selected-company question: 美的集团的财务趋势有哪些可验证的证据？
+  ---
+  duration_ms: 1.5468
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的集团的估值有哪些可验证的证据？
+ok 28 - selected-company question: 美的集团的估值有哪些可验证的证据？
+  ---
+  duration_ms: 1.2311
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的集团的行情特征有哪些可验证的证据？
+ok 29 - selected-company question: 美的集团的行情特征有哪些可验证的证据？
+  ---
+  duration_ms: 1.3369
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的集团的行业位置有哪些可验证的证据？
+ok 30 - selected-company question: 美的集团的行业位置有哪些可验证的证据？
+  ---
+  duration_ms: 1.0469
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的集团的事件与风险有哪些可验证的证据？
+ok 31 - selected-company question: 美的集团的事件与风险有哪些可验证的证据？
+  ---
+  duration_ms: 0.9873
+  type: 'test'
+  ...
+# Subtest: selected-company question: 归母与扣非利润表现为什么不同？
+ok 32 - selected-company question: 归母与扣非利润表现为什么不同？
+  ---
+  duration_ms: 0.6831
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的与格力的经营质量和估值有什么差异？
+ok 33 - selected-company question: 美的与格力的经营质量和估值有什么差异？
+  ---
+  duration_ms: 1.3428
+  type: 'test'
+  ...
+# Subtest: selected-company question: 利润增长与现金流增长为何不同步？
+ok 34 - selected-company question: 利润增长与现金流增长为何不同步？
+  ---
+  duration_ms: 0.5752
+  type: 'test'
+  ...
+# Subtest: selected-company question: 与格力同期相比有什么差异？
+ok 35 - selected-company question: 与格力同期相比有什么差异？
+  ---
+  duration_ms: 0.6022
+  type: 'test'
+  ...
+# Subtest: selected-company question: 还需要哪些材料才能验证原因？
+ok 36 - selected-company question: 还需要哪些材料才能验证原因？
+  ---
+  duration_ms: 0.5465
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否需要更完整的营运资金信息？
+ok 37 - selected-company question: 是否需要更完整的营运资金信息？
+  ---
+  duration_ms: 0.577
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否关注利润与现金流的同步程度？
+ok 38 - selected-company question: 是否关注利润与现金流的同步程度？
+  ---
+  duration_ms: 0.8394
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否想了解现金覆盖率的具体含义？
+ok 39 - selected-company question: 是否想了解现金覆盖率的具体含义？
+  ---
+  duration_ms: 0.5711
+  type: 'test'
+  ...
+# Subtest: selected-company question: 能否提供应收账款周转的详细说明
+ok 40 - selected-company question: 能否提供应收账款周转的详细说明
+  ---
+  duration_ms: 0.5452
+  type: 'test'
+  ...
+# Subtest: selected-company question: 能否提供存货跌价准备的披露
+ok 41 - selected-company question: 能否提供存货跌价准备的披露
+  ---
+  duration_ms: 0.4916
+  type: 'test'
+  ...
+# Subtest: selected-company question: 能否提供现金流量表附注的完整内容
+ok 42 - selected-company question: 能否提供现金流量表附注的完整内容
+  ---
+  duration_ms: 0.5183
+  type: 'test'
+  ...
+# Subtest: selected-company question: 请提供希望对比的具体同行公司名称
+ok 43 - selected-company question: 请提供希望对比的具体同行公司名称
+  ---
+  duration_ms: 0.594
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否有其他渠道获取美的及同行的估值数据
+ok 44 - selected-company question: 是否有其他渠道获取美的及同行的估值数据
+  ---
+  duration_ms: 0.5698
+  type: 'test'
+  ...
+# Subtest: selected-company question: 关注哪类估值指标比较重要
+ok 45 - selected-company question: 关注哪类估值指标比较重要
+  ---
+  duration_ms: 0.5802
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否需要比较不同期间的覆盖水平？
+ok 46 - selected-company question: 是否需要比较不同期间的覆盖水平？
+  ---
+  duration_ms: 0.6006
+  type: 'test'
+  ...
+# Subtest: selected-company question: 该代理的计算口径与归母利润是否完全一致？
+ok 47 - selected-company question: 该代理的计算口径与归母利润是否完全一致？
+  ---
+  duration_ms: 0.5876
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否关注现金覆盖与盈利质量的关联性？
+ok 48 - selected-company question: 是否关注现金覆盖与盈利质量的关联性？
+  ---
+  duration_ms: 0.9249
+  type: 'test'
+  ...
+# Subtest: selected-company question: 现金流的主要来源有哪些
+ok 49 - selected-company question: 现金流的主要来源有哪些
+  ---
+  duration_ms: 0.5213
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否有关于应收账款或存货变化的说明
+ok 50 - selected-company question: 是否有关于应收账款或存货变化的说明
+  ---
+  duration_ms: 0.5003
+  type: 'test'
+  ...
+# Subtest: selected-company question: 未来季度利润与现金流的趋势预期如何
+ok 51 - selected-company question: 未来季度利润与现金流的趋势预期如何
+  ---
+  duration_ms: 0.5201
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否有关于营运资金变动的详细披露
+ok 52 - selected-company question: 是否有关于营运资金变动的详细披露
+  ---
+  duration_ms: 0.4821
+  type: 'test'
+  ...
+# Subtest: selected-company question: 应收账款和存货的周转情况是否在附注中说明
+ok 53 - selected-company question: 应收账款和存货的周转情况是否在附注中说明
+  ---
+  duration_ms: 0.6009
+  type: 'test'
+  ...
+# Subtest: selected-company question: 毛利率的计算口径是否提供
+ok 54 - selected-company question: 毛利率的计算口径是否提供
+  ---
+  duration_ms: 0.5322
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否希望我们在获取估值数据后再进行分析
+ok 55 - selected-company question: 是否希望我们在获取估值数据后再进行分析
+  ---
+  duration_ms: 0.5342
+  type: 'test'
+  ...
+# Subtest: selected-company question: 还有其他关注的财务维度吗
+ok 56 - selected-company question: 还有其他关注的财务维度吗
+  ---
+  duration_ms: 0.5209
+  type: 'test'
+  ...
+# Subtest: selected-company question: 需要了解美的的业务结构吗
+ok 57 - selected-company question: 需要了解美的的业务结构吗
+  ---
+  duration_ms: 0.8698
+  type: 'test'
+  ...
+# Subtest: selected-company question: 还有哪些财务附注可能影响现金覆盖率的解释？
+ok 58 - selected-company question: 还有哪些财务附注可能影响现金覆盖率的解释？
+  ---
+  duration_ms: 0.812
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否存在其他一次性项目对现金流产生显著影响？
+ok 59 - selected-company question: 是否存在其他一次性项目对现金流产生显著影响？
+  ---
+  duration_ms: 0.4688
+  type: 'test'
+  ...
+# Subtest: selected-company question: 需要获取哪些具体的营运资本明细以完成验证？
+ok 60 - selected-company question: 需要获取哪些具体的营运资本明细以完成验证？
+  ---
+  duration_ms: 0.4651
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否关注覆盖水平的历史变化趋势
+ok 61 - selected-company question: 是否关注覆盖水平的历史变化趋势
+  ---
+  duration_ms: 0.4618
+  type: 'test'
+  ...
+# Subtest: selected-company question: 该代理是否受少数股东现金流影响
+ok 62 - selected-company question: 该代理是否受少数股东现金流影响
+  ---
+  duration_ms: 0.4532
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否需要进一步了解利润与现金流增速的关系
+ok 63 - selected-company question: 是否需要进一步了解利润与现金流增速的关系
+  ---
+  duration_ms: 0.5098
+  type: 'test'
+  ...
+# Subtest: selected-company question: 归母净利润同比是多少？
+ok 64 - selected-company question: 归母净利润同比是多少？
+  ---
+  duration_ms: 0.5115
+  type: 'test'
+  ...
+# Subtest: selected-company question: 扣非归母净利润为何下降？
+ok 65 - selected-company question: 扣非归母净利润为何下降？
+  ---
+  duration_ms: 0.5164
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的最新营业收入是多少？
+ok 66 - selected-company question: 美的最新营业收入是多少？
+  ---
+  duration_ms: 0.4603
+  type: 'test'
+  ...
+# Subtest: selected-company question: 什么是市盈率？
+ok 67 - selected-company question: 什么是市盈率？
+  ---
+  duration_ms: 0.4345
+  type: 'test'
+  ...
+# Subtest: selected-company question: 加权平均 ROE 如何计算？
+ok 68 - selected-company question: 加权平均 ROE 如何计算？
+  ---
+  duration_ms: 0.7557
+  type: 'test'
+  ...
+# Subtest: selected-company question: 解释指标口径
+ok 69 - selected-company question: 解释指标口径
+  ---
+  duration_ms: 0.4952
+  type: 'test'
+  ...
+# Subtest: selected-company question: 该公司经营情况如何？
+ok 70 - selected-company question: 该公司经营情况如何？
+  ---
+  duration_ms: 0.4464
+  type: 'test'
+  ...
+# Subtest: selected-company question: 还应检查现金流量表附注中对现金及现金等价物变动的说明
+ok 71 - selected-company question: 还应检查现金流量表附注中对现金及现金等价物变动的说明
+  ---
+  duration_ms: 0.4377
+  type: 'test'
+  ...
+# Subtest: selected-company question: 是否存在重大非经常性损益？
+ok 72 - selected-company question: 是否存在重大非经常性损益？
+  ---
+  duration_ms: 0.4832
+  type: 'test'
+  ...
+# Subtest: selected-company question: 能否提供应收账款及存货的最新数据
+ok 73 - selected-company question: 能否提供应收账款及存货的最新数据
+  ---
+  duration_ms: 0.542
+  type: 'test'
+  ...
+# Subtest: selected-company question: 近期是否有重大融资或投资安排
+ok 74 - selected-company question: 近期是否有重大融资或投资安排
+  ---
+  duration_ms: 0.4402
+  type: 'test'
+  ...
+# Subtest: selected-company question: 管理层对利润增速与现金流增速差异有何说明
+ok 75 - selected-company question: 管理层对利润增速与现金流增速差异有何说明
+  ---
+  duration_ms: 0.4407
+  type: 'test'
+  ...
+# Subtest: selected-company question: 围绕所选现金覆盖证据，差异的可能原因是什么，还需要验证哪些附注？
+ok 76 - selected-company question: 围绕所选现金覆盖证据，差异的可能原因是什么，还需要验证哪些附注？
+  ---
+  duration_ms: 0.4553
+  type: 'test'
+  ...
+# Subtest: selected-company question: 造成这种差异的原因是什么？
+ok 77 - selected-company question: 造成这种差异的原因是什么？
+  ---
+  duration_ms: 0.4232
+  type: 'test'
+  ...
+# Subtest: selected-company question: 需要哪些附注？
+ok 78 - selected-company question: 需要哪些附注？
+  ---
+  duration_ms: 1.1172
+  type: 'test'
+  ...
+# Subtest: selected-company question: 为什么？
+ok 79 - selected-company question: 为什么？
+  ---
+  duration_ms: 0.9207
+  type: 'test'
+  ...
+# Subtest: selected-company question: 历史波动率与最大回撤
+ok 80 - selected-company question: 历史波动率与最大回撤
+  ---
+  duration_ms: 0.7807
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的与海尔的利润对比
+ok 81 - selected-company question: 美的与海尔的利润对比
+  ---
+  duration_ms: 0.4996
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的与格力的经营质量与偿债能力如何？
+ok 82 - selected-company question: 美的与格力的经营质量与偿债能力如何？
+  ---
+  duration_ms: 0.4627
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的的海外业务有哪些风险？
+ok 83 - selected-company question: 美的的海外业务有哪些风险？
+  ---
+  duration_ms: 0.4699
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的集团事件与风险有哪些证据？
+ok 84 - selected-company question: 美的集团事件与风险有哪些证据？
+  ---
+  duration_ms: 0.4485
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的归母与扣非利润为何分化？
+ok 85 - selected-company question: 美的归母与扣非利润为何分化？
+  ---
+  duration_ms: 0.455
+  type: 'test'
+  ...
+# Subtest: selected-company question: ０００３３３.SZ 的经营情况如何？
+ok 86 - selected-company question: ０００３３３.SZ 的经营情况如何？
+  ---
+  duration_ms: 0.5744
+  type: 'test'
+  ...
+# Subtest: selected-company question: 美的​集团的财务趋势如何？
+ok 87 - selected-company question: 美的​集团的财务趋势如何？
+  ---
+  duration_ms: 0.6191
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 宁德时代的利润增长是否得到现金流支持？
+ok 88 - unavailable research subject: 宁德时代的利润增长是否得到现金流支持？
+  ---
+  duration_ms: 0.2126
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 比亚迪最近利润如何？
+ok 89 - unavailable research subject: 比亚迪最近利润如何？
+  ---
+  duration_ms: 0.0536
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 新希望的营收如何？
+ok 90 - unavailable research subject: 新希望的营收如何？
+  ---
+  duration_ms: 0.0535
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 贵州茅台最近盈利如何？
+ok 91 - unavailable research subject: 贵州茅台最近盈利如何？
+  ---
+  duration_ms: 0.0329
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 600519 的经营如何？
+ok 92 - unavailable research subject: 600519 的经营如何？
+  ---
+  duration_ms: 0.0305
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: ３００７５０ 的现金流如何？
+ok 93 - unavailable research subject: ３００７５０ 的现金流如何？
+  ---
+  duration_ms: 0.0264
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 美的与宁德时代的利润相比如何？
+ok 94 - unavailable research subject: 美的与宁德时代的利润相比如何？
+  ---
+  duration_ms: 0.0378
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 美的和腾讯的股价如何？
+ok 95 - unavailable research subject: 美的和腾讯的股价如何？
+  ---
+  duration_ms: 0.0275
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 美的与比亚迪的经营质量对比
+ok 96 - unavailable research subject: 美的与比亚迪的经营质量对比
+  ---
+  duration_ms: 0.0298
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 美的利润与贵州茅台的收入相比如何？
+ok 97 - unavailable research subject: 美的利润与贵州茅台的收入相比如何？
+  ---
+  duration_ms: 0.0351
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 格力电器利润如何？
+ok 98 - unavailable research subject: 格力电器利润如何？
+  ---
+  duration_ms: 0.0271
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 海尔智家的现金流如何？
+ok 99 - unavailable research subject: 海尔智家的现金流如何？
+  ---
+  duration_ms: 0.0262
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 分析美的的现金流，然后切换到宁德时代
+ok 100 - unavailable research subject: 分析美的的现金流，然后切换到宁德时代
+  ---
+  duration_ms: 0.0731
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 美的利润如何？研究对象改为贵州茅台
+ok 101 - unavailable research subject: 美的利润如何？研究对象改为贵州茅台
+  ---
+  duration_ms: 0.0363
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 美的现金流如何？再分析比亚迪的利润
+ok 102 - unavailable research subject: 美的现金流如何？再分析比亚迪的利润
+  ---
+  duration_ms: 0.0284
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 美的利润如何？分析宁德时代的现金流
+ok 103 - unavailable research subject: 美的利润如何？分析宁德时代的现金流
+  ---
+  duration_ms: 0.0267
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 宁德​时代的现金流如何？
+ok 104 - unavailable research subject: 宁德​时代的现金流如何？
+  ---
+  duration_ms: 0.0249
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 帮我写一首诗
+ok 105 - unavailable research subject: 帮我写一首诗
+  ---
+  duration_ms: 0.0284
+  type: 'test'
+  ...
+# Subtest: unavailable research subject: 查询纽约天气
+ok 106 - unavailable research subject: 查询纽约天气
+  ---
+  duration_ms: 0.0244
+  type: 'test'
+  ...
+# Subtest: restricted question: 现在该买入美的吗？
+ok 107 - restricted question: 现在该买入美的吗？
+  ---
+  duration_ms: 0.0581
+  type: 'test'
+  ...
+# Subtest: restricted question: 建议建仓。
+ok 108 - restricted question: 建议建仓。
+  ---
+  duration_ms: 0.027
+  type: 'test'
+  ...
+# Subtest: restricted question: 应该止损吗？
+ok 109 - restricted question: 应该止损吗？
+  ---
+  duration_ms: 0.0224
+  type: 'test'
+  ...
+# Subtest: restricted question: 应当增持。
+ok 110 - restricted question: 应当增持。
+  ---
+  duration_ms: 0.0196
+  type: 'test'
+  ...
+# Subtest: restricted question: 明天一定会涨吗？
+ok 111 - restricted question: 明天一定会涨吗？
+  ---
+  duration_ms: 0.0201
+  type: 'test'
+  ...
+# Subtest: restricted question: 给出目标价
+ok 112 - restricted question: 给出目标价
+  ---
+  duration_ms: 0.02
+  type: 'test'
+  ...
+# Subtest: restricted question: 保证收益百分之十
+ok 113 - restricted question: 保证收益百分之十
+  ---
+  duration_ms: 0.0203
+  type: 'test'
+  ...
+# Subtest: restricted question: Should I buy this stock?
+ok 114 - restricted question: Should I buy this stock?
+  ---
+  duration_ms: 0.0755
+  type: 'test'
+  ...
+# Subtest: restricted question: 建​仓建议
+ok 115 - restricted question: 建​仓建议
+  ---
+  duration_ms: 0.0253
+  type: 'test'
+  ...
+# Subtest: every shared UI shortcut is covered
+ok 116 - every shared UI shortcut is covered
+  ---
+  duration_ms: 0.0308
+  type: 'test'
+  ...
+# Subtest: financial followup keeps selected evidence and history
+ok 117 - financial followup keeps selected evidence and history
+  ---
+  duration_ms: 1.6813
+  type: 'test'
+  ...
+# Subtest: Retry-After countdown handles seconds, dates and malformed values
+ok 118 - Retry-After countdown handles seconds, dates and malformed values
+  ---
+  duration_ms: 0.1253
+  type: 'test'
+  ...
+# Subtest: unsupported generated followups are replaced transparently while valid claims remain
+ok 119 - unsupported generated followups are replaced transparently while valid claims remain
+  ---
+  duration_ms: 2.4085
+  type: 'test'
+  ...
+# Subtest: growth and ratios retain missing data and nonpositive denominator
+ok 120 - growth and ratios retain missing data and nonpositive denominator
+  ---
+  duration_ms: 0.8698
+  type: 'test'
+  ...
+# Subtest: cash coverage and parent profitability use explicit proxy definitions
+ok 121 - cash coverage and parent profitability use explicit proxy definitions
+  ---
+  duration_ms: 9.9356
+  type: 'test'
+  ...
+# Subtest: market return volatility and drawdown independently checked
+ok 122 - market return volatility and drawdown independently checked
+  ---
+  duration_ms: 0.4067
+  type: 'test'
+  ...
+# Subtest: malformed price series cannot create normal statistics
+ok 123 - malformed price series cannot create normal statistics
+  ---
+  duration_ms: 0.2276
+  type: 'test'
+  ...
+# Subtest: freshness detects stale and future dates
+ok 124 - freshness detects stale and future dates
+  ---
+  duration_ms: 0.1086
+  type: 'test'
+  ...
+# Subtest: different questions produce different manufacturing-aware plans
+ok 125 - different questions produce different manufacturing-aware plans
+  ---
+  duration_ms: 0.7727
+  type: 'test'
+  ...
+# Subtest: primary snapshot observations have traceable financial fields
+ok 126 - primary snapshot observations have traceable financial fields
+  ---
+  duration_ms: 1.4338
+  type: 'test'
+  ...
+# Subtest: same-half YoY is used; no invented missing prior-year result
+ok 127 - same-half YoY is used; no invented missing prior-year result
+  ---
+  duration_ms: 0.8284
+  type: 'test'
+  ...
+# Subtest: raw facts, directional signals and unknowns are independent
+ok 128 - raw facts, directional signals and unknowns are independent
+  ---
+  duration_ms: 0.6826
+  type: 'test'
+  ...
+# Subtest: economic signal tension is not a source conflict
+ok 129 - economic signal tension is not a source conflict
+  ---
+  duration_ms: 0.595
+  type: 'test'
+  ...
+# Subtest: source disagreement suppresses raw and derived conclusions
+ok 130 - source disagreement suppresses raw and derived conclusions
+  ---
+  duration_ms: 1.7165
+  type: 'test'
+  ...
+# Subtest: as-of visibility excludes disclosures from the future
+ok 131 - as-of visibility excludes disclosures from the future
+  ---
+  duration_ms: 0.331
+  type: 'test'
+  ...
+# Subtest: expired snapshot is visibly downgraded
+ok 132 - expired snapshot is visibly downgraded
+  ---
+  duration_ms: 0.7142
+  type: 'test'
+  ...
+# Subtest: valid LLM placeholders bind numbers to cited evidence
+ok 133 - valid LLM placeholders bind numbers to cited evidence
+  ---
+  duration_ms: 5.6037
+  type: 'test'
+  ...
+# Subtest: invented IDs, raw digits, chinese percentages and FACT model output are blocked
+ok 134 - invented IDs, raw digits, chinese percentages and FACT model output are blocked
+  ---
+  duration_ms: 1.2119
+  type: 'test'
+  ...
+# Subtest: missing model key, API HTTP errors and invalid JSON are not successful analysis
+ok 135 - missing model key, API HTTP errors and invalid JSON are not successful analysis
+  ---
+  duration_ms: 15.7391
+  type: 'test'
+  ...
+# Subtest: financial provider rejects missing key, errors, empty and malformed data
+ok 136 - financial provider rejects missing key, errors, empty and malformed data
+  ---
+  duration_ms: 0.6653
+  type: 'test'
+  ...
+# Subtest: financial normalization rejects period, currency and type mismatch
+ok 137 - financial normalization rejects period, currency and type mismatch
+  ---
+  duration_ms: 0.3404
+  type: 'test'
+  ...
+# Subtest: live mode cannot silently fall back to snapshot
+ok 138 - live mode cannot silently fall back to snapshot
+  ---
+  duration_ms: 1.5434
+  type: 'test'
+  ...
+# Subtest: core chain runs on real public facts with deterministic results
+ok 139 - core chain runs on real public facts with deterministic results
+  ---
+  duration_ms: 1.9225
+  type: 'test'
+  ...
+# Subtest: two-stage mocked LLM main chain passes schema and evidence checks
+ok 140 - two-stage mocked LLM main chain passes schema and evidence checks
+  ---
+  duration_ms: 2.5415
+  type: 'test'
+  ...
+# Subtest: invalid model plan is surfaced as explicit rule downgrade
+ok 141 - invalid model plan is surfaced as explicit rule downgrade
+  ---
+  duration_ms: 1.1294
+  type: 'test'
+  ...
+# Subtest: followup preserves server evidence and bounded history; forged IDs rejected
+ok 142 - followup preserves server evidence and bounded history; forged IDs rejected
+  ---
+  duration_ms: 2.5618
+  type: 'test'
+  ...
+# Subtest: compliance: 现在该买入吗？
+ok 143 - compliance: 现在该买入吗？
+  ---
+  duration_ms: 0.1543
+  type: 'test'
+  ...
+# Subtest: compliance: 明天一定会涨吗？
+ok 144 - compliance: 明天一定会涨吗？
+  ---
+  duration_ms: 0.0598
+  type: 'test'
+  ...
+# Subtest: compliance: 保证收益百分之十
+ok 145 - compliance: 保证收益百分之十
+  ---
+  duration_ms: 0.0501
+  type: 'test'
+  ...
+# Subtest: compliance: 给出目标价
+ok 146 - compliance: 给出目标价
+  ---
+  duration_ms: 0.0415
+  type: 'test'
+  ...
+# Subtest: compliance: Should I buy this stock?
+ok 147 - compliance: Should I buy this stock?
+  ---
+  duration_ms: 0.1017
+  type: 'test'
+  ...
+# Subtest: outside-company questions cannot masquerade as Midea diagnosis
+ok 148 - outside-company questions cannot masquerade as Midea diagnosis
+  ---
+  duration_ms: 0.3641
+  type: 'test'
+  ...
+# Subtest: Groq requests preserve strict schemas, bounded questions, and compatible token parameters
+ok 149 - Groq requests preserve strict schemas, bounded questions, and compatible token parameters
+  ---
+  duration_ms: 4.3988
+  type: 'test'
+  ...
+# Subtest: model truncation cannot count as successful JSON output
+ok 150 - model truncation cannot count as successful JSON output
+  ---
+  duration_ms: 0.3099
+  type: 'test'
+  ...
+# Subtest: provider 429 opens a cooldown and does not immediately retry
+ok 151 - provider 429 opens a cooldown and does not immediately retry
+  ---
+  duration_ms: 0.3039
+  type: 'test'
+  ...
+# Subtest: server renderer handles repeated units and rejects mismatched ones
+ok 152 - server renderer handles repeated units and rejects mismatched ones
+  ---
+  duration_ms: 0.762
+  type: 'test'
+  ...
+# Subtest: research gate enforces IP quotas, concurrency, and release after errors
+ok 153 - research gate enforces IP quotas, concurrency, and release after errors
+  ---
+  duration_ms: 0.3182
+  type: 'test'
+  ...
+# Subtest: rotating IPs cannot reset global quotas or clear capacity protection
+ok 154 - rotating IPs cannot reset global quotas or clear capacity protection
+  ---
+  duration_ms: 0.1001
+  type: 'test'
+  ...
+# Subtest: model Token guard reserves before requests, settles actual usage, and expires windows
+ok 155 - model Token guard reserves before requests, settles actual usage, and expires windows
+  ---
+  duration_ms: 0.1975
+  type: 'test'
+  ...
+# Subtest: long CJK context is budgeted and oversized single requests are rejected
+ok 156 - long CJK context is budgeted and oversized single requests are rejected
+  ---
+  duration_ms: 0.1227
+  type: 'test'
+  ...
+# Subtest: known ratios cannot promote unknown causes into a mixed inference
+ok 157 - known ratios cannot promote unknown causes into a mixed inference
+  ---
+  duration_ms: 0.3968
+  type: 'test'
+  ...
+# Subtest: blocks observed unsupported output: 归母利润与扣非利润表现不同，因包含少数股东权益及非经常性损益，导致趋势差异
+ok 158 - blocks observed unsupported output: 归母利润与扣非利润表现不同，因包含少数股东权益及非经常性损益，导致趋势差异
+  ---
+  duration_ms: 2.8381
+  type: 'test'
+  ...
+# Subtest: blocks observed unsupported output: 现有资料未覆盖少数股东损益具体数额及非经常性项目细节，难以定量说明差异来源
+ok 159 - blocks observed unsupported output: 现有资料未覆盖少数股东损益具体数额及非经常性项目细节，难以定量说明差异来源
+  ---
+  duration_ms: 0.6319
+  type: 'test'
+  ...
+# Subtest: blocks observed unsupported output: 归母利润与扣非利润的比较需要补充营运资金等附注信息，以便更完整评估盈利质量
+ok 160 - blocks observed unsupported output: 归母利润与扣非利润的比较需要补充营运资金等附注信息，以便更完整评估盈利质量
+  ---
+  duration_ms: 0.1822
+  type: 'test'
+  ...
+# Subtest: blocks observed unsupported output: 利润增速快于经营现金流增速，显示利润与现金生成不同步，提示流动性潜在压力。
+ok 161 - blocks observed unsupported output: 利润增速快于经营现金流增速，显示利润与现金生成不同步，提示流动性潜在压力。
+  ---
+  duration_ms: 2.327
+  type: 'test'
+  ...
+# Subtest: UNKNOWN cannot conceal a causal assertion even when the topic matches
+ok 162 - UNKNOWN cannot conceal a causal assertion even when the topic matches
+  ---
+  duration_ms: 4.2512
+  type: 'test'
+  ...
+# Subtest: nonrecurring and working-capital evidence cannot substitute for one another
+ok 163 - nonrecurring and working-capital evidence cannot substitute for one another
+  ---
+  duration_ms: 2.7081
+  type: 'test'
+  ...
+# Subtest: unrelated extra IDs cannot make a valid citation look stronger
+ok 164 - unrelated extra IDs cannot make a valid citation look stronger
+  ---
+  duration_ms: 0.4959
+  type: 'test'
+  ...
+# Subtest: known report observations and unverified sustainability stay separate
+ok 165 - known report observations and unverified sustainability stay separate
+  ---
+  duration_ms: 2.5917
+  type: 'test'
+  ...
+# Subtest: positive cash ratio below unity does not establish amount coverage
+ok 166 - positive cash ratio below unity does not establish amount coverage
+  ---
+  duration_ms: 1.4482
+  type: 'test'
+  ...
+# Subtest: cash growth evidence does not establish a liquidity condition
+ok 167 - cash growth evidence does not establish a liquidity condition
+  ---
+  duration_ms: 0.8991
+  type: 'test'
+  ...
+# Subtest: supplementary sources preserve point-in-time basis and original PDF pages
+ok 168 - supplementary sources preserve point-in-time basis and original PDF pages
+  ---
+  duration_ms: 0.6949
+  type: 'test'
+  ...
+# Subtest: verified followup banks route and remain relevant to the current topic
+ok 169 - verified followup banks route and remain relevant to the current topic
+  ---
+  duration_ms: 0.5187
+  type: 'test'
+  ...
+# Subtest: a generic followup retains the prior nonrecurring topic and verified facts
+ok 170 - a generic followup retains the prior nonrecurring topic and verified facts
+  ---
+  duration_ms: 23.2031
+  type: 'test'
+  ...
+# Subtest: independent request handlers share IP limits; expiry permits later requests
+ok 171 - independent request handlers share IP limits; expiry permits later requests
+  ---
+  duration_ms: 9.2887
+  type: 'test'
+  ...
+# Subtest: rotating IPs cannot bypass shared global entry limit
+ok 172 - rotating IPs cannot bypass shared global entry limit
+  ---
+  duration_ms: 5.7026
+  type: 'test'
+  ...
+# Subtest: shared research lease survives handler recreation and releases only its owner
+ok 173 - shared research lease survives handler recreation and releases only its owner
+  ---
+  duration_ms: 2.0522
+  type: 'test'
+  ...
+# Subtest: shared Token reservation settles usage and denies excess before network transmission
+ok 174 - shared Token reservation settles usage and denies excess before network transmission
+  ---
+  duration_ms: 17.3379
+  type: 'test'
+  ...
+# Subtest: provider 429 cooldown is shared by new handlers
+ok 175 - provider 429 cooldown is shared by new handlers
+  ---
+  duration_ms: 1.3474
+  type: 'test'
+  ...
+# Subtest: missing or failed shared database fails closed
+ok 176 - missing or failed shared database fails closed
+  ---
+  duration_ms: 0.2006
+  type: 'test'
+  ...
+# Subtest: trade-action synonyms and obfuscated text blocked at both request and model boundaries
+ok 177 - trade-action synonyms and obfuscated text blocked at both request and model boundaries
+  ---
+  duration_ms: 17.0454
+  type: 'test'
+  ...
+# Subtest: neutral event research does not become a trade instruction
+ok 178 - neutral event research does not become a trade instruction
+  ---
+  duration_ms: 0.1249
+  type: 'test'
+  ...
+# Subtest: unavailable company subjects and codes never inherit Midea facts
+ok 179 - unavailable company subjects and codes never inherit Midea facts
+  ---
+  duration_ms: 1.7964
+  type: 'test'
+  ...
+# Subtest: UI presets, supported peers and evidence followups keep selected company context
+ok 180 - UI presets, supported peers and evidence followups keep selected company context
+  ---
+  duration_ms: 1.2839
+  type: 'test'
+  ...
+# Subtest: metric names bind to values: a cash ratio cannot masquerade as profit growth
+ok 181 - metric names bind to values: a cash ratio cannot masquerade as profit growth
+  ---
+  duration_ms: 3.1673
+  type: 'test'
+  ...
+# Subtest: explicit growth comparisons and YoY signs cannot reverse cited relationships
+ok 182 - explicit growth comparisons and YoY signs cannot reverse cited relationships
+  ---
+  duration_ms: 1.1978
+  type: 'test'
+  ...
+# Subtest: peer evidence ownership agrees with original company input
+ok 183 - peer evidence ownership agrees with original company input
+  ---
+  duration_ms: 0.4345
+  type: 'test'
+  ...
+# Subtest: missing local coverage cannot imply the company failed to disclose
+ok 184 - missing local coverage cannot imply the company failed to disclose
+  ---
+  duration_ms: 1.0737
+  type: 'test'
+  ...
+# Subtest: valuation scope rejects substituted and duplicate companies; labels come from code
+ok 185 - valuation scope rejects substituted and duplicate companies; labels come from code
+  ---
+  duration_ms: 0.2268
+  type: 'test'
+  ...
+# Subtest: wrong upstream valuation becomes an explicit unknown rather than a normal fact
+ok 186 - wrong upstream valuation becomes an explicit unknown rather than a normal fact
+  ---
+  duration_ms: 18.4707
+  type: 'test'
+  ...
+# Subtest: invalid calendar dates and future prices cannot produce statistics
+ok 187 - invalid calendar dates and future prices cannot produce statistics
+  ---
+  duration_ms: 0.3557
+  type: 'test'
+  ...
+# Subtest: quarterly-spaced prices cannot be annualized as daily returns
+ok 188 - quarterly-spaced prices cannot be annualized as daily returns
+  ---
+  duration_ms: 0.7079
+  type: 'test'
+  ...
+# Subtest: future publications do not manufacture a present source conflict
+ok 189 - future publications do not manufacture a present source conflict
+  ---
+  duration_ms: 0.5109
+  type: 'test'
+  ...
+# Subtest: forged or cross-period context rejects before a single model request
+ok 190 - forged or cross-period context rejects before a single model request
+  ---
+  duration_ms: 1.5364
+  type: 'test'
+  ...
+1..190
+# tests 190
+# suites 0
+# pass 190
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 227.0562

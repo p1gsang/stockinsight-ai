@@ -1,0 +1,17 @@
+{
+  "site": {
+    "id": "appgprj_6ac7e1b683388191b105cb2014e84456",
+    "title": "StockInsight AI · 美的集团证据研究",
+    "status": "active",
+    "latest_version_number": 14,
+    "current_live_url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+    "access_mode": "public"
+  },
+  "deployment": {
+    "id": "appgdep_6ac836aa9c3481918ec312134b82e81d",
+    "version_id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_ad3bd2846ad8819197a0f55ac8693178",
+    "status": "succeeded",
+    "env_set_revision": 2,
+    "url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site"
+  }
+}

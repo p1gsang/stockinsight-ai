@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-09T06:57:57.460Z",
+  "method": "Real Groq direct adapter diagnostic of the saved failing context, not public E2E and not Mock",
+  "events": [
+    {
+      "stage": "evidence_analysis",
+      "provider": "Groq",
+      "model": "openai/gpt-oss-120b",
+      "response_id": "chatcmpl-5a098ff1-0a0d-4689-89ba-2ee448367f56",
+      "called_at": "2026-10-09T06:57:57.454Z",
+      "usage": {
+        "prompt_tokens": 2452,
+        "completion_tokens": 913,
+        "total_tokens": 3365
+      }
+    }
+  ],
+  "status": "PASS",
+  "claims": [
+    {
+      "text": "该代理以合并经营现金流净额除以归属于母公司净利润为分子分母，分子包含少数股东现金流，分母仅为归母利润，口径与合并利润现金含量不同。",
+      "claim_type": "INFERENCE",
+      "evidence_ids": [
+        "E-MD-20260630-cash-coverage"
+      ],
+      "rendered_text": "该代理以合并经营现金流净额除以归属于母公司净利润为分子分母，分子包含少数股东现金流，分母仅为归母利润，口径与合并利润现金含量不同。",
+      "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+      "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+    },
+    {
+      "text": "现金流变动背后的具体业务因素尚未得到验证，现有资料未覆盖汇率、季节性、结算及并表等可能贡献。",
+      "claim_type": "UNKNOWN",
+      "evidence_ids": [
+        "E-MD-20260630-cause"
+      ],
+      "rendered_text": "现金流变动背后的具体业务因素尚未得到验证，现有资料未覆盖汇率、季节性、结算及并表等可能贡献。",
+      "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+      "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+    },
+    {
+      "text": "关于流动性状况及偿债压力缺乏完整证据，不能确认是否存在相关压力。",
+      "claim_type": "UNKNOWN",
+      "evidence_ids": [
+        "E-MD-20260630-liquidity-cause"
+      ],
+      "rendered_text": "关于流动性状况及偿债压力缺乏完整证据，不能确认是否存在相关压力。",
+      "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+      "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+    }
+  ]
+}

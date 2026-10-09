@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-09T07:30:09.251Z",
+  "version": {
+    "id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_b28a3a124aa48191bbd25ff5b8e1889a",
+    "project_id": "appgprj_6ac7e1b683388191b105cb2014e84456",
+    "version_number": 18,
+    "source": {
+      "commit_sha": "2b92659a65524ddcc94a746a7119508e4934ce89"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000fe8081f5a06401ff3b88498a",
+      "content_hash": "sha256:c05cc62e34b1098a108b44b997c1dfa477449385c4674795f5ba4798a067c7a1",
+      "size_bytes": 2508800,
+      "file_count": 88
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ac897e56ac081918882803fdc5a36ea",
+    "project_id": "appgprj_6ac7e1b683388191b105cb2014e84456",
+    "title": "StockInsight AI · 美的集团证据研究",
+    "version_id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_b28a3a124aa48191bbd25ff5b8e1889a",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ac7e1b683388191b105cb2014e84456",
+    "failure_message": null,
+    "env_set_revision": 3,
+    "updated_at": "2026-10-09T07:29:49.845658+00:00"
+  }
+}

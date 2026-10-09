@@ -1,0 +1,180 @@
+{
+  "started_at": "2026-10-09T06:32:22.356Z",
+  "target": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+  "cases": [
+    {
+      "label": "missing access code",
+      "payload": {
+        "question": "利润现金流"
+      },
+      "authorized": false,
+      "started_at": "2026-10-09T06:32:22.357Z",
+      "http_status": 401,
+      "response": {
+        "error": "此功能需要站点访问口令。请在连接设置中填写；口令用于保护已授权的数据和模型调用。"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b5906eaabab95-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "invalid future report period",
+      "payload": {
+        "question": "利润现金流",
+        "period": "2026-12-31"
+      },
+      "authorized": true,
+      "started_at": "2026-10-09T06:32:23.292Z",
+      "http_status": 400,
+      "response": {
+        "error": "请求格式或期次无效，请检查输入。",
+        "code": "RESEARCH_ERROR"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b590c7c39454f-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "missing authorized financial key",
+      "payload": {
+        "question": "利润现金流",
+        "mode": "live"
+      },
+      "authorized": true,
+      "started_at": "2026-10-09T06:32:24.209Z",
+      "http_status": 503,
+      "response": {
+        "error": "尚未配置扶摇金融数据凭证。请选择公开财报快照，或由维护者配置服务端密钥。",
+        "code": "KEY_MISSING"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b5912196dab95-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "nonexistent selected evidence",
+      "payload": {
+        "question": "为什么？",
+        "context": {
+          "selected_ids": [
+            "E-FAKE"
+          ]
+        }
+      },
+      "authorized": true,
+      "started_at": "2026-10-09T06:32:24.353Z",
+      "http_status": 400,
+      "response": {
+        "error": "追问包含无效或不属于所选期次的证据 ID。",
+        "code": "INVALID_CONTEXT"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b5912fbe4454f-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "direct buy recommendation",
+      "payload": {
+        "question": "现在该买入美的集团吗？"
+      },
+      "authorized": true,
+      "started_at": "2026-10-09T06:32:24.750Z",
+      "http_status": 200,
+      "response": {
+        "status": "restricted",
+        "message": "本产品不提供直接买卖建议、确定性价格预测或收益保证。可以研究盈利质量、估值口径与风险证据。",
+        "question": "现在该买入美的集团吗？"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b59157a53ab95-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "deterministic price prediction",
+      "payload": {
+        "question": "美的明天一定会涨吗？"
+      },
+      "authorized": true,
+      "started_at": "2026-10-09T06:32:24.902Z",
+      "http_status": 200,
+      "response": {
+        "status": "restricted",
+        "message": "本产品不提供直接买卖建议、确定性价格预测或收益保证。可以研究盈利质量、估值口径与风险证据。",
+        "question": "美的明天一定会涨吗？"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b59167cc9ab95-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "return promise",
+      "payload": {
+        "question": "保证美的投资收益百分之十。"
+      },
+      "authorized": true,
+      "started_at": "2026-10-09T06:32:25.047Z",
+      "http_status": 200,
+      "response": {
+        "status": "restricted",
+        "message": "本产品不提供直接买卖建议、确定性价格预测或收益保证。可以研究盈利质量、估值口径与风险证据。",
+        "question": "保证美的投资收益百分之十。"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b59175f50ab95-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "unauthorized rate probe 1",
+      "payload": {
+        "question": "利润现金流"
+      },
+      "authorized": false,
+      "started_at": "2026-10-09T06:32:25.197Z",
+      "http_status": 401,
+      "response": {
+        "error": "此功能需要站点访问口令。请在连接设置中填写；口令用于保护已授权的数据和模型调用。"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b591849eeab95-ORD",
+      "status": "PASS"
+    },
+    {
+      "label": "unauthorized rate probe 2",
+      "payload": {
+        "question": "利润现金流"
+      },
+      "authorized": false,
+      "started_at": "2026-10-09T06:32:25.348Z",
+      "http_status": 401,
+      "response": {
+        "error": "此功能需要站点访问口令。请在连接设置中填写；口令用于保护已授权的数据和模型调用。"
+      },
+      "retry_after": null,
+      "cf_ray": "a47b59193aba454f-ORD",
+      "status": "PASS"
+    }
+  ],
+  "rate_limit": {
+    "status": "PASS",
+    "method": "Public entry limiter, not a forced Groq provider 429",
+    "observations": [
+      {
+        "http_status": 401,
+        "retry_after": null,
+        "cf_ray": "a47b591849eeab95-ORD"
+      },
+      {
+        "http_status": 401,
+        "retry_after": null,
+        "cf_ray": "a47b59193aba454f-ORD"
+      },
+      {
+        "http_status": 429,
+        "retry_after": "34",
+        "cf_ray": "a47b591a2ea9ab95-ORD"
+      }
+    ]
+  },
+  "status": "PASS",
+  "finished_at": "2026-10-09T06:32:25.613Z"
+}

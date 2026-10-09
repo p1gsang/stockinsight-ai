@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-09T07:10:24.310Z",
+  "method": "Real public HTTP; new code in HTTPS body; retired code rejected; only a non-secret test placeholder sent in legacy header. No model calls.",
+  "results": [
+    {
+      "id": "old_body",
+      "http_status": 401,
+      "status": null,
+      "cf_ray": "a47b90b3ed666d8d-ORD",
+      "passed": true
+    },
+    {
+      "id": "legacy_header_ignored",
+      "http_status": 401,
+      "status": null,
+      "cf_ray": "a47b90baecd7fced-ORD",
+      "passed": true
+    },
+    {
+      "id": "new_body",
+      "http_status": 200,
+      "status": "restricted",
+      "cf_ray": "a47b90bbfb3e6d8d-ORD",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}

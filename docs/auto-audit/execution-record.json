@@ -1,0 +1,102 @@
+{
+  "recorded_at": "2026-10-09T06:44:40.363528+00:00",
+  "commit": "62141347a0a8e48d779ad9c3dad15463e38e22ac",
+  "tree": "d4509659d4f3fb4b5be2586e8d84ff7db58b7598",
+  "tracked_production_diff_exit": 0,
+  "production_changes": false,
+  "deployment_changes": false,
+  "credential_changes": false,
+  "git_commit_or_push_performed": false,
+  "node": {
+    "command": "Node --test with package.json test targets (TAP preserved)",
+    "passed": 169,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "output": "node-tests.tap"
+  },
+  "pytest": {
+    "command": "python -m pytest -q",
+    "passed": 8,
+    "skipped": 0,
+    "exit_code": 0,
+    "fresh_output_saved_at_utc": "2026-10-09T06:44:04Z",
+    "output": "pytest.txt"
+  },
+  "typecheck": {
+    "command": "TypeScript tsc --noEmit",
+    "exit_code": 0
+  },
+  "targeted_lint": {
+    "scope": "Changed production files, earlier audit test batch",
+    "exit_code": 0,
+    "limitation": "Not a claim that every repository file passed full-repository lint."
+  },
+  "build": {
+    "command": "Project Vinext/Vite production build",
+    "exit_code": 0,
+    "output": "build.log"
+  },
+  "isolated_http": {
+    "command": "python tools/smoke_http.py",
+    "base_url": "http://127.0.0.1:5362",
+    "source_commit": "dbbae2655e1c06bfabc294d1b8798f157d9b469f",
+    "passed": 8,
+    "exit_code": 0,
+    "output": "http-local.txt",
+    "real_llm": false
+  },
+  "formal_public_llm": {
+    "cases": 5,
+    "structural_pass": 4,
+    "failed": 1,
+    "extra_different_context_diagnostic": "FAIL"
+  },
+  "fault_injection": {
+    "PASS": 13,
+    "FAIL": 1,
+    "UNVERIFIED": 0
+  },
+  "financial": {
+    "PASS": 189,
+    "FAIL": 1,
+    "UNVERIFIED": 7
+  },
+  "evidence_delivery": {
+    "PASS": 120,
+    "FAIL": 3,
+    "UNVERIFIED": 4
+  },
+  "browser": {
+    "checks": 6,
+    "passed": 6,
+    "output": "ui-checks.json"
+  },
+  "report_files": [
+    "../../AUTO_AUDIT_REPORT.md",
+    "../../HUMAN_REVIEW_CHECKLIST.md"
+  ],
+  "artifact_checks": {
+    "audit_eslint": {
+      "command": "node node_modules/eslint/bin/eslint.js tools/audit_public_llm.mjs tools/audit_public_context.mjs tools/audit_http_boundaries.mjs tools/audit_faults.mjs tools/audit_evidence_delivery.mjs",
+      "exit_code": 0,
+      "initial_npx_attempt": "Not started: npx unavailable on PATH; direct installed ESLint subsequently passed"
+    },
+    "audit_python_compile": {
+      "command": "python -m py_compile tools/audit_financial_independent.py",
+      "exit_code": 0
+    },
+    "secret_scan": {
+      "command": "node tools/check_secrets.mjs",
+      "exit_code": 0,
+      "files_checked": 300,
+      "private_values_compared": 2
+    },
+    "temporary_http_server": "Stopped isolated port 5362 server after all checks; original user dev server unchanged.",
+    "local_links": {
+      "status": "PASS",
+      "errors": []
+    }
+  },
+  "finalized_at": "2026-10-09T06:45:52.611887+00:00"
+}

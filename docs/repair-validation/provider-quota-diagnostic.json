@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-09T07:37:35.171Z",
+  "method": "Real minimal Groq quota diagnostic, not a financial acceptance case",
+  "http_status": 200,
+  "provider": "Groq",
+  "model": "openai/gpt-oss-120b",
+  "response_id": "chatcmpl-e5e020da-42c8-4651-8aa4-a57b36a2dfa0",
+  "usage": {
+    "queue_time": 0.243151884,
+    "prompt_tokens": 74,
+    "prompt_time": 0.002973948,
+    "completion_tokens": 20,
+    "completion_time": 0.041456512,
+    "total_tokens": 94,
+    "total_time": 0.04443046,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9
+    }
+  },
+  "error_code": null,
+  "quota_numbers": {
+    "limit": null,
+    "used": null,
+    "requested": null
+  },
+  "quota_kind": null,
+  "limits": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "978",
+    "x-ratelimit-remaining-tokens": "7674",
+    "x-ratelimit-reset-requests": "31m40.8s",
+    "x-ratelimit-reset-tokens": "2.445s"
+  }
+}

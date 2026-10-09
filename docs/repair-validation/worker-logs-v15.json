@@ -1,0 +1,437 @@
+{
+  "method": "Allowlisted platform metadata only; no header values, raw IPs, body or failed_generation",
+  "events": [
+    {
+      "timestamp": 1791529935039,
+      "request_id": "f47333b5d08bef11b0dcc2905db87988",
+      "ray_id": "a47b934d0da4e8d0",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529934999,
+      "request_id": "f47333b5d08bef11b0dcc2905db87988",
+      "ray_id": "a47b934d0da4e8d0",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-b02e1897-c783-43fe-8455-6007d9bdbdf1",
+        "called_at": "2026-10-09T07:12:14.999Z",
+        "usage": {
+          "prompt_tokens": 2526,
+          "completion_tokens": 1156,
+          "total_tokens": 3682
+        }
+      }
+    },
+    {
+      "timestamp": 1791529931984,
+      "request_id": "f47333b5d08bef11b0dcc2905db87988",
+      "ray_id": "a47b934d0da4e8d0",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-329c7788-1843-4d32-b5a2-f683d720fb09",
+        "called_at": "2026-10-09T07:12:11.984Z",
+        "usage": {
+          "prompt_tokens": 615,
+          "completion_tokens": 215,
+          "total_tokens": 830
+        }
+      }
+    },
+    {
+      "timestamp": 1791529864654,
+      "request_id": "62733f5a544dd63c73a1645aae1f6f98",
+      "ray_id": "a47b9197ab1f512a",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529864612,
+      "request_id": "62733f5a544dd63c73a1645aae1f6f98",
+      "ray_id": "a47b9197ab1f512a",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-d34e00a4-63f1-4040-b687-963c3fc382d3",
+        "called_at": "2026-10-09T07:11:04.612Z",
+        "usage": {
+          "prompt_tokens": 2763,
+          "completion_tokens": 1337,
+          "total_tokens": 4100
+        }
+      }
+    },
+    {
+      "timestamp": 1791529860960,
+      "request_id": "62733f5a544dd63c73a1645aae1f6f98",
+      "ray_id": "a47b9197ab1f512a",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-77679d03-10b1-4452-997c-82eb1a7a01eb",
+        "called_at": "2026-10-09T07:11:00.960Z",
+        "usage": {
+          "prompt_tokens": 616,
+          "completion_tokens": 251,
+          "total_tokens": 867
+        }
+      }
+    },
+    {
+      "timestamp": 1791529824748,
+      "request_id": "75b8f67cd89c4468fdd23c909ad98824",
+      "ray_id": "a47b90bbfb3e6d8d",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529824590,
+      "request_id": "40131d17fcbc1652f8a91e4571cf61e8",
+      "ray_id": "a47b90baecd7fced",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529824402,
+      "request_id": "fcff41007189e8e115054247b4952fab",
+      "ray_id": "a47b90b3ed666d8d",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529794711,
+      "request_id": "edcf5d8f44e91431eef1430b41c5c309",
+      "ray_id": "a47b8fdfdb21f607",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529794674,
+      "request_id": "edcf5d8f44e91431eef1430b41c5c309",
+      "ray_id": "a47b8fdfdb21f607",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-6983bea4-5f01-4e15-981b-6714d38abd9e",
+        "called_at": "2026-10-09T07:09:54.674Z",
+        "usage": {
+          "prompt_tokens": 2320,
+          "completion_tokens": 1283,
+          "total_tokens": 3603
+        }
+      }
+    },
+    {
+      "timestamp": 1791529791496,
+      "request_id": "edcf5d8f44e91431eef1430b41c5c309",
+      "ray_id": "a47b8fdfdb21f607",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-dd7f7938-2f2f-44a6-9cee-1f2e012c2556",
+        "called_at": "2026-10-09T07:09:51.496Z",
+        "usage": {
+          "prompt_tokens": 415,
+          "completion_tokens": 187,
+          "total_tokens": 602
+        }
+      }
+    },
+    {
+      "timestamp": 1791529724345,
+      "request_id": "879f43d5f4de60b03412476f87c92928",
+      "ray_id": "a47b8e325de74138",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529724304,
+      "request_id": "879f43d5f4de60b03412476f87c92928",
+      "ray_id": "a47b8e325de74138",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-7793b841-537c-412d-9907-d470f4f8ba92",
+        "called_at": "2026-10-09T07:08:44.304Z",
+        "usage": {
+          "prompt_tokens": 1342,
+          "completion_tokens": 400,
+          "total_tokens": 1742
+        }
+      }
+    },
+    {
+      "timestamp": 1791529722995,
+      "request_id": "879f43d5f4de60b03412476f87c92928",
+      "ray_id": "a47b8e325de74138",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-af07e0be-94fd-46e3-82aa-caf8a6f96caf",
+        "called_at": "2026-10-09T07:08:42.995Z",
+        "usage": {
+          "prompt_tokens": 411,
+          "completion_tokens": 191,
+          "total_tokens": 602
+        }
+      }
+    },
+    {
+      "timestamp": 1791529655582,
+      "request_id": "87658eed13bd5bb702dd1fc55217b7c2",
+      "ray_id": "a47b8c7c1935f53a",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-a75d5489-de2c-4126-8221-16cad314f4cb",
+        "called_at": "2026-10-09T07:07:35.582Z",
+        "usage": {
+          "prompt_tokens": 2324,
+          "completion_tokens": 1321,
+          "total_tokens": 3645
+        }
+      }
+    },
+    {
+      "timestamp": 1791529652408,
+      "request_id": "87658eed13bd5bb702dd1fc55217b7c2",
+      "ray_id": "a47b8c7c1935f53a",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-5ea9a78a-ef1e-43e6-aca0-9164f177d80f",
+        "called_at": "2026-10-09T07:07:32.408Z",
+        "usage": {
+          "prompt_tokens": 409,
+          "completion_tokens": 150,
+          "total_tokens": 559
+        }
+      }
+    },
+    {
+      "timestamp": 1791529589203,
+      "request_id": "ff784d00e6e4304193cbb7c5f03fad75",
+      "ray_id": "a47b8afc3bab8399",
+      "trigger": "GET /api/status",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529588957,
+      "request_id": "91fd14b18c5369955c2f1ce8a8f27538",
+      "ray_id": "a47b8afac8762ccb",
+      "trigger": "GET /api/status",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529588319,
+      "request_id": "8690942c3d4844f8daed5232887add8e",
+      "ray_id": "a47b8af639a48399",
+      "trigger": "GET /",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529588057,
+      "request_id": "80d39faa7b1b4d79e1154dd8b647facb",
+      "ray_id": "a47b8af46e572ccb",
+      "trigger": "GET /",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529585507,
+      "request_id": "580c8d5f2dde1f8fedb6e40e78f2b4e7",
+      "ray_id": "a47b8acb882fc694",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    },
+    {
+      "timestamp": 1791529585473,
+      "request_id": "580c8d5f2dde1f8fedb6e40e78f2b4e7",
+      "ray_id": "a47b8acb882fc694",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-7315ae35-93e1-4602-812c-126f0b11a40f",
+        "called_at": "2026-10-09T07:06:25.473Z",
+        "usage": {
+          "prompt_tokens": 2327,
+          "completion_tokens": 889,
+          "total_tokens": 3216
+        }
+      }
+    },
+    {
+      "timestamp": 1791529583176,
+      "request_id": "580c8d5f2dde1f8fedb6e40e78f2b4e7",
+      "ray_id": "a47b8acb882fc694",
+      "trigger": "POST /api/research",
+      "level": "info",
+      "type": "cf-worker",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-f403e87a-4571-44e1-90b2-be26d63e7878",
+        "called_at": "2026-10-09T07:06:23.176Z",
+        "usage": {
+          "prompt_tokens": 412,
+          "completion_tokens": 149,
+          "total_tokens": 561
+        }
+      }
+    },
+    {
+      "timestamp": 1791529581334,
+      "request_id": "b74ff90a3ece93a69072eb548e12f851",
+      "ray_id": "a47b8ac69ae3c694",
+      "trigger": "GET /api/status",
+      "level": "info",
+      "type": "cf-worker-event",
+      "script_version": "edb759bc-139d-4484-a78c-67a87482b3d3",
+      "current_access_code_present": false,
+      "retired_access_code_present": false,
+      "provider_call": null
+    }
+  ]
+}

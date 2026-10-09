@@ -1,0 +1,2100 @@
+{
+  "started_at": "2026-10-09T07:14:30.965Z",
+  "target": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+  "source_commit": "d0a67ebcf3825602e19cfb1ed0dfd1d0723d43d4",
+  "method": "Actual production HTTP; no Mock; 65-second spacing; no automatic retries",
+  "cases": [
+    {
+      "label": "利润与现金流",
+      "payload": {
+        "question": "利润增长是否得到了现金流支持？"
+      },
+      "started_at": "2026-10-09T07:14:32.135Z",
+      "status": "FAIL",
+      "checks": [
+        {
+          "name": "HTTP 200",
+          "status": "PASS",
+          "detail": 200
+        },
+        {
+          "name": "actual validated LLM",
+          "status": "FAIL",
+          "detail": {
+            "engine": "rules",
+            "model_state": "failed",
+            "planning": "llm",
+            "warnings": [
+              "AI 解读被拦截：基准或行业比较缺少明确来源和口径，输出已拦截。 以下为规则生成的研究说明。",
+              "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+            ]
+          }
+        },
+        {
+          "name": "Groq plan/analysis and optional bounded claim repair metadata",
+          "status": "PASS",
+          "detail": {
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "planning": "validated",
+            "interpretation": "not_validated",
+            "validated_at": null,
+            "calls": [
+              {
+                "stage": "research_plan",
+                "provider": "Groq",
+                "model": "openai/gpt-oss-120b",
+                "response_id": "chatcmpl-2649a2a9-e769-4e29-8487-5928506d92c7",
+                "called_at": "2026-10-09T07:14:34.745Z",
+                "usage": {
+                  "prompt_tokens": 448,
+                  "completion_tokens": 239,
+                  "total_tokens": 687
+                }
+              },
+              {
+                "stage": "evidence_analysis",
+                "provider": "Groq",
+                "model": "openai/gpt-oss-120b",
+                "response_id": "chatcmpl-f02e3857-29d9-4bb9-9f1e-45797bc1baec",
+                "called_at": "2026-10-09T07:14:37.911Z",
+                "usage": {
+                  "prompt_tokens": 2327,
+                  "completion_tokens": 1096,
+                  "total_tokens": 3423
+                }
+              },
+              {
+                "stage": "claim_repair",
+                "provider": "Groq",
+                "model": "openai/gpt-oss-120b",
+                "response_id": "chatcmpl-ed683b29-4047-40f8-9297-378e7cb601a9",
+                "called_at": "2026-10-09T07:14:38.437Z",
+                "usage": {
+                  "prompt_tokens": 581,
+                  "completion_tokens": 151,
+                  "total_tokens": 732
+                }
+              }
+            ],
+            "validation_failures": [
+              {
+                "message": "基准或行业比较缺少明确来源和口径，输出已拦截。",
+                "claim_text": "现金覆盖代理高于基准，但分子含少数股东现金流，分母仅为归母利润，无法直接确认利润增长得到现金流支持。"
+              }
+            ]
+          }
+        },
+        {
+          "name": "required dimensions",
+          "status": "PASS",
+          "detail": [
+            "quality",
+            "trend"
+          ]
+        },
+        {
+          "name": "all conclusion references exist",
+          "status": "PASS",
+          "detail": [
+            [
+              "E-MD-20260630-cash-coverage"
+            ],
+            [
+              "E-MD-20260630-growth-tension"
+            ],
+            [
+              "E-MD-20260630-adjusted_profit-yoy"
+            ],
+            [
+              "E-MD-20260630-cause"
+            ]
+          ]
+        },
+        {
+          "name": "unknown conclusions cite unknown evidence",
+          "status": "PASS"
+        },
+        {
+          "name": "selected context retained",
+          "status": "PASS",
+          "detail": []
+        }
+      ],
+      "http_status": 200,
+      "request_headers": {
+        "content-type": "application/json"
+      },
+      "authorization_transport": "HTTPS body, removed before research",
+      "response_headers": {
+        "cache-control": "no-store",
+        "cf-ray": "a47b96c9d8203f2a-ORD",
+        "content-type": "application/json",
+        "date": "Fri, 09 Oct 2026 07:14:38 GMT"
+      },
+      "response_secret_scan": "PASS",
+      "response": {
+        "status": "ok",
+        "question": "利润增长是否得到了现金流支持？",
+        "period": "2026-06-30",
+        "plan": {
+          "intent": "判断利润增长是否得到现金流支持",
+          "dimensions": [
+            "quality",
+            "trend"
+          ],
+          "rationale": "选择quality评估利润的真实水平，trend观察经营现金流的变化趋势，以确认盈利是否由现金流支撑",
+          "questions": [
+            "请提供最近一期的经营活动现金流净额",
+            "请提供利润总额及其变化情况",
+            "是否有重大资本支出影响现金流"
+          ],
+          "engine": "llm",
+          "metrics": [
+            "parent_profit",
+            "ocf",
+            "cash_coverage",
+            "profit_margin",
+            "adjusted_profit",
+            "roe",
+            "accounts_receivable",
+            "inventory",
+            "revenue"
+          ],
+          "company_type": "家电制造业（兼有工业技术、楼宇及自动化业务）"
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-MD-20260630-revenue",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "trend",
+            "title": "营业收入",
+            "claim": "营业收入",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "营业收入",
+            "raw_value": 260042490000,
+            "display_value": "2600.42亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "报表原值；人民币元 ÷ 一亿（展示换算），ROE 按披露值。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "营业收入",
+                "normalized_field": "revenue",
+                "source_column": "本报告期",
+                "raw_value": 260042490,
+                "normalized_value": 260042490000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "金额为半年度累计，ROE 为半年度披露值，不年化。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-parent_profit",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "归母净利润",
+            "claim": "归母净利润",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的净利润",
+            "raw_value": 26446037000,
+            "display_value": "264.46亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "报表原值；人民币元 ÷ 一亿（展示换算），ROE 按披露值。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "本报告期",
+                "raw_value": 26446037,
+                "normalized_value": 26446037000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "金额为半年度累计，ROE 为半年度披露值，不年化。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-adjusted_profit",
+            "topics": [
+              "nonrecurring"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "扣非归母净利润",
+            "claim": "扣非归母净利润",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的扣除非经常性损益的净利润",
+            "raw_value": 19595179000,
+            "display_value": "195.95亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "报表原值；人民币元 ÷ 一亿（展示换算），ROE 按披露值。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的扣除非经常性损益的净利润",
+                "normalized_field": "adjusted_profit",
+                "source_column": "本报告期",
+                "raw_value": 19595179,
+                "normalized_value": 19595179000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "金额为半年度累计，ROE 为半年度披露值，不年化。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-ocf",
+            "topics": [
+              "cashflow"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "经营现金流净额",
+            "claim": "经营现金流净额",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "经营活动产生的现金流量净额",
+            "raw_value": 37552090000,
+            "display_value": "375.52亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "报表原值；人民币元 ÷ 一亿（展示换算），ROE 按披露值。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "经营活动产生的现金流量净额",
+                "normalized_field": "ocf",
+                "source_column": "本报告期",
+                "raw_value": 37552090,
+                "normalized_value": 37552090000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "金额为半年度累计，ROE 为半年度披露值，不年化。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-roe",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "加权平均 ROE",
+            "claim": "加权平均 ROE",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "加权平均净资产收益率",
+            "raw_value": 11.33,
+            "display_value": "11.33%",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "报表原值；人民币元 ÷ 一亿（展示换算），ROE 按披露值。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "加权平均净资产收益率",
+                "normalized_field": "roe",
+                "source_column": "本报告期",
+                "raw_value": 11.33,
+                "normalized_value": 11.33,
+                "raw_unit": "%",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "金额为半年度累计，ROE 为半年度披露值，不年化。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-accounts_receivable",
+            "topics": [
+              "cashflow",
+              "receivables"
+            ],
+            "period_basis": "POINT_IN_TIME",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "应收账款",
+            "claim": "应收账款",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "应收账款",
+            "raw_value": 61954826000,
+            "display_value": "619.55亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "合并资产负债表期末余额；人民币千元 ×1000，展示为亿元。不是半年流量，不与半年收入直接作同比。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "accounts_receivable",
+                "source_field": "应收账款",
+                "source_page": 96,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "POINT_IN_TIME",
+                "source_column": "合并·期末",
+                "raw_value": 61954826,
+                "normalized_value": 61954826000,
+                "raw_unit": "千元",
+                "normalized_field": "accounts_receivable",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "期末存量不等于现金流量表的营运资金调节项。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-inventory",
+            "topics": [
+              "cashflow",
+              "inventory"
+            ],
+            "period_basis": "POINT_IN_TIME",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "存货",
+            "claim": "存货",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "存货",
+            "raw_value": 55440969000,
+            "display_value": "554.41亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "合并资产负债表期末余额；人民币千元 ×1000，展示为亿元。不是半年流量，不与半年收入直接作同比。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "inventory",
+                "source_field": "存货",
+                "source_page": 96,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "POINT_IN_TIME",
+                "source_column": "合并·期末",
+                "raw_value": 55440969,
+                "normalized_value": 55440969000,
+                "raw_unit": "千元",
+                "normalized_field": "inventory",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "期末存量不等于现金流量表的营运资金调节项。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-revenue-yoy",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "trend",
+            "title": "营业收入同比",
+            "claim": "营业收入同比",
+            "claim_type": "FACT",
+            "evidence_direction": "POSITIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "营业收入 / 营业收入",
+            "raw_value": 3.5515467089659136,
+            "display_value": "3.55%",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "（本期 ÷ 上年同期 − 1）×100；仅比较相同半年累计口径，非正基数不计算。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "营业收入",
+                "normalized_field": "revenue",
+                "source_column": "本报告期",
+                "raw_value": 260042490,
+                "normalized_value": 260042490000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2025-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "营业收入",
+                "normalized_field": "revenue",
+                "source_column": "上年同期",
+                "raw_value": 251123714,
+                "normalized_value": 251123714000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "正负方向只表示指标变化，不代表投资建议。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-parent_profit-yoy",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "归母净利润同比",
+            "claim": "归母净利润同比",
+            "claim_type": "FACT",
+            "evidence_direction": "POSITIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的净利润 / 归属于上市公司股东的净利润",
+            "raw_value": 1.6619979710683186,
+            "display_value": "1.66%",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "（本期 ÷ 上年同期 − 1）×100；仅比较相同半年累计口径，非正基数不计算。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "本报告期",
+                "raw_value": 26446037,
+                "normalized_value": 26446037000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2025-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "上年同期",
+                "raw_value": 26013690,
+                "normalized_value": 26013690000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "正负方向只表示指标变化，不代表投资建议。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-adjusted_profit-yoy",
+            "topics": [
+              "nonrecurring"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "扣非归母净利润同比",
+            "claim": "扣非归母净利润同比",
+            "claim_type": "FACT",
+            "evidence_direction": "NEGATIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的扣除非经常性损益的净利润 / 归属于上市公司股东的扣除非经常性损益的净利润",
+            "raw_value": -25.31015442151271,
+            "display_value": "-25.31%",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "（本期 ÷ 上年同期 − 1）×100；仅比较相同半年累计口径，非正基数不计算。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的扣除非经常性损益的净利润",
+                "normalized_field": "adjusted_profit",
+                "source_column": "本报告期",
+                "raw_value": 19595179,
+                "normalized_value": 19595179000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2025-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的扣除非经常性损益的净利润",
+                "normalized_field": "adjusted_profit",
+                "source_column": "上年同期",
+                "raw_value": 26235399,
+                "normalized_value": 26235399000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "正负方向只表示指标变化，不代表投资建议。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-ocf-yoy",
+            "topics": [
+              "cashflow"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "经营现金流净额同比",
+            "claim": "经营现金流净额同比",
+            "claim_type": "FACT",
+            "evidence_direction": "POSITIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "经营活动产生的现金流量净额 / 经营活动产生的现金流量净额",
+            "raw_value": 0.7271127140717537,
+            "display_value": "0.73%",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "（本期 ÷ 上年同期 − 1）×100；仅比较相同半年累计口径，非正基数不计算。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "经营活动产生的现金流量净额",
+                "normalized_field": "ocf",
+                "source_column": "本报告期",
+                "raw_value": 37552090,
+                "normalized_value": 37552090000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2025-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "经营活动产生的现金流量净额",
+                "normalized_field": "ocf",
+                "source_column": "上年同期",
+                "raw_value": 37281015,
+                "normalized_value": 37281015000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "正负方向只表示指标变化，不代表投资建议。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-cash-coverage",
+            "topics": [
+              "cashflow",
+              "coverage"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "现金流对归母利润的覆盖代理",
+            "claim": "现金流对归母利润的覆盖代理",
+            "claim_type": "FACT",
+            "evidence_direction": "POSITIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "经营活动产生的现金流量净额 / 归属于上市公司股东的净利润",
+            "raw_value": 1.4199515035088244,
+            "display_value": "1.42倍",
+            "unit": "倍",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "合并经营现金流净额 ÷ 归母净利润。分子含少数股东相关现金流，分母仅归母，属辅助代理；不能等同合并净利润现金含量。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "经营活动产生的现金流量净额",
+                "normalized_field": "ocf",
+                "source_column": "本报告期",
+                "raw_value": 37552090,
+                "normalized_value": 37552090000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "本报告期",
+                "raw_value": 26446037,
+                "normalized_value": 26446037000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-profit-margin",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "归母净利润 / 营业收入",
+            "claim": "归母净利润 / 营业收入",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的净利润 / 营业收入",
+            "raw_value": 10.169890697477939,
+            "display_value": "10.17%",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "归母净利润 ÷ 营业收入 ×100；属归母盈利比率，不等同合并净利率。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "本报告期",
+                "raw_value": 26446037,
+                "normalized_value": 26446037000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "营业收入",
+                "normalized_field": "revenue",
+                "source_column": "本报告期",
+                "raw_value": 260042490,
+                "normalized_value": 260042490000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-growth-tension",
+            "topics": [
+              "cashflow"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "利润增速快于现金流增速",
+            "claim": "利润增速快于现金流增速",
+            "claim_type": "INFERENCE",
+            "evidence_direction": "CONFLICTING",
+            "conflict_kind": "SIGNAL_TENSION",
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的净利润 / 归属于上市公司股东的净利润 / 经营活动产生的现金流量净额 / 经营活动产生的现金流量净额",
+            "raw_value": 0.9348852569965649,
+            "display_value": "0.93个百分点",
+            "unit": "个百分点",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "归母净利润同比 − 经营现金流同比；经营信号的分析张力，不是来源数字冲突。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "本报告期",
+                "raw_value": 26446037,
+                "normalized_value": 26446037000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2025-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "上年同期",
+                "raw_value": 26013690,
+                "normalized_value": 26013690000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "经营活动产生的现金流量净额",
+                "normalized_field": "ocf",
+                "source_column": "本报告期",
+                "raw_value": 37552090,
+                "normalized_value": 37552090000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2025-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "经营活动产生的现金流量净额",
+                "normalized_field": "ocf",
+                "source_column": "上年同期",
+                "raw_value": 37281015,
+                "normalized_value": 37281015000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "现金流覆盖水平与增长速度分别回答不同问题。无法凭增速差直接判断利润失真。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-cause",
+            "topics": [
+              "cashflow",
+              "receivables",
+              "inventory",
+              "payables"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "现金流变化的业务归因尚待核验",
+            "claim": "现金流变化的业务归因尚待核验",
+            "claim_type": "UNKNOWN",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "数据覆盖检查",
+            "source_url": null,
+            "source_field": "",
+            "raw_value": null,
+            "display_value": "待验证",
+            "unit": "",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:57:25.515719+00:00",
+            "calculation_method": "已有报表现金流桥接；仍需业务层面回款、采购结算等明细才能验证具体经营原因。",
+            "verification_status": "UNAVAILABLE",
+            "inputs": [],
+            "note": "已有数据无法隔离汇率、季节性、结算及并表变化的贡献，不能生成确定性因果结论。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-nonrecurring-cause",
+            "topics": [
+              "nonrecurring"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "非经常性项目的持续影响尚待核验",
+            "claim": "非经常性项目的持续影响尚待核验",
+            "claim_type": "UNKNOWN",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "数据覆盖检查",
+            "source_url": null,
+            "source_field": "",
+            "raw_value": null,
+            "display_value": "待验证",
+            "unit": "",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:57:25.515719+00:00",
+            "calculation_method": "需具体项目明细、对冲期限与后续期间披露，不能把当期调节数推为持续业绩。",
+            "verification_status": "UNAVAILABLE",
+            "inputs": [],
+            "note": "归母与扣非归母同属归母口径；不能用少数股东权益解释二者口径差异。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-liquidity-cause",
+            "topics": [
+              "liquidity"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "流动性与偿债压力尚不能确认",
+            "claim": "流动性与偿债压力尚不能确认",
+            "claim_type": "UNKNOWN",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "数据覆盖检查",
+            "source_url": null,
+            "source_field": "",
+            "raw_value": null,
+            "display_value": "待验证",
+            "unit": "",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:57:25.515719+00:00",
+            "calculation_method": "需债务到期结构、受限资金、可用授信与预测现金流；利润和经营现金流增速差不足以判断。",
+            "verification_status": "UNAVAILABLE",
+            "inputs": [],
+            "note": "没有完整偿债证据，不判断公司已经存在流动性压力。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-nonrecurring-parent",
+            "topics": [
+              "nonrecurring"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "归母非经常性损益净额",
+            "claim": "归母非经常性损益净额",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "归属于母公司所有者的非经常性损益净额",
+            "raw_value": 6850858000,
+            "display_value": "68.51亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "非经常性损益明细表原值；已扣除所得税与少数股东税后影响额。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "nonrecurring_parent",
+                "source_field": "归属于母公司所有者的非经常性损益净额",
+                "source_page": 204,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 6850858,
+                "normalized_value": 6850858000,
+                "raw_unit": "千元",
+                "normalized_field": "nonrecurring_parent",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-nonrecurring-financial",
+            "topics": [
+              "nonrecurring"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "金融资产等非经常性公允价值变动及处置收益",
+            "claim": "金融资产等非经常性公允价值变动及处置收益",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "金融资产等公允价值变动及处置投资收益（非经常性）",
+            "raw_value": 6745721000,
+            "display_value": "67.46亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "明细表综合项目；包含多类金融资产，不能等同单一衍生工具收益。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "nonrecurring_financial",
+                "source_field": "金融资产等公允价值变动及处置投资收益（非经常性）",
+                "source_page": 204,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 6745721,
+                "normalized_value": 6745721000,
+                "raw_unit": "千元",
+                "normalized_field": "nonrecurring_financial",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-profit-reconciliation",
+            "topics": [
+              "nonrecurring"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "归母与扣非归母差额核对",
+            "claim": "归母与扣非归母差额核对",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的净利润 / 归属于上市公司股东的扣除非经常性损益的净利润 / 归属于母公司所有者的非经常性损益净额",
+            "raw_value": 6850858000,
+            "display_value": "68.51亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "归母净利润 − 扣非归母净利润；与披露的归母非经常性损益净额核对。税后归母口径。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "本报告期",
+                "raw_value": 26446037,
+                "normalized_value": 26446037000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的扣除非经常性损益的净利润",
+                "normalized_field": "adjusted_profit",
+                "source_column": "本报告期",
+                "raw_value": 19595179,
+                "normalized_value": 19595179000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "field": "nonrecurring_parent",
+                "source_field": "归属于母公司所有者的非经常性损益净额",
+                "source_page": 204,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 6850858,
+                "normalized_value": 6850858000,
+                "raw_unit": "千元",
+                "normalized_field": "nonrecurring_parent",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "差额与非经常性损益净额一致；不代表这些损益会持续。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-ocf-bridge",
+            "topics": [
+              "cashflow",
+              "receivables",
+              "inventory",
+              "payables"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "合并净利润至经营现金流的调节核对",
+            "claim": "合并净利润至经营现金流的调节核对",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "净利润 / 资产减值损失 / 信用减值损失 / 折旧和摊销 / 资产处置损失 / 公允价值变动(收益)/损失 / 财务费用/(收入) / 投资收益 / 递延所得税资产增加 / 递延所得税负债减少 / 存货的减少 / 经营性应收项目的增加 / 经营性应付项目的增加 / 股份支付及其他 / 经营活动产生的现金流量净额",
+            "raw_value": 37552090000,
+            "display_value": "375.52亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "将合并净利润加各项报表调节数，核对经营现金流。此处使用合并净利润，不能代入归母净利润。",
+            "verification_status": "CALCULATED",
+            "inputs": [
+              {
+                "field": "bridge_net_profit",
+                "source_field": "净利润",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 26582874,
+                "normalized_value": 26582874000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_net_profit",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_impairment",
+                "source_field": "资产减值损失",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 1652869,
+                "normalized_value": 1652869000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_impairment",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_credit",
+                "source_field": "信用减值损失",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 606402,
+                "normalized_value": 606402000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_credit",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_depreciation",
+                "source_field": "折旧和摊销",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 5002775,
+                "normalized_value": 5002775000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_depreciation",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_disposal",
+                "source_field": "资产处置损失",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 178365,
+                "normalized_value": 178365000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_disposal",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_fair_value",
+                "source_field": "公允价值变动(收益)/损失",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": -4997108,
+                "normalized_value": -4997108000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_fair_value",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_finance",
+                "source_field": "财务费用/(收入)",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 1715548,
+                "normalized_value": 1715548000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_finance",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_investment",
+                "source_field": "投资收益",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": -3040102,
+                "normalized_value": -3040102000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_investment",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_tax_asset",
+                "source_field": "递延所得税资产增加",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": -1817862,
+                "normalized_value": -1817862000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_tax_asset",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_tax_liability",
+                "source_field": "递延所得税负债减少",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 725318,
+                "normalized_value": 725318000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_tax_liability",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_inventory",
+                "source_field": "存货的减少",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 9062647,
+                "normalized_value": 9062647000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_inventory",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_receivables",
+                "source_field": "经营性应收项目的增加",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": -24088817,
+                "normalized_value": -24088817000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_receivables",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_payables",
+                "source_field": "经营性应付项目的增加",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 25484008,
+                "normalized_value": 25484008000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_payables",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_other",
+                "source_field": "股份支付及其他",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 485173,
+                "normalized_value": 485173000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_other",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              },
+              {
+                "field": "bridge_ocf",
+                "source_field": "经营活动产生的现金流量净额",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 37552090,
+                "normalized_value": 37552090000,
+                "raw_unit": "千元",
+                "normalized_field": "ocf",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "各项为报表调节贡献；不能单独证明客户回款、采购策略或汇率等具体经营原因。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-bridge-inventory",
+            "topics": [
+              "cashflow",
+              "inventory"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "存货减少的现金流调节项",
+            "claim": "存货减少的现金流调节项",
+            "claim_type": "FACT",
+            "evidence_direction": "POSITIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "存货的减少",
+            "raw_value": 9062647000,
+            "display_value": "90.63亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "现金流补充资料有符号原值；为当期流量，不等于对应资产负债期末余额变化。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "bridge_inventory",
+                "source_field": "存货的减少",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 9062647,
+                "normalized_value": 9062647000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_inventory",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "方向表示对净利润调节到经营现金流的正负贡献，不代表投资判断。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-bridge-receivables",
+            "topics": [
+              "cashflow",
+              "receivables"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "经营性应收增加的现金流调节项",
+            "claim": "经营性应收增加的现金流调节项",
+            "claim_type": "FACT",
+            "evidence_direction": "NEGATIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "经营性应收项目的增加",
+            "raw_value": -24088817000,
+            "display_value": "-240.89亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "现金流补充资料有符号原值；为当期流量，不等于对应资产负债期末余额变化。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "bridge_receivables",
+                "source_field": "经营性应收项目的增加",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": -24088817,
+                "normalized_value": -24088817000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_receivables",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "方向表示对净利润调节到经营现金流的正负贡献，不代表投资判断。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-bridge-payables",
+            "topics": [
+              "cashflow",
+              "payables"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "经营性应付增加的现金流调节项",
+            "claim": "经营性应付增加的现金流调节项",
+            "claim_type": "FACT",
+            "evidence_direction": "POSITIVE",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "经营性应付项目的增加",
+            "raw_value": 25484008000,
+            "display_value": "254.84亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "现金流补充资料有符号原值；为当期流量，不等于对应资产负债期末余额变化。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "bridge_payables",
+                "source_field": "经营性应付项目的增加",
+                "source_page": 177,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_column": "本期数",
+                "raw_value": 25484008,
+                "normalized_value": 25484008000,
+                "raw_unit": "千元",
+                "normalized_field": "bridge_payables",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "方向表示对净利润调节到经营现金流的正负贡献，不代表投资判断。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-accounts_payable",
+            "topics": [
+              "cashflow",
+              "payables"
+            ],
+            "period_basis": "POINT_IN_TIME",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "应付账款期末余额",
+            "claim": "应付账款期末余额",
+            "claim_type": "FACT",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 深圳证券交易所",
+            "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+            "source_field": "应付账款",
+            "raw_value": 109516782000,
+            "display_value": "1095.17亿元",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+            "calculation_method": "合并资产负债表期末存量，不等同经营性应付项目现金流调节项。",
+            "verification_status": "SOURCE_EXTRACTED",
+            "inputs": [
+              {
+                "field": "accounts_payable",
+                "source_field": "应付账款",
+                "source_page": 97,
+                "source_id": "midea-h1-2026-full",
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "POINT_IN_TIME",
+                "source_column": "合并·期末",
+                "raw_value": 109516782,
+                "normalized_value": 109516782000,
+                "raw_unit": "千元",
+                "normalized_field": "accounts_payable",
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+                "source_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF"
+              }
+            ],
+            "note": "",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-gross-margin",
+            "topics": [
+              "gross_margin"
+            ],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "毛利率数据未覆盖",
+            "claim": "毛利率数据未覆盖",
+            "claim_type": "UNKNOWN",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "数据覆盖检查",
+            "source_url": null,
+            "source_field": "",
+            "raw_value": null,
+            "display_value": "待验证",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:57:25.515719+00:00",
+            "calculation_method": "需要同口径营业收入与营业成本。",
+            "verification_status": "UNAVAILABLE",
+            "inputs": [],
+            "note": "不以归母盈利比率代替毛利率。",
+            "limitations": []
+          }
+        ],
+        "analysis": {
+          "claims": [
+            {
+              "text": "经营现金流对归母利润的覆盖代理为 1.42倍。这反映当期现金规模；分子、分母的少数股东口径并不完全一致。",
+              "rendered_text": "经营现金流对归母利润的覆盖代理为 1.42倍。这反映当期现金规模；分子、分母的少数股东口径并不完全一致。",
+              "claim_type": "INFERENCE",
+              "evidence_ids": [
+                "E-MD-20260630-cash-coverage"
+              ],
+              "verification_status": "RULE_DERIVED",
+              "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+            },
+            {
+              "text": "利润同比增速高于经营现金流同比，差 0.93个百分点。覆盖水平与增速方向需同时观察，不能仅据此认定盈利失真。",
+              "rendered_text": "利润同比增速高于经营现金流同比，差 0.93个百分点。覆盖水平与增速方向需同时观察，不能仅据此认定盈利失真。",
+              "claim_type": "INFERENCE",
+              "evidence_ids": [
+                "E-MD-20260630-growth-tension"
+              ],
+              "verification_status": "RULE_DERIVED",
+              "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+            },
+            {
+              "text": "扣非归母净利润同比为 -25.31%，与归母利润表现存在分化。应进一步核对非经常性损益和会计分类。",
+              "rendered_text": "扣非归母净利润同比为 -25.31%，与归母利润表现存在分化。应进一步核对非经常性损益和会计分类。",
+              "claim_type": "INFERENCE",
+              "evidence_ids": [
+                "E-MD-20260630-adjusted_profit-yoy"
+              ],
+              "verification_status": "RULE_DERIVED",
+              "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+            },
+            {
+              "text": "尚缺少验证变化原因的完整证据；对未来的影响暂无法确认。",
+              "rendered_text": "尚缺少验证变化原因的完整证据；对未来的影响暂无法确认。",
+              "claim_type": "UNKNOWN",
+              "evidence_ids": [
+                "E-MD-20260630-cause"
+              ],
+              "verification_status": "RULE_DERIVED",
+              "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+            }
+          ],
+          "followups": [
+            "经营性应收项目如何影响现金流调节？",
+            "存货与经营性应付项目的现金流调节方向是否一致？",
+            "现金覆盖使用合并净利润和归母净利润有什么差异？"
+          ],
+          "followup_source": "rule_question_bank"
+        },
+        "engine": "rules",
+        "model_state": "failed",
+        "data_mode": "public_report_snapshot",
+        "model_usage": {
+          "provider": "Groq",
+          "model": "openai/gpt-oss-120b",
+          "planning": "validated",
+          "interpretation": "not_validated",
+          "validated_at": null,
+          "calls": [
+            {
+              "stage": "research_plan",
+              "provider": "Groq",
+              "model": "openai/gpt-oss-120b",
+              "response_id": "chatcmpl-2649a2a9-e769-4e29-8487-5928506d92c7",
+              "called_at": "2026-10-09T07:14:34.745Z",
+              "usage": {
+                "prompt_tokens": 448,
+                "completion_tokens": 239,
+                "total_tokens": 687
+              }
+            },
+            {
+              "stage": "evidence_analysis",
+              "provider": "Groq",
+              "model": "openai/gpt-oss-120b",
+              "response_id": "chatcmpl-f02e3857-29d9-4bb9-9f1e-45797bc1baec",
+              "called_at": "2026-10-09T07:14:37.911Z",
+              "usage": {
+                "prompt_tokens": 2327,
+                "completion_tokens": 1096,
+                "total_tokens": 3423
+              }
+            },
+            {
+              "stage": "claim_repair",
+              "provider": "Groq",
+              "model": "openai/gpt-oss-120b",
+              "response_id": "chatcmpl-ed683b29-4047-40f8-9297-378e7cb601a9",
+              "called_at": "2026-10-09T07:14:38.437Z",
+              "usage": {
+                "prompt_tokens": 581,
+                "completion_tokens": 151,
+                "total_tokens": 732
+              }
+            }
+          ],
+          "validation_failures": [
+            {
+              "message": "基准或行业比较缺少明确来源和口径，输出已拦截。",
+              "claim_text": "现金覆盖代理高于基准，但分子含少数股东现金流，分母仅为归母利润，无法直接确认利润增长得到现金流支持。"
+            }
+          ]
+        },
+        "warnings": [
+          "AI 解读被拦截：基准或行业比较缺少明确来源和口径，输出已拦截。 以下为规则生成的研究说明。",
+          "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+        ],
+        "selected_ids": [],
+        "history": [
+          {
+            "question": "利润增长是否得到了现金流支持？",
+            "summary": "经营现金流对归母利润的覆盖代理为 1.42倍。这反映当期现金规模；分子、分母的少数股东口径并不完全一致。 利润同比增速高于经营现金流同比，差 0.93个百分点。覆盖水平与增速方向需同时观察，不能仅据此认定盈利失真。 扣非归母净利润同比为 -25.31%，与归母利润表现存在分化。应进一步核对非经常性损益和会计分类。 尚缺少验证变化原因的完整证据；对未来的影响暂无法确认。"
+          }
+        ],
+        "financials": [
+          {
+            "company_code": "000333.SZ",
+            "company_name": "美的集团",
+            "period": "2024-06-30",
+            "basis": "H1_YTD",
+            "currency": "CNY",
+            "published_at": "2025-08-30",
+            "source_id": "midea-h1-2025",
+            "source_fields": {
+              "revenue": "营业收入",
+              "parent_profit": "归属于上市公司股东的净利润",
+              "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+              "ocf": "经营活动产生的现金流量净额",
+              "roe": "加权平均净资产收益率"
+            },
+            "source_column": "上年同期",
+            "values": {
+              "revenue": 217274086000,
+              "parent_profit": 20804176000,
+              "adjusted_profit": 20180878000,
+              "ocf": 33488170000,
+              "roe": 12.2
+            },
+            "raw_values": {
+              "revenue": 217274086,
+              "parent_profit": 20804176,
+              "adjusted_profit": 20180878,
+              "ocf": 33488170,
+              "roe": 12.2
+            }
+          },
+          {
+            "company_code": "000333.SZ",
+            "company_name": "美的集团",
+            "period": "2025-06-30",
+            "basis": "H1_YTD",
+            "currency": "CNY",
+            "published_at": "2026-08-29",
+            "source_id": "midea-h1-2026",
+            "source_fields": {
+              "revenue": "营业收入",
+              "parent_profit": "归属于上市公司股东的净利润",
+              "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+              "ocf": "经营活动产生的现金流量净额",
+              "roe": "加权平均净资产收益率"
+            },
+            "source_column": "上年同期",
+            "values": {
+              "revenue": 251123714000,
+              "parent_profit": 26013690000,
+              "adjusted_profit": 26235399000,
+              "ocf": 37281015000,
+              "roe": 11.29
+            },
+            "raw_values": {
+              "revenue": 251123714,
+              "parent_profit": 26013690,
+              "adjusted_profit": 26235399,
+              "ocf": 37281015,
+              "roe": 11.29
+            }
+          },
+          {
+            "company_code": "000333.SZ",
+            "company_name": "美的集团",
+            "period": "2026-06-30",
+            "basis": "H1_YTD",
+            "currency": "CNY",
+            "published_at": "2026-08-29",
+            "source_id": "midea-h1-2026",
+            "source_fields": {
+              "revenue": "营业收入",
+              "parent_profit": "归属于上市公司股东的净利润",
+              "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+              "ocf": "经营活动产生的现金流量净额",
+              "roe": "加权平均净资产收益率"
+            },
+            "source_column": "本报告期",
+            "values": {
+              "revenue": 260042490000,
+              "parent_profit": 26446037000,
+              "adjusted_profit": 19595179000,
+              "ocf": 37552090000,
+              "roe": 11.33
+            },
+            "raw_values": {
+              "revenue": 260042490,
+              "parent_profit": 26446037,
+              "adjusted_profit": 19595179,
+              "ocf": 37552090,
+              "roe": 11.33
+            }
+          }
+        ],
+        "peers": [
+          {
+            "company_code": "000651.SZ",
+            "company_name": "格力电器",
+            "period": "2026-06-30",
+            "basis": "H1_YTD",
+            "currency": "CNY",
+            "published_at": "2026-08-27",
+            "source_id": "gree-h1-2026",
+            "source_fields": {
+              "revenue": "营业收入",
+              "parent_profit": "归属于上市公司股东的净利润",
+              "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+              "ocf": "经营活动产生的现金流量净额",
+              "roe": "加权平均净资产收益率"
+            },
+            "source_column": "本报告期",
+            "values": {
+              "revenue": 89397522501.21,
+              "parent_profit": 13277590882.57,
+              "adjusted_profit": 12706672720.9,
+              "ocf": 18808832392.46,
+              "roe": 8.68
+            },
+            "raw_values": {
+              "revenue": 89397522501.21,
+              "parent_profit": 13277590882.57,
+              "adjusted_profit": 12706672720.9,
+              "ocf": 18808832392.46,
+              "roe": 8.68
+            }
+          },
+          {
+            "company_code": "000333.SZ",
+            "company_name": "美的集团",
+            "period": "2026-06-30",
+            "basis": "H1_YTD",
+            "currency": "CNY",
+            "published_at": "2026-08-29",
+            "source_id": "midea-h1-2026",
+            "source_fields": {
+              "revenue": "营业收入",
+              "parent_profit": "归属于上市公司股东的净利润",
+              "adjusted_profit": "归属于上市公司股东的扣除非经常性损益的净利润",
+              "ocf": "经营活动产生的现金流量净额",
+              "roe": "加权平均净资产收益率"
+            },
+            "source_column": "本报告期",
+            "values": {
+              "revenue": 260042490000,
+              "parent_profit": 26446037000,
+              "adjusted_profit": 19595179000,
+              "ocf": 37552090000,
+              "roe": 11.33
+            },
+            "raw_values": {
+              "revenue": 260042490,
+              "parent_profit": 26446037,
+              "adjusted_profit": 19595179,
+              "ocf": 37552090,
+              "roe": 11.33
+            }
+          }
+        ],
+        "prices": [],
+        "valuations": [],
+        "coverage": {
+          "report_period": "2026-06-30",
+          "published_at": "2026-08-29",
+          "retrieved_at": "2026-10-08T18:57:25.515719+00:00",
+          "sources": [
+            {
+              "id": "midea-h1-2026",
+              "code": "000333.SZ",
+              "name": "美的集团",
+              "year": 2026,
+              "page": 2,
+              "published": "2026-08-29",
+              "unit": "千元",
+              "multiplier": 1000,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+              "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+              "sha256": "9c4f21cebe9b35824276c41b90647bead0fd7948abc300ec1a2db0a7dfcac6f1",
+              "title": "美的集团 2026 年半年度报告摘要",
+              "extraction": "pypdf + required row regex; candidate review pending"
+            },
+            {
+              "id": "midea-h1-2025",
+              "code": "000333.SZ",
+              "name": "美的集团",
+              "year": 2025,
+              "page": 7,
+              "published": "2025-08-30",
+              "unit": "千元",
+              "multiplier": 1000,
+              "url": "https://static.cninfo.com.cn/finalpage/2025-08-30/1224626720.PDF",
+              "retrieved_at": "2026-10-08T18:34:33.000215+00:00",
+              "sha256": "cec88d9c6ded328ac9b467ba55254ab831b906dfc613982f6ac0504fc2055a12",
+              "title": "美的集团 2025 年半年度报告全文",
+              "extraction": "pypdf + required row regex; candidate review pending"
+            },
+            {
+              "id": "gree-h1-2026",
+              "code": "000651.SZ",
+              "name": "格力电器",
+              "year": 2026,
+              "page": 7,
+              "published": "2026-08-27",
+              "unit": "元",
+              "multiplier": 1,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225515004.PDF",
+              "retrieved_at": "2026-10-08T18:34:38.740561+00:00",
+              "sha256": "50da2e03fddbe9dd424d8fe7881f47fb34efa5d38c96aa9449c12e445c3b2dec",
+              "title": "格力电器 2026 年半年度报告全文",
+              "extraction": "pypdf + required row regex; candidate review pending"
+            },
+            {
+              "id": "midea-h1-2026-full",
+              "title": "美的集团 2026 H1 全文及财务附注",
+              "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/df25443f-d67a-4cc5-8bd6-6c3e681a9575.PDF",
+              "page": 177,
+              "pages": [
+                96,
+                97,
+                177,
+                204
+              ],
+              "unit": "千元",
+              "published": "2026-08-29",
+              "retrieved_at": "2026-10-09T00:02:10.651721+00:00",
+              "sha256": "576dd80e353e53296a800b03e9889a9cbb2e8b91fa2ab3c1dace7c10159179b8",
+              "extraction": "Exact page/row extraction + cash bridge and nonrecurring reconciliation; personal review pending"
+            }
+          ],
+          "conflicts": []
+        },
+        "trace": [
+          {
+            "step": "问题理解与规划",
+            "engine": "llm",
+            "dimensions": [
+              "quality",
+              "trend"
+            ]
+          },
+          {
+            "step": "取数与标准化",
+            "engine": "public_report_snapshot",
+            "metrics": [
+              "parent_profit",
+              "ocf",
+              "cash_coverage",
+              "profit_margin",
+              "adjusted_profit",
+              "roe",
+              "accounts_receivable",
+              "inventory",
+              "revenue"
+            ]
+          },
+          {
+            "step": "指标计算与证据",
+            "engine": "deterministic",
+            "count": 26
+          },
+          {
+            "step": "解释与引用检查",
+            "engine": "rules",
+            "status": "failed"
+          }
+        ],
+        "elapsed_ms": 4561,
+        "disclaimer": "仅供研究辅助，不构成投资建议。正负方向指指标变化，推断与未知信息应进一步核验。"
+      },
+      "semantic_status": "UNVERIFIED",
+      "semantic_note": "Root independent audit reviews this exact response against original records and deterministic checks; model success alone is not semantic proof.",
+      "finished_at": "2026-10-09T07:14:38.137Z"
+    }
+  ],
+  "status": "FAIL",
+  "public_status": {
+    "http_status": 200,
+    "body": {
+      "financial_configured": false,
+      "model_configured": true,
+      "model_provider": "Groq",
+      "model": "openai/gpt-oss-120b",
+      "verification": "per_request",
+      "shared_rate_limit": true,
+      "access_protected": true
+    }
+  },
+  "stopped_at": "2026-10-09T07:15:30.549225+00:00",
+  "planned_cases": 6,
+  "stopped_reason": "First case still failed: a single-claim repair left another invalid claim. Stopped before remaining requests to fix batched semantic repair; no remaining case is counted as tested."
+}

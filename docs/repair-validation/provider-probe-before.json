@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-09T06:52:37.672Z",
+  "method": "Real Groq direct adapter diagnostic of the saved failing context, not public E2E and not Mock",
+  "events": [
+    {
+      "http_status": 400,
+      "request_id": "req_01m4fpyrmkeg6a51fz21gsd43v",
+      "code": "json_validate_failed",
+      "type": "invalid_request_error",
+      "message": "Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/claims/1/claim_type' does not validate with /properties/claims/items/anyOf/0/properties/claim_type/const: value must be 'INFERENCE'"
+    }
+  ],
+  "status": "FAIL",
+  "error": "模型接口错误 HTTP 400；未生成正常 AI 结论。"
+}

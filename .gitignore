@@ -37,6 +37,7 @@ yarn-error.log*
 /.pytest_cache/
 /tmp/
 *.log
+!/docs/auto-audit/build.log
 
 # vercel
 .vercel

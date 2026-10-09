@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-09T06:57:10.769Z",
+  "method": "Real Groq direct adapter diagnostic of the saved failing context, not public E2E and not Mock",
+  "events": [
+    {
+      "http_status": 400,
+      "request_id": "req_01m4fq72zpe97v7f22228bzk8b",
+      "code": "json_validate_failed",
+      "type": "invalid_request_error",
+      "message": "Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/claims/1/text' does not validate with /properties/claims/items/properties/text/pattern: '现金流变动的具体业务来源尚未核实，现有资料未覆盖汇率、季节性、结算及并表等因素的贡献。' does not match pattern '^[^0-9０-９{}零壹贰叁肆伍陆柒捌玖拾佰仟亿兆倍元年月日季之]+$'"
+    },
+    {
+      "stage": "evidence_analysis",
+      "provider": "Groq",
+      "model": "openai/gpt-oss-120b",
+      "response_id": null,
+      "called_at": "2026-10-09T06:57:10.768Z",
+      "http_status": 400,
+      "error_code": "json_validate_failed",
+      "error_type": "invalid_request_error",
+      "usage": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null
+      }
+    }
+  ],
+  "status": "FAIL",
+  "error": "模型接口错误 HTTP 400（json_validate_failed）；未生成正常 AI 结论。"
+}

@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-09T07:36:24.078Z",
+  "method": "Real Groq 20b compatibility diagnostic; not production acceptance",
+  "engine": "rules",
+  "model_state": "failed",
+  "model_usage": {
+    "provider": "Groq",
+    "model": "openai/gpt-oss-20b",
+    "planning": "validated",
+    "interpretation": "not_validated",
+    "validated_at": null,
+    "calls": [
+      {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-20b",
+        "response_id": "chatcmpl-b7a75ff6-18e9-4378-8b9f-1ecbd73055fa",
+        "called_at": "2026-10-09T07:36:23.648Z",
+        "usage": {
+          "prompt_tokens": 531,
+          "completion_tokens": 117,
+          "total_tokens": 648
+        }
+      },
+      {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-20b",
+        "response_id": null,
+        "called_at": "2026-10-09T07:36:24.078Z",
+        "http_status": 400,
+        "error_code": "output_parse_failed",
+        "error_type": "invalid_request_error",
+        "usage": {
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "total_tokens": null
+        }
+      }
+    ],
+    "validation_failures": [
+      {
+        "message": "模型接口错误 HTTP 400（output_parse_failed）；未生成正常 AI 结论。",
+        "claim_text": null
+      }
+    ]
+  },
+  "claims": [
+    {
+      "text": "经营现金流对归母利润的覆盖代理为 1.42倍。这反映当期现金规模；分子、分母的少数股东口径并不完全一致。",
+      "rendered_text": "经营现金流对归母利润的覆盖代理为 1.42倍。这反映当期现金规模；分子、分母的少数股东口径并不完全一致。",
+      "claim_type": "INFERENCE",
+      "evidence_ids": [
+        "E-MD-20260630-cash-coverage"
+      ],
+      "verification_status": "RULE_DERIVED",
+      "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+    },
+    {
+      "text": "利润同比增速高于经营现金流同比，差 0.93个百分点。覆盖水平与增速方向需同时观察，不能仅据此认定盈利失真。",
+      "rendered_text": "利润同比增速高于经营现金流同比，差 0.93个百分点。覆盖水平与增速方向需同时观察，不能仅据此认定盈利失真。",
+      "claim_type": "INFERENCE",
+      "evidence_ids": [
+        "E-MD-20260630-growth-tension"
+      ],
+      "verification_status": "RULE_DERIVED",
+      "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+    },
+    {
+      "text": "扣非归母净利润同比为 -25.31%，与归母利润表现存在分化。应进一步核对非经常性损益和会计分类。",
+      "rendered_text": "扣非归母净利润同比为 -25.31%，与归母利润表现存在分化。应进一步核对非经常性损益和会计分类。",
+      "claim_type": "INFERENCE",
+      "evidence_ids": [
+        "E-MD-20260630-adjusted_profit-yoy"
+      ],
+      "verification_status": "RULE_DERIVED",
+      "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+    },
+    {
+      "text": "追问已保留所选证据。现有资料不足以确认差异的具体原因，需要相关财务附注或同口径补充数据。",
+      "rendered_text": "追问已保留所选证据。现有资料不足以确认差异的具体原因，需要相关财务附注或同口径补充数据。",
+      "claim_type": "UNKNOWN",
+      "evidence_ids": [
+        "E-MD-20260630-cause"
+      ],
+      "verification_status": "RULE_DERIVED",
+      "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+    }
+  ],
+  "warnings": [
+    "AI 解读被拦截：模型接口错误 HTTP 400（output_parse_failed）；未生成正常 AI 结论。 以下为规则生成的研究说明。",
+    "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+  ]
+}

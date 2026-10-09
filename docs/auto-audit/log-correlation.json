@@ -1,0 +1,147 @@
+[
+  {
+    "case": "利润与现金流",
+    "client_ray": "a47b4e429ad42972",
+    "matched_server_requests": [
+      {
+        "timestamp": 1791527107311,
+        "request_id": "13ff46414dd645a1b62f21ca6d4ebc7c",
+        "ray_id": "a47b4e429ad42972",
+        "trigger": "POST /api/research",
+        "level": "info",
+        "type": "cf-worker-event",
+        "outcome": "ok",
+        "status": 200,
+        "method": "POST",
+        "path": "/api/research",
+        "wall_time_ms": 4656,
+        "script_version": "b55fd9ff-ac4e-49a4-8476-8bfbf8eab492",
+        "access_header_recorded": true,
+        "outbound_llm_response_ids_available": false
+      }
+    ],
+    "server_invocation_match": "PASS",
+    "llm_response_ids": [
+      "chatcmpl-5b5b7324-0c44-4895-b467-c4a515048a85",
+      "chatcmpl-bac268d1-77cb-4999-aafb-a84e8a9dcce8"
+    ],
+    "outbound_provider_log": "UNVERIFIED",
+    "limitation": "Worker invocation logs have no outbound Groq response IDs; application response metadata is not an independent provider trace."
+  },
+  {
+    "case": "经营质量",
+    "client_ray": "a47b4ffb6e5468d7",
+    "matched_server_requests": [
+      {
+        "timestamp": 1791527177930,
+        "request_id": "1cbe92c7c1537dbc9c98e24b90ea7bf1",
+        "ray_id": "a47b4ffb6e5468d7",
+        "trigger": "POST /api/research",
+        "level": "info",
+        "type": "cf-worker-event",
+        "outcome": "ok",
+        "status": 200,
+        "method": "POST",
+        "path": "/api/research",
+        "wall_time_ms": 4731,
+        "script_version": "b55fd9ff-ac4e-49a4-8476-8bfbf8eab492",
+        "access_header_recorded": true,
+        "outbound_llm_response_ids_available": false
+      }
+    ],
+    "server_invocation_match": "PASS",
+    "llm_response_ids": [
+      "chatcmpl-db39e6b8-e89f-478e-8ef3-7738800e9545",
+      "chatcmpl-c0676d76-4f6a-43fc-ae4e-a99287435b9e"
+    ],
+    "outbound_provider_log": "UNVERIFIED",
+    "limitation": "Worker invocation logs have no outbound Groq response IDs; application response metadata is not an independent provider trace."
+  },
+  {
+    "case": "估值缺失",
+    "client_ray": "a47b51b4cd46eb64",
+    "matched_server_requests": [
+      {
+        "timestamp": 1791527247647,
+        "request_id": "b92aaed1bc17efe1b64e446a7d103327",
+        "ray_id": "a47b51b4cd46eb64",
+        "trigger": "POST /api/research",
+        "level": "info",
+        "type": "cf-worker-event",
+        "outcome": "ok",
+        "status": 200,
+        "method": "POST",
+        "path": "/api/research",
+        "wall_time_ms": 3798,
+        "script_version": "b55fd9ff-ac4e-49a4-8476-8bfbf8eab492",
+        "access_header_recorded": true,
+        "outbound_llm_response_ids_available": false
+      }
+    ],
+    "server_invocation_match": "PASS",
+    "llm_response_ids": [
+      "chatcmpl-c2f33896-3bd0-445e-be2e-424a305aeabb",
+      "chatcmpl-18cf29d5-e4ea-4ad5-aa96-df27872241b5"
+    ],
+    "outbound_provider_log": "UNVERIFIED",
+    "limitation": "Worker invocation logs have no outbound Groq response IDs; application response metadata is not an independent provider trace."
+  },
+  {
+    "case": "行情缺失",
+    "client_ray": "a47b536878e3f60c",
+    "matched_server_requests": [
+      {
+        "timestamp": 1791527315937,
+        "request_id": "a53ca0beb414fd328c7fb434880e0532",
+        "ray_id": "a47b536878e3f60c",
+        "trigger": "POST /api/research",
+        "level": "info",
+        "type": "cf-worker-event",
+        "outcome": "ok",
+        "status": 200,
+        "method": "POST",
+        "path": "/api/research",
+        "wall_time_ms": 2267,
+        "script_version": "b55fd9ff-ac4e-49a4-8476-8bfbf8eab492",
+        "access_header_recorded": true,
+        "outbound_llm_response_ids_available": false
+      }
+    ],
+    "server_invocation_match": "PASS",
+    "llm_response_ids": [
+      "chatcmpl-6374af23-2dc7-4bb8-abff-182234f61914",
+      "chatcmpl-b0fdfd14-5d47-470f-9b1d-922caaeeb97e"
+    ],
+    "outbound_provider_log": "UNVERIFIED",
+    "limitation": "Worker invocation logs have no outbound Groq response IDs; application response metadata is not an independent provider trace."
+  },
+  {
+    "case": "所选证据上下文追问",
+    "client_ray": "a47b55135feb0ce1",
+    "matched_server_requests": [
+      {
+        "timestamp": 1791527385767,
+        "request_id": "0b1a667bf1f7e1fb5375d9d8f2643b7c",
+        "ray_id": "a47b55135feb0ce1",
+        "trigger": "POST /api/research",
+        "level": "info",
+        "type": "cf-worker-event",
+        "outcome": "ok",
+        "status": 200,
+        "method": "POST",
+        "path": "/api/research",
+        "wall_time_ms": 4013,
+        "script_version": "b55fd9ff-ac4e-49a4-8476-8bfbf8eab492",
+        "access_header_recorded": true,
+        "outbound_llm_response_ids_available": false
+      }
+    ],
+    "server_invocation_match": "PASS",
+    "llm_response_ids": [
+      "chatcmpl-f5e5c10a-e45f-4e73-bb04-bc6b2b12aec5",
+      "chatcmpl-0d2f504f-c135-49ea-aed9-4f856c81580b"
+    ],
+    "outbound_provider_log": "UNVERIFIED",
+    "limitation": "Worker invocation logs have no outbound Groq response IDs; application response metadata is not an independent provider trace."
+  }
+]

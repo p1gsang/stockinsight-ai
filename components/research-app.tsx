@@ -39,7 +39,7 @@ export default function ResearchApp({initial}:{initial:ResearchResult}) {
       const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),100000);
       const context=asFollowup||selected.length?{question:result.question,dimensions:result.plan.dimensions,selected_ids:selected,history:result.history}:undefined;
       let response:Response;
-      try{response=await fetch("/api/research",{method:"POST",headers:{"Content-Type":"application/json",...(access?{"x-research-access":access}:{})},body:JSON.stringify({question:q,period,mode,context}),signal:controller.signal});}finally{clearTimeout(timeout);}
+      try{response=await fetch("/api/research",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q,period,mode,context,...(access?{access_code:access}:{})}),signal:controller.signal});}finally{clearTimeout(timeout);}
       if(response.status===401)setSettings(true);
       if(response.status===429){const window=retryWindow(response.headers.get("Retry-After"));setClock(window.startedAt);setRetryAt(window.retryAt);}
       const data=await response.json() as ResearchResult & {error?:string;message?:string};if(!response.ok)throw new Error(data.error||"研究请求失败。");if(data.status!=="ok")throw new Error(data.message||"当前问题超出研究能力。");

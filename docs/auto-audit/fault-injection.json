@@ -1,0 +1,293 @@
+{
+  "checked_at": "2026-10-09T07:01:17.543Z",
+  "source_commit": "62141347a0a8e48d779ad9c3dad15463e38e22ac",
+  "method": "Fault injection only; real Groq acceptance separately in public-llm.json",
+  "summary": {
+    "PASS": 13,
+    "FAIL": 1,
+    "UNVERIFIED": 0
+  },
+  "cases": [
+    {
+      "name": "missing revenue does not become zero or normal growth",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "rows": [
+          {
+            "evidence_id": "E-MD-20260630-revenue",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "trend",
+            "title": "营业收入",
+            "claim": "营业收入",
+            "claim_type": "UNKNOWN",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "数据覆盖检查",
+            "source_url": null,
+            "source_field": "",
+            "raw_value": null,
+            "display_value": "待验证",
+            "unit": "亿元",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:57:25.515719+00:00",
+            "calculation_method": "报表原值；人民币元 ÷ 一亿（展示换算），ROE 按披露值。",
+            "verification_status": "UNAVAILABLE",
+            "inputs": [],
+            "note": "现有公开摘要未覆盖该字段，需完整财报或授权接口。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-revenue-yoy",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "trend",
+            "title": "营业收入同比",
+            "claim": "营业收入同比",
+            "claim_type": "UNKNOWN",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "营业收入",
+            "raw_value": null,
+            "display_value": "待验证",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "（本期 ÷ 上年同期 − 1）×100；仅比较相同半年累计口径，非正基数不计算。",
+            "verification_status": "UNAVAILABLE",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2025-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "营业收入",
+                "normalized_field": "revenue",
+                "source_column": "上年同期",
+                "raw_value": 251123714,
+                "normalized_value": 251123714000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "缺少同口径同期数据、基数非正或来源冲突。",
+            "limitations": []
+          },
+          {
+            "evidence_id": "E-MD-20260630-profit-margin",
+            "topics": [],
+            "period_basis": "H1_YTD",
+            "company_code": "000333.SZ",
+            "dimension": "quality",
+            "title": "归母净利润 / 营业收入",
+            "claim": "归母净利润 / 营业收入",
+            "claim_type": "UNKNOWN",
+            "evidence_direction": "UNKNOWN",
+            "conflict_kind": null,
+            "source_name": "上市公司定期报告 · 巨潮资讯",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+            "source_field": "归属于上市公司股东的净利润 / 营业收入",
+            "raw_value": null,
+            "display_value": "待验证",
+            "unit": "%",
+            "report_period": "2026-06-30",
+            "market_date_range": null,
+            "retrieved_at": "2026-10-08T18:34:31.483160+00:00",
+            "calculation_method": "归母净利润 ÷ 营业收入 ×100；属归母盈利比率，不等同合并净利率。",
+            "verification_status": "UNAVAILABLE",
+            "inputs": [
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "归属于上市公司股东的净利润",
+                "normalized_field": "parent_profit",
+                "source_column": "本报告期",
+                "raw_value": 26446037,
+                "normalized_value": 26446037000,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              },
+              {
+                "company_code": "000333.SZ",
+                "report_period": "2026-06-30",
+                "basis": "H1_YTD",
+                "source_id": "midea-h1-2026",
+                "source_field": "营业收入",
+                "normalized_field": "revenue",
+                "source_column": "本报告期",
+                "raw_value": null,
+                "normalized_value": null,
+                "raw_unit": "千元",
+                "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531403.PDF",
+                "source_page": 2,
+                "published_at": "2026-08-29",
+                "retrieved_at": "2026-10-08T18:34:31.483160+00:00"
+              }
+            ],
+            "note": "",
+            "limitations": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "financial API HTTP 503 fails explicitly",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "code": "HTTP_ERROR",
+        "message": "金融接口返回 HTTP 503。"
+      }
+    },
+    {
+      "name": "financial API malformed JSON fails explicitly",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "code": "INVALID_JSON",
+        "message": "金融接口未返回合法 JSON。"
+      }
+    },
+    {
+      "name": "financial API empty data fails explicitly",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "code": "EMPTY",
+        "message": "金融接口未返回记录。"
+      }
+    },
+    {
+      "name": "model malformed completion JSON rejected",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "message": "模型正文不是有效 JSON，输出已拦截。"
+      }
+    },
+    {
+      "name": "model truncated output rejected",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "message": "模型输出被截断或未正常结束，输出已拦截。"
+      }
+    },
+    {
+      "name": "nonexistent model Evidence ID rejected",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "message": "模型引用不存在或不在当前研究范围的证据，输出已拦截。"
+      }
+    },
+    {
+      "name": "nonexistent selected Evidence ID rejected before any provider request",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "code": "INVALID_CONTEXT",
+        "message": "追问包含无效或不属于所选期次的证据 ID。",
+        "provider_calls": 0
+      }
+    },
+    {
+      "name": "prohibited model conclusion rejected: 建议增持美的集团。",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "message": "模型输出含建议、承诺或未经验证的确定性判断。"
+      }
+    },
+    {
+      "name": "prohibited model conclusion rejected: 美的明天一定会涨。",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "message": "模型输出含建议、承诺或未经验证的确定性判断。"
+      }
+    },
+    {
+      "name": "prohibited model conclusion rejected: 保证收益百分之十。",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "message": "模型输出了未经证据占位符绑定的数字，输出已拦截。"
+      }
+    },
+    {
+      "name": "prohibited model conclusion rejected: 美的下周肯定上涨。",
+      "status": "FAIL",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": false,
+        "observed": "accepted"
+      }
+    },
+    {
+      "name": "prohibited model conclusion rejected: 美的必然获得正收益。",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "observed": "rejected",
+        "message": "模型输出含建议、承诺或未经验证的确定性判断。"
+      }
+    },
+    {
+      "name": "Groq 429 handled with cooldown",
+      "status": "PASS",
+      "method": "Offline fault injection / real implementation, TEST_ONLY credentials; no production modification",
+      "observed": {
+        "ok": true,
+        "first": {
+          "ok": true,
+          "observed": "rejected",
+          "message": "模型免费额度或速率达到限制，请在 45 秒后重试；未生成正常 AI 结论。"
+        },
+        "second": {
+          "ok": true,
+          "observed": "rejected",
+          "message": "模型额度正在冷却，请稍后重试；本次未调用模型。"
+        },
+        "provider_calls": 1
+      }
+    }
+  ]
+}
