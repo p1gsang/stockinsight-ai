@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-09T08:11:03.448Z",
+  "site": {
+    "id": "appgprj_6ac7e1b683388191b105cb2014e84456",
+    "status": "active",
+    "url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+    "latest_version_number": 19,
+    "access_mode": "public"
+  },
+  "version": {
+    "id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_85490fea8658819197b0bffdcd517729",
+    "version_number": 19,
+    "source": {
+      "commit_sha": "d1ff590263af946fa48b4f419914ff877550122f"
+    },
+    "deployment_id": "appgdep_6ac89a335d348191a4246fafa82eec88"
+  },
+  "deployment": {
+    "status": "succeeded",
+    "url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+    "updated_at": "2026-10-09T07:40:23.099209+00:00",
+    "env_set_revision": 3
+  }
+}

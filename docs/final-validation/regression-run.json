@@ -1,0 +1,110 @@
+{
+  "started_at": "2026-10-09T08:10:10.879Z",
+  "timezone": "America/New_York",
+  "source_commit": "20c4dac70882ca16228566a75a1e77c2febe5a43",
+  "functional_commit": "d1ff590263af946fa48b4f419914ff877550122f",
+  "performed_by": "Codex and programs; no candidate personal sign-off",
+  "tests": [
+    {
+      "id": "node-tests",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/research.test.mjs",
+        "tests/shared-limits.test.mjs",
+        "tests/trust-boundaries.test.mjs",
+        "tests/question-routing.test.mjs",
+        "tests/semantic-support.test.mjs",
+        "tests/auto-audit-regression.test.mjs"
+      ],
+      "started_at": "2026-10-09T08:10:10.944Z",
+      "finished_at": "2026-10-09T08:10:11.348Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "node-tests.txt"
+    },
+    {
+      "id": "pytest",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at": "2026-10-09T08:10:10.957Z",
+      "finished_at": "2026-10-09T08:10:13.048Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "pytest.txt"
+    },
+    {
+      "id": "typecheck",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "started_at": "2026-10-09T08:10:10.973Z",
+      "finished_at": "2026-10-09T08:10:13.597Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "typecheck.txt"
+    },
+    {
+      "id": "lint",
+      "command": [
+        "node",
+        "node_modules/eslint/bin/eslint.js",
+        "app",
+        "components/research-app.tsx",
+        "lib/research",
+        "lib/runtime-env.ts",
+        "lib/types.ts"
+      ],
+      "started_at": "2026-10-09T08:10:10.986Z",
+      "finished_at": "2026-10-09T08:10:14.875Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "lint.txt"
+    },
+    {
+      "id": "build",
+      "command": [
+        "node",
+        "scripts/run-framework.mjs",
+        "build"
+      ],
+      "started_at": "2026-10-09T08:10:10.998Z",
+      "finished_at": "2026-10-09T08:10:18.644Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "build.txt"
+    },
+    {
+      "id": "fault-injection",
+      "command": [
+        "node",
+        "tools/audit_faults.mjs"
+      ],
+      "started_at": "2026-10-09T08:10:11.008Z",
+      "finished_at": "2026-10-09T08:10:11.322Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "fault-injection.txt"
+    },
+    {
+      "id": "financial-independent",
+      "command": [
+        "python",
+        "tools/audit_financial_independent.py"
+      ],
+      "started_at": "2026-10-09T08:10:11.022Z",
+      "finished_at": "2026-10-09T08:10:11.563Z",
+      "exit_code": 1,
+      "status": "FAIL",
+      "log": "financial-independent.txt"
+    }
+  ],
+  "finished_at": "2026-10-09T08:10:18.645Z"
+}

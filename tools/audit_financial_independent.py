@@ -160,7 +160,11 @@ def evaluate(base, supplement, sources, fetched):
         supplement_checks.append(check('PASS' if okay else 'FAIL', f"{fact['field']}:{fact['report_period']}", 'Separate literal row anchors over freshly downloaded full PDF; first two consolidated columns only', original_raw=item['raw'], raw_unit='千元', product_raw=fact['raw_value'], product_normalized=fact['normalized_value'], independently_normalized=item['normalized'], physical_pdf_page=item['page'], basis=item['basis'], source_column=item['column'], original_snippet=item['snippet']))
     observations = independent_product_observation()
     # Compare actually returned public data wherever present; preserve method.
-    online_path = OUTPUT / 'public-llm.json'
+    # Accept this final submission's actual observation without copying or
+    # renaming it as a different test run. Historical audit folders still work.
+    online_path = OUTPUT / 'public-final.json'
+    if not online_path.exists():
+        online_path = OUTPUT / 'public-llm.json'
     online_response = None
     if online_path.exists():
         online = load_json(online_path)

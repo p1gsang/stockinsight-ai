@@ -1,0 +1,90 @@
+{
+  "checked_at": "2026-10-09T08:12:07.253Z",
+  "source_commit": "20c4dac70882ca16228566a75a1e77c2febe5a43",
+  "method": "Replay exact historical real model text against current deterministic guard; not a new provider call or proof of all semantics",
+  "cases": [
+    {
+      "id": "AUD-S01",
+      "original": {
+        "text": "经营现金流亦呈正向同比，但增速低于利润，暗示现金转化速度相对滞后",
+        "claim_type": "INFERENCE",
+        "evidence_ids": [
+          "E-MD-20260630-ocf-yoy",
+          "E-MD-20260630-growth-tension"
+        ]
+      },
+      "status": "PASS",
+      "observed": "rejected",
+      "message": "金额及增速证据不能证明现金转化或回款速度，输出已拦截。"
+    },
+    {
+      "id": "AUD-S02",
+      "original": {
+        "text": "现金覆盖水平高于基准，但因分子分母口径不一致，需结合股东口径理解现金流与利润规模。",
+        "claim_type": "INFERENCE",
+        "evidence_ids": [
+          "E-MD-20260630-cash-coverage"
+        ]
+      },
+      "status": "PASS",
+      "observed": "rejected",
+      "message": "基准或行业比较缺少明确来源和口径，输出已拦截。"
+    },
+    {
+      "id": "V17_UNDEFINED_HIGH",
+      "original": {
+        "text": "现金流对归母利润的覆盖比例偏高，暗示经营现金流在一定程度上支撑了利润，但该比例为代理口径，不能直接等同于合并净利润的现金含量",
+        "claim_type": "INFERENCE",
+        "evidence_ids": [
+          "E-MD-20260630-cash-coverage"
+        ]
+      },
+      "status": "PASS",
+      "observed": "rejected",
+      "message": "基准或行业比较缺少明确来源和口径，输出已拦截。"
+    },
+    {
+      "id": "V17_SUPPORT_AMOUNT",
+      "original": {
+        "text": "利润增速快于现金流增速，说明利润增长未完全得到现金流同步支持",
+        "claim_type": "INFERENCE",
+        "evidence_ids": [
+          "E-MD-20260630-growth-tension",
+          "E-MD-20260630-parent_profit-yoy",
+          "E-MD-20260630-ocf-yoy"
+        ]
+      },
+      "status": "PASS",
+      "observed": "rejected",
+      "message": "金额及增速差异不能证明现金支持不足，输出已拦截。"
+    },
+    {
+      "id": "V17_UNKNOWN_DIRECTION",
+      "original": {
+        "text": "现金流调节中经营性应收增加带来负向贡献，存货下降和经营性应付增加提供正向调节，但业务具体原因尚未明确",
+        "claim_type": "UNKNOWN",
+        "evidence_ids": [
+          "E-MD-20260630-cause"
+        ]
+      },
+      "status": "PASS",
+      "observed": "rejected",
+      "message": "待验证信息不能断言已知调节方向；报表贡献应单独引用已知证据。"
+    },
+    {
+      "id": "V18_UNBOUND_NUMBER",
+      "original": {
+        "text": "现金流对归母利润的覆盖仍低于一倍半，说明利润增长的现金实现仍有提升空间",
+        "claim_type": "INFERENCE",
+        "evidence_ids": [
+          "E-MD-20260630-cash-coverage"
+        ]
+      },
+      "note": "Already rejected in production; preserves rejection after enabling one genuine model rewrite.",
+      "status": "PASS",
+      "observed": "rejected",
+      "message": "模型输出了未经证据占位符绑定的数字，输出已拦截。"
+    }
+  ],
+  "status": "PASS"
+}

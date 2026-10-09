@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\liu\Documents\ChatGPT\ͬ��˳\stockinsight-ai\tools\audit_financial_independent.py", line 20, in <module>
+    import pdfplumber
+ModuleNotFoundError: No module named 'pdfplumber'

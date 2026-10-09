@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-09T08:16:10.275Z",
+  "performed_by": "Codex controlled browser, not candidate",
+  "target": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+  "method": "Actual existing production page; no UI model request; one context request separately recorded in public-final.json",
+  "checks": [
+    {
+      "id": "financial_display",
+      "status": "PASS",
+      "evidence": "Revenue/profit/OCF in actual page"
+    },
+    {
+      "id": "natural_question_input",
+      "status": "PASS",
+      "evidence": "Filled research question"
+    },
+    {
+      "id": "evidence_drill",
+      "status": "PASS",
+      "evidence": "Opened cash-coverage dialog"
+    },
+    {
+      "id": "formula_source",
+      "status": "PASS",
+      "evidence": "Observed normalized ratio, raw thousand-CNY inputs, H1 period, PDF page 2 link"
+    },
+    {
+      "id": "selected_context",
+      "status": "PASS",
+      "evidence": "Cleared and added one cash coverage evidence"
+    },
+    {
+      "id": "followup_input",
+      "status": "PASS",
+      "evidence": "Filled context question; continue button enabled"
+    },
+    {
+      "id": "peer_comparison",
+      "status": "PASS",
+      "evidence": "Actual Midea/Gree same H1 table"
+    },
+    {
+      "id": "missing_valuation",
+      "status": "PASS",
+      "evidence": "Observed valuation unavailable notice"
+    }
+  ],
+  "real_llm_ui": "NOT TESTED",
+  "screenshots": [
+    "ui-evidence.png",
+    "ui-peer.png"
+  ],
+  "video": "NOT TESTED: recording capability not exposed; script only"
+}

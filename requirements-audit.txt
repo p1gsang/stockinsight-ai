@@ -1,0 +1,4 @@
+-r requirements-dev.txt
+# Independent PDF parser for tools/audit_financial_independent.py.
+# Product extraction uses pypdf; keeping this separate avoids reusing its parser.
+pdfplumber>=0.11,<0.12

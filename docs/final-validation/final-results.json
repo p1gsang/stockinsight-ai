@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-10-09T08:16:10.275Z",
+  "timezone": "America/New_York",
+  "performed_by": "Codex and programs; candidate review remains unsigned",
+  "source_document_baseline": "20c4dac70882ca16228566a75a1e77c2febe5a43",
+  "production_version": 19,
+  "production_unchanged": true,
+  "current_execution": {
+    "node": {
+      "PASS": 196,
+      "FAIL": 0,
+      "SKIP": 0,
+      "log": "node-tests.txt"
+    },
+    "pytest": {
+      "PASS": 8,
+      "FAIL": 0,
+      "SKIP": 0,
+      "log": "pytest.txt"
+    },
+    "typecheck": "PASS",
+    "targeted_lint": "PASS",
+    "build": "PASS",
+    "fault_injection": {
+      "PASS": 14,
+      "FAIL": 0,
+      "UNVERIFIED": 0
+    },
+    "semantic_replay": {
+      "PASS": 6,
+      "FAIL": 0
+    },
+    "financial": {
+      "PASS": 190,
+      "FAIL": 0,
+      "UNVERIFIED": 7
+    },
+    "evidence": {
+      "PASS": 118,
+      "FAIL": 0,
+      "UNVERIFIED": 4
+    },
+    "local_http": {
+      "PASS": 8,
+      "real_llm": false,
+      "dependencies": "Existing installed dependencies linked to isolated public clone; no clean install claim",
+      "server_stopped": true,
+      "log": "local-http.txt"
+    },
+    "public_non_llm_checks": {
+      "PASS": 11,
+      "FAIL": 0
+    },
+    "public_real_llm": "FAIL",
+    "browser": {
+      "PASS": 8,
+      "real_llm_ui": "NOT TESTED"
+    }
+  },
+  "retained_failures": [
+    {
+      "log": "financial-independent.txt",
+      "status": "FAIL",
+      "cause": "Default local Python lacks pdfplumber",
+      "resolution": "Retried with already bundled Python; actual four fresh PDFs checked. Added requirements-audit.txt for reproducibility."
+    },
+    {
+      "log": "financial-independent-retry.txt",
+      "status": "PARTIAL",
+      "cause": "Standalone audit initially looked only for public-llm.json, so current public-final.json was not compared",
+      "resolution": "Audit input reader updated without changing original response; final run in financial-independent-final.txt has 190 PASS / 0 FAIL / 7 UNVERIFIED."
+    },
+    {
+      "status": "FAIL",
+      "cause": "Initial isolated Worker startup used absent generated dist/server/wrangler.json",
+      "resolution": "Started existing portable vinext dev on isolated port 5363; eight actual HTTP checks passed; process stopped."
+    },
+    {
+      "log": "public-final.json",
+      "status": "FAIL",
+      "cause": "Real Groq planner succeeds; evidence analysis HTTP 429 / TPD; no retry or Mock"
+    }
+  ],
+  "historical_evidence": {
+    "folder": "../repair-validation",
+    "not_rerun": [
+      "Previous six public LLM scenarios",
+      "Public entry rate burst test",
+      "Historical log association",
+      "GitHub from-zero dependency install"
+    ]
+  },
+  "manual_acceptance": "NOT TESTED; checklist awaits candidate",
+  "limits": [
+    "Financial semantics not universally proven",
+    "No authorized live market/valuation/iFinD",
+    "Historical platform log deletion unverified",
+    "Optional video not recorded"
+  ]
+}

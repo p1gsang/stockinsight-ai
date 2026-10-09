@@ -1,0 +1,2 @@
+[{"id": "midea-h1-2026", "sha_status": "PASS", "pages": 5}, {"id": "midea-h1-2025", "sha_status": "PASS", "pages": 205}, {"id": "gree-h1-2026", "sha_status": "PASS", "pages": 190}, {"id": "midea-h1-2026-full", "sha_status": "PASS", "pages": 205}]
+{"status": "PASS_WITH_UNVERIFIED_BOUNDARIES", "counts": {"PASS": 190, "FAIL": 0, "UNVERIFIED": 7}, "outputs": ["docs\\final-validation\\financial-verification.json", "docs\\final-validation\\financial-verification.md"]}

@@ -1,3 +1,5 @@
+> **最终提交入口（2026-10-09）：** 请先阅读 [SUBMISSION.md](SUBMISSION.md)。本次重新执行的结果见 [最终执行记录](docs/final-validation/final-results.json)，完整 AI 主链路仍因 Groq 日额度 FAIL。必要本人复核以 [12 分钟清单](CANDIDATE_REVIEW_CHECKLIST.md) 为准。以下开发历史不覆盖最新失败。独立 PDF 审计额外安装 `python -m pip install -r requirements-audit.txt`。
+
 # StockInsight AI · 个股多维诊断与证据验证
 
 2026-10-09 最新验收：功能版本 19 已部署，196 项 Node、8 项 pytest、14 项故障注入及独立财报 190 项通过；财报仍有 7 项 UNVERIFIED。**最终六条真实 Groq 公网流程因日 Token 配额均未完成，验收为 FAIL，不能宣称全面通过。** 代码修复、原始失败和实际回归见 [AUTO_AUDIT_REPORT.md](AUTO_AUDIT_REPORT.md)；本人只需约 11 分钟必要确认，见 [HUMAN_REVIEW_CHECKLIST.md](HUMAN_REVIEW_CHECKLIST.md)。下文旧测试数量属于各次开发历史，以最新报告为准。

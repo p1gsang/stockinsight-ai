@@ -1,3 +1,15 @@
+## 最终打包阶段实际重跑（2026-10-09 / America/New_York）
+
+本次实际执行日志在 [docs/final-validation](docs/final-validation/final-results.json)，原始 UTC 时间与命令在 [regression-run.json](docs/final-validation/regression-run.json)。196 Node PASS / 0 FAIL / 0 SKIP；8 pytest PASS / 0 SKIP；类型、生产代码 lint、生产构建均 exit 0；14 项故障注入与 6 条历史错误文本回放通过。单元测试中模型为显式 TEST_ONLY / 注入传输，不当作真实模型验收。
+
+四份新下载 PDF 独立核验 190 PASS / 0 FAIL / 7 UNVERIFIED；81 条证据的审计汇总 118 PASS / 0 FAIL / 4 UNVERIFIED。默认 Python 首次缺 pdfplumber，已保留失败日志；改用已有完整审计 Python 重跑成功。当前正式公网响应使用 public-final.json，审计工具已支持该文件，未把历史响应当成新调用。审计依赖：`python -m pip install -r requirements-audit.txt`。
+
+隔离公共克隆 `node node_modules/vinext/dist/cli.js dev --port 5363`，再执行 `TEST_BASE_URL=http://127.0.0.1:5363 python tools/smoke_http.py`：8 PASS。依赖复用既有安装，没有重新 npm ci；服务已停止。首次误用不存在的生成 Worker 路径启动失败在执行记录披露。
+
+公网 HTTPS 11 项有限边界/数据/上下文校验通过；三类真实禁止建议返回 restricted；真实 Groq 追问只执行一次，规划 response ID `chatcmpl-32b379e0-c234-4b06-9291-bc9cda3121e6`、902 tokens，解释 HTTP 429 / TPD、Retry-After 568 秒，完整主链路 FAIL。返回规则说明、所选 ID/历史与引用仍保留，不计 LLM 成功。实际浏览器 8 项有限交互通过，没有重复请求 UI 模型。
+
+人工验收 NOT TESTED，候选人未签认；可选视频未录制。过期、冲突、极端输入、错误 JSON、伪造 ID、接口失败和模型 429 的确定性覆盖见 Node/fault 日志。任意金融语义、全部合规改写和压力安全不在通过范围。以下为此前历史阶段记录，不是本次重跑。
+
 ## 2026-10-09 最新修复验收
 
 功能版本 19 / d1ff590263af946fa48b4f419914ff877550122f：196 项 Node、8 项 pytest、类型检查、变更生产 lint、生产构建通过；14 项故障注入、6 项历史错误文本拒绝回放通过；匿名公开克隆另执行 196 项 Node 和 8 项无模型 HTTP 检查通过。独立财报 190 PASS / 0 FAIL / 7 UNVERIFIED；证据与交付 118 PASS / 0 FAIL / 4 UNVERIFIED。

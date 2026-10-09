@@ -126,3 +126,8 @@ PASS 只证明对应断言；FAIL 表示实际观察失败；UNVERIFIED 表示�
 5. **待本人确认：AI 使用经历真实性、资料使用权利、评审口令私下交付与是否接受提交风险。** 程序不能替本人签认。
 
 本轮已自动承担修复、回归、财报复算、来源冲突与选证据检查、公开访问、真实调用尝试、日志脱敏及交付核验。人工清单只保留不能由程序充分证明的事项；没有把自动审核写成候选人本人审核。
+
+
+## 最终交付整理补充（2026-10-09）
+
+产品功能保持版本 19；本次重新执行结果及失败处理见 [最终执行记录](docs/final-validation/final-results.json)，题目逐项 PASS/PARTIAL/FAIL/NOT TESTED 见 [SUBMISSION.md](SUBMISSION.md)。最新真实 Groq 追问规划成功、解释 TPD 429，仍 FAIL。原始审计与历史失败保留；未把本轮自动操作写成候选人本人验收。最终手工清单为 [CANDIDATE_REVIEW_CHECKLIST.md](CANDIDATE_REVIEW_CHECKLIST.md)，约12分钟。
