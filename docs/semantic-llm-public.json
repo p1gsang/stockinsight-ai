@@ -1,0 +1,373 @@
+{
+  "checked_at": "2026-10-09T00:29:30.585Z",
+  "target": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+  "cases": [
+    {
+      "label": "financial planning and interpretation",
+      "question": "利润增长是否得到了现金流支持？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend",
+        "events"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-09T00:29:35.866Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-b81faec0-9d7d-46dc-90ff-8e8c62c4204e",
+            "called_at": "2026-10-09T00:29:33.259Z",
+            "usage": {
+              "prompt_tokens": 412,
+              "completion_tokens": 221,
+              "total_tokens": 633
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-6b9e6e34-91cf-45c6-9a57-4b1cf67b67ec",
+            "called_at": "2026-10-09T00:29:35.866Z",
+            "usage": {
+              "prompt_tokens": 2382,
+              "completion_tokens": 975,
+              "total_tokens": 3357
+            }
+          }
+        ],
+        "validation_failures": []
+      },
+      "selected_ids": [],
+      "history_length": 1,
+      "claims": [
+        {
+          "text": "利润增速快于现金流增速，二者增长不同步",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-growth-tension"
+          ],
+          "rendered_text": "利润增速快于现金流增速，二者增长不同步",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "现金流对利润的覆盖需结合股东口径理解现金流与利润规模",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-cash-coverage"
+          ],
+          "rendered_text": "现金流对利润的覆盖需结合股东口径理解现金流与利润规模",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+        },
+        {
+          "text": "现金流调节项显示存货、应收、应付对经营现金流的影响，但具体业务原因尚未确认",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "rendered_text": "现金流调节项显示存货、应收、应付对经营现金流的影响，但具体业务原因尚未确认",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "扣非利润变化有哪些公司披露的解释？",
+        "非经常性损益的持续影响还需要哪些证据？",
+        "偿债与流动性风险还需要哪些证据？"
+      ],
+      "warnings": [
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    },
+    {
+      "label": "previously rejected UI event followup",
+      "question": "归母与扣非利润表现为什么不同？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend",
+        "events"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-09T00:30:50.283Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-bc9a1b4d-f0ee-4ba4-8991-bbeab8e12482",
+            "called_at": "2026-10-09T00:30:43.757Z",
+            "usage": {
+              "prompt_tokens": 531,
+              "completion_tokens": 224,
+              "total_tokens": 755
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-ecacc1e5-80ff-40f4-a1b4-53eb7ef118e8",
+            "called_at": "2026-10-09T00:30:50.283Z",
+            "usage": {
+              "prompt_tokens": 2644,
+              "completion_tokens": 1036,
+              "total_tokens": 3680
+            }
+          }
+        ],
+        "validation_failures": []
+      },
+      "selected_ids": [
+        "E-MD-20260630-cash-coverage"
+      ],
+      "history_length": 2,
+      "claims": [
+        {
+          "text": "归母净利润与扣非归母净利润的差额与非经常性损益净额一致",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-profit-reconciliation",
+            "E-MD-20260630-nonrecurring-parent"
+          ],
+          "rendered_text": "归母净利润与扣非归母净利润的差额与非经常性损益净额一致",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "公司披露，扣非利润下降主要与外币汇兑损失及衍生金融工具收益的会计分类差异有关",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-event-fx"
+          ],
+          "rendered_text": "公司披露，扣非利润下降主要与外币汇兑损失及衍生金融工具收益的会计分类差异有关",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "现有资料未覆盖非经常性项目的持续影响，需进一步核实其后续期间的实际贡献",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-nonrecurring-cause"
+          ],
+          "rendered_text": "现有资料未覆盖非经常性项目的持续影响，需进一步核实其后续期间的实际贡献",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "归母与扣非利润差额能否与非经常性损益明细核对？",
+        "非经常性损益的持续影响还需要哪些证据？",
+        "金融资产收益与扣非利润口径有什么关系？"
+      ],
+      "warnings": [
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    },
+    {
+      "label": "previously rejected event dimension shortcut",
+      "question": "美的集团的事件与风险有哪些可验证的证据？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "events",
+        "quality"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-09T00:32:05.140Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-492b79de-682e-47bc-9d18-c237e436bf31",
+            "called_at": "2026-10-09T00:31:57.784Z",
+            "usage": {
+              "prompt_tokens": 417,
+              "completion_tokens": 206,
+              "total_tokens": 623
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-61879e01-75ed-4b39-b4f8-75128a9a58b1",
+            "called_at": "2026-10-09T00:32:05.140Z",
+            "usage": {
+              "prompt_tokens": 2106,
+              "completion_tokens": 1031,
+              "total_tokens": 3137
+            }
+          }
+        ],
+        "validation_failures": []
+      },
+      "selected_ids": [],
+      "history_length": 1,
+      "claims": [
+        {
+          "text": "利润增速快于现金流增速，表明二者增长不同步",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-growth-tension"
+          ],
+          "rendered_text": "利润增速快于现金流增速，表明二者增长不同步",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "非经常性项目的持续影响尚未得到验证",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-nonrecurring-cause"
+          ],
+          "rendered_text": "非经常性项目的持续影响尚未得到验证",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "流动性与偿债压力的具体情况缺乏确认",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-liquidity-cause"
+          ],
+          "rendered_text": "流动性与偿债压力的具体情况缺乏确认",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "非经常性损益的持续影响还需要哪些证据？",
+        "偿债与流动性风险还需要哪些证据？",
+        "扣非利润变化有哪些公司披露的解释？"
+      ],
+      "warnings": [
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    },
+    {
+      "label": "generic followup retains nonrecurring topic",
+      "question": "还需要哪些材料才能验证原因？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend",
+        "events"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-09T00:33:16.403Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-4e554b79-05e8-4d78-be9f-d76e04648434",
+            "called_at": "2026-10-09T00:33:13.531Z",
+            "usage": {
+              "prompt_tokens": 625,
+              "completion_tokens": 215,
+              "total_tokens": 840
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-16b7e82f-5d65-4cc2-b53d-9e1e6f64a00d",
+            "called_at": "2026-10-09T00:33:16.403Z",
+            "usage": {
+              "prompt_tokens": 2610,
+              "completion_tokens": 950,
+              "total_tokens": 3560
+            }
+          }
+        ],
+        "validation_failures": []
+      },
+      "selected_ids": [
+        "E-MD-20260630-profit-reconciliation"
+      ],
+      "history_length": 3,
+      "claims": [
+        {
+          "text": "报表勾稽显示差额与非经常性损益净额一致",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-profit-reconciliation",
+            "E-MD-20260630-nonrecurring-parent"
+          ],
+          "rendered_text": "报表勾稽显示差额与非经常性损益净额一致",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "公司披露归因于外币汇兑损失与衍生工具收益的会计分类差异",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-event-fx"
+          ],
+          "rendered_text": "公司披露归因于外币汇兑损失与衍生工具收益的会计分类差异",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "仍需获取后续期间非经常性项目的明细与实际贡献资料，以确认其持续影响",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-nonrecurring-cause"
+          ],
+          "rendered_text": "仍需获取后续期间非经常性项目的明细与实际贡献资料，以确认其持续影响",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "归母与扣非利润差额能否与非经常性损益明细核对？",
+        "非经常性损益的持续影响还需要哪些证据？",
+        "金融资产收益与扣非利润口径有什么关系？"
+      ],
+      "warnings": [
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-10-09T00:33:16.381Z"
+}

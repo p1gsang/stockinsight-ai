@@ -1,3 +1,9 @@
+## 最终本轮验收
+
+最终功能版本 13 的四项真实公网 Groq 验证通过：财务规划与解释、所选证据扣非追问、事件入口、保留扣非主题的通用追问。共八次真实响应、16,585 Token，响应 ID 与 usage 保存在 docs/semantic-llm-public.json；这是一次有限场景验证，不是全面语义质量保证。历史预算、原因表述和数字绑定失败均保留，未写成全程成功。
+
+169 项 Node、8 项原始财报 pytest、类型与变更 lint、生产构建通过；GitHub 独立克隆通过 169 项 Node / 类型 / 八项 HTTP 检查。原文复核含完整报告哈希和三项残差为零的勾稽。汇总见 docs/submission-risk-verification.json；以下按对应历史版本解释。
+
 ## 本轮最新语义与全文验收
 
 169 项 Node、8 项 pytest、TypeScript 和变更代码 ESLint 通过。新增 13 项语义 / 来源 / 问题库检查，包含四条历史真实不支持输出；新增原始全文字段与哈希复核、三项勾稽检查。真实模型 Token 预算失败保留在 docs/semantic-llm-budget-failure.json；后续实际调用记录另存，不覆盖旧失败。完整 PDF 未采集时四项原文测试会明确 skip，先运行两项采集器可复核。以下为各版本历史验收记录。

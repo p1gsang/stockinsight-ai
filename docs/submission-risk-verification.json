@@ -1,0 +1,58 @@
+{
+  "functional_release": {
+    "version": 13,
+    "site_commit": "fdd7ce108ec3ca020f127476bfeec71b0c138e85",
+    "source_tree": "65c69110ed6d6aef8aac7a43174ffa3f1a246412",
+    "deployment_id": "appgdep_6ac835582f288191b64cdf52d35825ac",
+    "deployment_status": "succeeded",
+    "deployed_at": "2026-10-09T00:29:22.323477+00:00",
+    "url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
+    "secrets_revision": 2
+  },
+  "source": {
+    "repository": "https://github.com/p1gsang/stockinsight-ai",
+    "verified_github_commit": "887f4a4c5f62437360bf77a3bfb8455027eba4c6",
+    "verified_tree": "65c69110ed6d6aef8aac7a43174ffa3f1a246412",
+    "matches_functional_source": true,
+    "later_changes": "Only validation documents and records; compiled application unchanged."
+  },
+  "verified_at": "2026-10-09T00:34:01.417272+00:00",
+  "checks": {
+    "node_tests": 169,
+    "pytest": 8,
+    "typescript": "passed",
+    "changed_code_lint": "passed",
+    "question_routing_cases": 94,
+    "clone_node_tests": 169,
+    "clone_typecheck": "passed",
+    "clone_http_checks": 8,
+    "clone_http_base": "http://127.0.0.1:5361",
+    "public_real_groq_cases": 4,
+    "public_real_groq_responses": 8,
+    "public_real_groq_tokens": 16585,
+    "original_full_report_facts": 43,
+    "reconciliations_zero_residual": 3,
+    "source_and_build_secret_scan": "passed; actual private values compared without printing",
+    "browser": "Public access-code guidance and original full-report receivables drawer verified"
+  },
+  "limitations": {
+    "semantic_validation": "Finite rules and one successful run do not prove arbitrary semantic correctness or reliability.",
+    "candidate_personal_review": "not completed",
+    "fuyao_authorization": "not configured",
+    "ifind_authorization": "not configured",
+    "gemini_real_validation": "not performed",
+    "market_and_valuation": "no live authorized observations",
+    "optional_video": "not recorded"
+  },
+  "failure_history": [
+    "semantic-llm-budget-failure.json",
+    "semantic-llm-guarded-rejection.json",
+    "semantic-llm-public-v11.json",
+    "semantic-llm-public-v12-numeric.json"
+  ],
+  "evidence": [
+    "semantic-llm-public.json",
+    "semantic-schema-local.json",
+    "question-routing-verification.json"
+  ]
+}

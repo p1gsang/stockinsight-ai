@@ -1,3 +1,5 @@
+最新验收：最终功能版本 13 的四项真实公网 Groq 验证通过：财务规划与解释、所选证据扣非追问、事件入口、保留扣非主题的通用追问。共八次真实响应、16,585 Token，响应 ID 与 usage 保存在 docs/semantic-llm-public.json；这是一次有限场景验证，不是全面语义质量保证。历史预算、原因表述和数字绑定失败均保留，未写成全程成功。 独立源码克隆和类型 / HTTP 检查通过；最终汇总 docs/submission-risk-verification.json。评审操作见 REVIEWER_GUIDE.md，候选人待完成 CANDIDATE_REVIEW.md。
+
 本轮增补：提交风险逐条处理见 SUBMISSION_RISK_RESOLUTION.md；新接入公开全文 43 条字段及现金流 / 非经常性损益勾稽，169 项 Node / 8 项 pytest 通过。行情与估值授权、候选人本人复核仍未完成。以下历史交付状态按对应版本解释。
 
 # StockInsight AI 交付报告
