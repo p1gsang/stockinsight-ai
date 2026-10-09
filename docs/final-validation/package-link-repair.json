@@ -1,0 +1,16 @@
+{
+  "status": "RESOLVED_IN_PACKAGING_TOOL; final archive verification recorded in external package receipt",
+  "performed_by": "Codex, not candidate",
+  "first_attempt": {
+    "status": "FAIL",
+    "local_links_checked": 77,
+    "missing": [
+      {"file": "evidence/current/financial-verification.md", "target": "../../tools/audit_financial_independent.py"}
+    ],
+    "archive_created": false
+  },
+  "root_cause": "Moving a convenience Markdown copy to evidence/current changed its relative base directory",
+  "fix": "Remap local links in copied Markdown to canonical source_code/docs/final-validation; preserve original source blobs and all test results",
+  "regression_scope": "Packaging, local links, security, extraction and hashes only; no repeated product or provider tests",
+  "previous_attempt": "Incomplete generated directory preserved in ignored .sites-runtime; no pre-existing user work overwritten or deleted"
+}

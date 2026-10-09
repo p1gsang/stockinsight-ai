@@ -145,7 +145,11 @@ def main():
     (target / 'SUBMISSION.md').write_text(remap_links(text, 'source_code/'), encoding='utf-8')
     for p in (target / 'source_code/docs/final-validation').iterdir():
         if p.is_file():
-            (target / 'evidence/current' / p.name).write_bytes(p.read_bytes())
+            destination = target / 'evidence/current' / p.name
+            if p.suffix == '.md':
+                destination.write_text(remap_links(p.read_text(encoding='utf-8-sig'), '../../source_code/docs/final-validation/'), encoding='utf-8')
+            else:
+                destination.write_bytes(p.read_bytes())
     (target / 'demo/DEMO_SCRIPT.md').write_bytes((target / 'source_code/docs/final-submission/DEMO_SCRIPT.md').read_bytes())
     (target / 'demo/README.md').write_text('视频未录制，仅提供 120 秒实际操作脚本。当前真实 Groq 完整解释遇日额度 429，不得用脚本或截图冒充视频/模型成功。\n', encoding='utf-8')
     (target / 'docs/README.md').write_text('本目录是主要文档的便捷副本；链接回到 source_code 中的完整原版，避免截断历史证据。最终入口见 ../SUBMISSION.md。\n', encoding='utf-8')
