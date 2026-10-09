@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-09T08:01:35.703Z",
+  "tested_functional_commit": "d1ff590263af946fa48b4f419914ff877550122f",
+  "current_head": "d1ff590263af946fa48b4f419914ff877550122f",
+  "production_scope": [
+    "app",
+    "components",
+    "lib",
+    "data",
+    "scripts",
+    "drizzle",
+    "package.json",
+    "package-lock.json",
+    "vite.config.ts",
+    "tsconfig.json",
+    "wrangler.json",
+    ".openai/hosting.json"
+  ],
+  "production_unchanged_since_deployment": true,
+  "local_document_links": {
+    "status": "PASS",
+    "missing": []
+  },
+  "json_artifacts": {
+    "status": "PASS",
+    "parsed": 29
+  },
+  "source_note": "Final docs/audit scripts may be newer than the fixed production commit; no product code changes after final functional regression."
+}

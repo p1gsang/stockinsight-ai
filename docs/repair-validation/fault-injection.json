@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-09T07:30:10.612Z",
-  "source_commit": "2b92659a65524ddcc94a746a7119508e4934ce89",
+  "checked_at": "2026-10-09T07:42:08.286Z",
+  "source_commit": "d1ff590263af946fa48b4f419914ff877550122f",
   "working_tree_under_test": true,
   "method": "Fault injection only; real Groq acceptance separately in public-llm.json",
   "summary": {

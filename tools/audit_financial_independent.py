@@ -364,7 +364,10 @@ def main():
         return
     report = evaluate(base, supplement, sources, fetched)
     write_report(report)
-    print(json.dumps({'status': 'FAIL' if report['counts']['FAIL'] else 'PASS_WITH_UNVERIFIED_BOUNDARIES', 'counts': report['counts'], 'outputs': ['docs/auto-audit/financial-verification.json', 'docs/auto-audit/financial-verification.md']}, ensure_ascii=False))
+    report['method']['original_baseline'] = report['method'].pop('frozen_version')
+    report['method']['tested_commit'] = report['source_commit']
+    (OUTPUT / 'financial-verification.json').write_text(json.dumps(report, ensure_ascii=False, indent=2, default=decimal_text) + '\n', encoding='utf-8')
+    print(json.dumps({'status': 'FAIL' if report['counts']['FAIL'] else 'PASS_WITH_UNVERIFIED_BOUNDARIES', 'counts': report['counts'], 'outputs': [str((OUTPUT / name).relative_to(ROOT)) for name in ['financial-verification.json', 'financial-verification.md']]}, ensure_ascii=False))
     if report['counts']['FAIL']:
         raise SystemExit(1)
 

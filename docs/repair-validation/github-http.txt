@@ -1,0 +1,1 @@
+{"passed": 8, "checks": ["page renders", "safe connection status", "research HTTP chain", "context followup", "dynamic plan", "compliance", "invalid period", "missing data key"], "base_url": "http://127.0.0.1:5363"}

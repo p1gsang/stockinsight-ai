@@ -1,4 +1,12 @@
-## 本轮最终功能部署
+## 2026-10-09 最新修复功能部署
+
+- 功能版本 19，源码 d1ff590263af946fa48b4f419914ff877550122f，部署 appgdep_6ac89a335d348191a4246fafa82eec88，2026-10-09T07:39:41 UTC，原生返回 succeeded；public，Secrets revision 3。
+- 对应公开 GitHub 功能提交 cae11feca0cc281096ae8da6583a15fa4f9393bb，树 ee0aa1a793fb8324affdf7e6be78b4615e01c7a9 与部署源码一致。后续验收文档提交不改变这个固定的功能验收对象。
+- 口令请求体迁移已生效，旧口令 401，新口令有效；新口令仅本地私密交付。27 条最终部署日志的已保存采样未检出新旧口令；历史日志删除 UNVERIFIED。
+- 196 项 Node、8 项 pytest、生产构建通过。但最后六项真实 Groq 公网研究均 FAIL：实际日 Token 配额 429 后共享冷却，不能把部署成功当作 AI 全链路成功。完整证据见 AUTO_AUDIT_REPORT.md。
+- 真实行情、估值、iFinD 与候选人本人确认仍未完成。
+
+## 历史功能版本 13 部署
 
 - 功能版本 13：`fdd7ce108ec3ca020f127476bfeec71b0c138e85`。
 - 部署 `appgdep_6ac835582f288191b64cdf52d35825ac`，原生结果 succeeded，2026-10-09T00:29:22.323477+00:00；public，Secrets revision 2。

@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-09T08:00:07.309Z",
+  "method": "Only allowlisted production metadata for the separate recovery request",
+  "events": [
+    {
+      "timestamp": 1791532747608,
+      "request_id": "e317f25ccede71cd6bfa7de36db5dbde",
+      "ray_id": "a47bd801c9ece814",
+      "trigger": "POST /api/research",
+      "worker_version": "3a0f449c-5a6d-4ea0-a3b7-aba40a14adf4"
+    },
+    {
+      "timestamp": 1791532747407,
+      "request_id": "e317f25ccede71cd6bfa7de36db5dbde",
+      "ray_id": "a47bd801c9ece814",
+      "trigger": "POST /api/research",
+      "worker_version": "3a0f449c-5a6d-4ea0-a3b7-aba40a14adf4",
+      "provider_call": {
+        "stage": "evidence_analysis",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-4d2a971b-5d77-4cd7-a691-a021a906aa20",
+        "called_at": "2026-10-09T07:59:07.407Z",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 407,
+          "total_tokens": 2153
+        },
+        "http_status": null,
+        "quota_kind": null
+      }
+    },
+    {
+      "timestamp": 1791532746038,
+      "request_id": "e317f25ccede71cd6bfa7de36db5dbde",
+      "ray_id": "a47bd801c9ece814",
+      "trigger": "POST /api/research",
+      "worker_version": "3a0f449c-5a6d-4ea0-a3b7-aba40a14adf4",
+      "provider_call": {
+        "stage": "research_plan",
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "response_id": "chatcmpl-061ada26-5f70-4c30-9009-be7bb3c4e385",
+        "called_at": "2026-10-09T07:59:06.038Z",
+        "usage": {
+          "prompt_tokens": 667,
+          "completion_tokens": 178,
+          "total_tokens": 845
+        },
+        "http_status": null,
+        "quota_kind": null
+      }
+    }
+  ],
+  "security": {
+    "current_code_absent": true,
+    "retired_code_absent": true,
+    "groq_key_pattern_absent": true
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "generated_at": "2026-10-09T08:01:35.769Z",
+  "purpose": "Integrity of final local audit artifacts; not a signature or a financial/semantic correctness certificate. Excludes itself.",
+  "tested_functional_commit": "d1ff590263af946fa48b4f419914ff877550122f",
+  "files": [
+    {
+      "path": "AUTO_AUDIT_REPORT.md",
+      "bytes": 18050,
+      "sha256": "5122f205862e9a952d8d2269718b30f43b34329ea303c110bc14a9a3a597271e"
+    },
+    {
+      "path": "HUMAN_REVIEW_CHECKLIST.md",
+      "bytes": 2967,
+      "sha256": "769345221d5024e147c2b44ffc576c6c99603c5ec69b4cbbe4f73e4ce681abda"
+    },
+    {
+      "path": "AI_USAGE_AND_VALIDATION.md",
+      "bytes": 12152,
+      "sha256": "80ff64545a052875ff2a62b739449537809c414e2fd97aa7d51a46bb932b9d0d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 17864,
+      "sha256": "20c0327b5bb7eb7b4079f410ea22a5547f84ae714ce89a5ccb22f9c358e0046a"
+    },
+    {
+      "path": "TEST_REPORT.md",
+      "bytes": 11437,
+      "sha256": "56ec08e4ae6b0d3f7c944b16b33e759b0540e7e85cd4fa39742298533039fb08"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 6658,
+      "sha256": "af01de4ece0ef68b9b6bd72383d7dbdeaf0594bdde4fa45cdf2a1c8fb3ba3d06"
+    },
+    {
+      "path": "docs/repair-validation/access-transport.json",
+      "bytes": 699,
+      "sha256": "0a5319ec1e529e195896b0c64ca95479a642ab7f2909c6bb67b0a91f8e68408a"
+    },
+    {
+      "path": "docs/repair-validation/audit-lint.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/build-final.txt",
+      "bytes": 1161,
+      "sha256": "d672dadd0e7d31fef13579974c7848150ab9fe4ba87f0aa3239481874246b02f"
+    },
+    {
+      "path": "docs/repair-validation/build-v16.txt",
+      "bytes": 1161,
+      "sha256": "34aaf6b253fbade78bac42a0c855811bacb21295f58a291644afd7382f593fea"
+    },
+    {
+      "path": "docs/repair-validation/build-v17.txt",
+      "bytes": 1161,
+      "sha256": "273b1573f452ae64dd14b57b3f6a5342d42d0014fee7ea373e460848b0129e76"
+    },
+    {
+      "path": "docs/repair-validation/build-v18.txt",
+      "bytes": 1161,
+      "sha256": "c55d6b28b3e94f329a672ce535f86bfcfa30b3fb96f87dcf6c1c3c0f9bc8f8ec"
+    },
+    {
+      "path": "docs/repair-validation/build-v19.txt",
+      "bytes": 1161,
+      "sha256": "4a2a91185622ad0ba1a5cdf9cc2b97d0eaab764176b6727472a0c2bfd5260ac1"
+    },
+    {
+      "path": "docs/repair-validation/build.txt",
+      "bytes": 1161,
+      "sha256": "0670e65019c0d720e66962aebe4651987de20326bfe2903a3d048ab3cd55ecdb"
+    },
+    {
+      "path": "docs/repair-validation/deployment-state.json",
+      "bytes": 1339,
+      "sha256": "73449844b1e2024adf35ecad77f959bf5cb9a50b25b8c8519359fc628349261f"
+    },
+    {
+      "path": "docs/repair-validation/evidence-delivery.json",
+      "bytes": 186874,
+      "sha256": "55de29cd844b905de913d416b262e71dc54659fd33fb81183c09a95d664afdea"
+    },
+    {
+      "path": "docs/repair-validation/evidence-delivery.md",
+      "bytes": 1427,
+      "sha256": "aa8625b2e6620f12e459b4cbb0eba6775584f4d6422c7b295859b00a8b041cde"
+    },
+    {
+      "path": "docs/repair-validation/execution-record.json",
+      "bytes": 3538,
+      "sha256": "d6d3baa1c9e9eea4385125bdc8fb9b33ac964793a1b9af4b73b63d661f466cd9"
+    },
+    {
+      "path": "docs/repair-validation/fault-injection.json",
+      "bytes": 11724,
+      "sha256": "c615234d3477f8ef3f807e07a66e65ceec0e0efa2d580af7a076bac6cc182476"
+    },
+    {
+      "path": "docs/repair-validation/final-artifact-checks.json",
+      "bytes": 769,
+      "sha256": "23e144478f0401b11dcf2d5109ff816fac971ee0bc0b1adb23dd5ff5e89ea6b4"
+    },
+    {
+      "path": "docs/repair-validation/financial-verification.json",
+      "bytes": 118163,
+      "sha256": "aef809178de663f23df55dbb74ce3051fe2939285f7134b791af04c29ff0e503"
+    },
+    {
+      "path": "docs/repair-validation/financial-verification.md",
+      "bytes": 14917,
+      "sha256": "83826d28406e1a9344cd98ded6b771816e75101f9efca0d74c214e84f28a6d94"
+    },
+    {
+      "path": "docs/repair-validation/github-http.txt",
+      "bytes": 217,
+      "sha256": "d4d43faf611319201c60ed7878342e1a45e0ecd36519f2d750f18ad9b3dff977"
+    },
+    {
+      "path": "docs/repair-validation/github-node-tests.tap",
+      "bytes": 16589,
+      "sha256": "ad64a884cb51207eca4e557623d1f0a777e887aaabc802b48a4eecdcab413467"
+    },
+    {
+      "path": "docs/repair-validation/groq-20b-compatibility-larger-budget.json",
+      "bytes": 4414,
+      "sha256": "8e494134b4d658cf823cbd9e5209f68e07aa369a3d4959e22ad8dd019b098a24"
+    },
+    {
+      "path": "docs/repair-validation/groq-20b-compatibility.json",
+      "bytes": 4026,
+      "sha256": "1323528f0502d36056dbbea10b8f2b3f49b110a84cf616ae867cf3bdf9be27e9"
+    },
+    {
+      "path": "docs/repair-validation/http-boundaries.json",
+      "bytes": 4913,
+      "sha256": "313df7388cbb2a0ad6fc85495c3da43ca75c1e72a9899755edca62de52e4a3bf"
+    },
+    {
+      "path": "docs/repair-validation/lint-final.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/lint-v18.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/lint-v19.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/lint.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/log-correlation.json",
+      "bytes": 1846,
+      "sha256": "58b8d6d3948b23facb5b6b052f1cd11edd736dbcc797513f688cab846c48c4d8"
+    },
+    {
+      "path": "docs/repair-validation/node-tests-final-189.tap",
+      "bytes": 40176,
+      "sha256": "4ed9b60f6ef23e4d263ca33134bb54b66ed62fae2cd994050eedb542045c0c3b"
+    },
+    {
+      "path": "docs/repair-validation/node-tests-final-190.tap",
+      "bytes": 40410,
+      "sha256": "8a94f7de47f313088a67fa7d7641cdeb089296b2175e4e09077cf8ad0905cf98"
+    },
+    {
+      "path": "docs/repair-validation/node-tests-final-191.tap",
+      "bytes": 40639,
+      "sha256": "434aba952017dfcedbfa89073b5f0f569de1e0c396b543da89c4e53b7618f125"
+    },
+    {
+      "path": "docs/repair-validation/node-tests-final.tap",
+      "bytes": 39726,
+      "sha256": "186c69d81b46b9d6715a9a9b22018720a6e117b588bca2e7c350134166d9288a"
+    },
+    {
+      "path": "docs/repair-validation/node-tests-repair.tap",
+      "bytes": 41693,
+      "sha256": "d2619176e4ad610a364825a17ca6ffdd607ab3b807afa0086dfef8a4747b110b"
+    },
+    {
+      "path": "docs/repair-validation/node-tests-v18.tap",
+      "bytes": 16479,
+      "sha256": "ba35c93f9c816e65536b76bec4b14350cce7fcb44c06ad51415e15b855f9dae0"
+    },
+    {
+      "path": "docs/repair-validation/node-tests-v19.tap",
+      "bytes": 16589,
+      "sha256": "3d6d18143b397a7b6e6bb6896e119631ba5b8b638215f3a43ed635b44a520bb2"
+    },
+    {
+      "path": "docs/repair-validation/node-tests.tap",
+      "bytes": 41713,
+      "sha256": "a44a09b676e77222a07e2c64802c59da19382ca6f288b975681af273acc118a9"
+    },
+    {
+      "path": "docs/repair-validation/provider-planner-quota.json",
+      "bytes": 273,
+      "sha256": "7719422d83b3ff9036b7e30202aec1581f61b80208b924190ff2835056f9dab6"
+    },
+    {
+      "path": "docs/repair-validation/provider-probe-after-pattern.json",
+      "bytes": 2798,
+      "sha256": "f7fce8e4f6c6b6f9c233ad491b14036b8a5116ce3abda42d689c88a10f031128"
+    },
+    {
+      "path": "docs/repair-validation/provider-probe-after.json",
+      "bytes": 1369,
+      "sha256": "89a4a8b028e99fbec53a547b3d4d2edfeeb5ae310cbd4a19656f0688961110c9"
+    },
+    {
+      "path": "docs/repair-validation/provider-probe-before.json",
+      "bytes": 723,
+      "sha256": "d32fcb29ceb8ef403cd49eb24130b7efa26ac4636e6319883a69267819e7b1e3"
+    },
+    {
+      "path": "docs/repair-validation/provider-quota-diagnostic.json",
+      "bytes": 974,
+      "sha256": "18cff18b4071cb17f686e0d5b483a00957d77da47cca0d251a3b29be3ad85f56"
+    },
+    {
+      "path": "docs/repair-validation/public-context-recovery.json",
+      "bytes": 84361,
+      "sha256": "c207f4088087075c5e3c2c7375c11ac1f4511560f99a2af3671951e4366f677a"
+    },
+    {
+      "path": "docs/repair-validation/public-llm-v15.json",
+      "bytes": 491678,
+      "sha256": "081dbdf71b2ba1c4f6c7a4b5636d8042e002cd641a3535f9cbb820aab10d5991"
+    },
+    {
+      "path": "docs/repair-validation/public-llm-v16.json",
+      "bytes": 97120,
+      "sha256": "d0e3c1777906e9ed13bb34033fafb0e84bea20d5cd5396c1f3e2ade5b4a8e44c"
+    },
+    {
+      "path": "docs/repair-validation/public-llm-v17.json",
+      "bytes": 430777,
+      "sha256": "3a13b5846b94cf610bec37b914e8751775833072fedad37d757a8a9cfded8838"
+    },
+    {
+      "path": "docs/repair-validation/public-llm-v18.json",
+      "bytes": 418978,
+      "sha256": "125b6d87bfd0555d44cd48b15787b3096ae0c1ca12e97c8b2210f2f197c6752e"
+    },
+    {
+      "path": "docs/repair-validation/public-llm.json",
+      "bytes": 416869,
+      "sha256": "e0a657034d2f016f4dc78614a8f4844e59d4d2f06823840de453e8646659697d"
+    },
+    {
+      "path": "docs/repair-validation/pytest-v18.txt",
+      "bytes": 100,
+      "sha256": "acfd5e18300f2a2255fef5161f98cc0721c2816bcabaa6c3feaa1cd076452989"
+    },
+    {
+      "path": "docs/repair-validation/pytest.txt",
+      "bytes": 100,
+      "sha256": "3f154986fe33d28aa8c6f23cbf1e6cf24e1125224db93c4f2afdc3c42197c936"
+    },
+    {
+      "path": "docs/repair-validation/recovery-log-correlation.json",
+      "bytes": 831,
+      "sha256": "0aeeb29c221c9e28fdc43ba123bdacdbbff617a9a193a7fb2bc8fc1e327975f2"
+    },
+    {
+      "path": "docs/repair-validation/semantic-replay.json",
+      "bytes": 3377,
+      "sha256": "f8d7678932768c2cf3a7f1f43b5b85310b0ed79f570dd4e4e173350e41e3dda2"
+    },
+    {
+      "path": "docs/repair-validation/typecheck-final.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/typecheck-v18.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/typecheck-v19.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/typecheck.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/repair-validation/ui-checks.json",
+      "bytes": 1082,
+      "sha256": "929b9d40da999ce6152fbf0f1eb38b33a919df70d3f5b81b76f07f15958a03f1"
+    },
+    {
+      "path": "docs/repair-validation/ui-evidence-v18.png",
+      "bytes": 50211,
+      "sha256": "4a6786ce3ff163ee0a97676c85659487922ff587cf534b95299fac00bf5c6ff1"
+    },
+    {
+      "path": "docs/repair-validation/ui-evidence-v19.png",
+      "bytes": 50232,
+      "sha256": "227faf6bf7df9724751cdeeed1fe0ee6bacf6881d0592c20035974bf3627b2f7"
+    },
+    {
+      "path": "docs/repair-validation/ui-peer-v18.png",
+      "bytes": 52348,
+      "sha256": "4a06fde291f8c9de01ed6c11c49a356b1fbd75503af9d1cb1589d9c4e94a170b"
+    },
+    {
+      "path": "docs/repair-validation/ui-peer-v19.png",
+      "bytes": 52348,
+      "sha256": "4a06fde291f8c9de01ed6c11c49a356b1fbd75503af9d1cb1589d9c4e94a170b"
+    },
+    {
+      "path": "docs/repair-validation/worker-logs-recovery.json",
+      "bytes": 1886,
+      "sha256": "62e12c942d00316429c60f0d6b56de3fe85c1723c864d9c38c60aed2bd34b926"
+    },
+    {
+      "path": "docs/repair-validation/worker-logs-v15.json",
+      "bytes": 14668,
+      "sha256": "bf3474f50be88059c7271af6bb4a25de869f13ab434a290fe1aa3e06af36efcf"
+    },
+    {
+      "path": "docs/repair-validation/worker-logs-v19.json",
+      "bytes": 9137,
+      "sha256": "5d3145f94ed45db05e4f58f65fc8aaf505f30e7624d0fec8f1e65ec442ad7f83"
+    }
+  ]
+}

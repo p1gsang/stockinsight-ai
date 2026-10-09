@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-10-09T07:30:09.251Z",
+  "checked_at": "2026-10-09T07:40:16.067Z",
   "version": {
-    "id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_b28a3a124aa48191bbd25ff5b8e1889a",
+    "id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_85490fea8658819197b0bffdcd517729",
     "project_id": "appgprj_6ac7e1b683388191b105cb2014e84456",
-    "version_number": 18,
+    "version_number": 19,
     "source": {
-      "commit_sha": "2b92659a65524ddcc94a746a7119508e4934ce89"
+      "commit_sha": "d1ff590263af946fa48b4f419914ff877550122f"
     },
     "archive_storage": {
       "archive_format": "tar",
-      "sediment_file_id": "file_00000000fe8081f5a06401ff3b88498a",
-      "content_hash": "sha256:c05cc62e34b1098a108b44b997c1dfa477449385c4674795f5ba4798a067c7a1",
+      "sediment_file_id": "file_000000009a9481f6bdd69590f0f7daf0",
+      "content_hash": "sha256:8bca89696810afff934dddf759ab3a36062737df029c0159fb8143262c3a6ca4",
       "size_bytes": 2508800,
       "file_count": 88
     },
@@ -18,10 +18,10 @@
     "deployment_id": null
   },
   "deployment": {
-    "id": "appgdep_6ac897e56ac081918882803fdc5a36ea",
+    "id": "appgdep_6ac89a335d348191a4246fafa82eec88",
     "project_id": "appgprj_6ac7e1b683388191b105cb2014e84456",
     "title": "StockInsight AI · 美的集团证据研究",
-    "version_id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_b28a3a124aa48191bbd25ff5b8e1889a",
+    "version_id": "appgprj_6ac7e1b683388191b105cb2014e84456~appgver_85490fea8658819197b0bffdcd517729",
     "type": "publish",
     "status": "succeeded",
     "url": "https://stockinsight-midea-research.eagercomet2.chatgpt.site",
@@ -30,6 +30,6 @@
     "provider_deployment_id": "site---6ac7e1b683388191b105cb2014e84456",
     "failure_message": null,
     "env_set_revision": 3,
-    "updated_at": "2026-10-09T07:29:49.845658+00:00"
+    "updated_at": "2026-10-09T07:39:41.017025+00:00"
   }
 }

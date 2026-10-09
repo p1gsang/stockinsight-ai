@@ -1,0 +1,123 @@
+{
+  "recorded_at": "2026-10-09T07:58:58.506Z",
+  "performed_by": "Codex and automated programs; not candidate personal review",
+  "functional_commit": "d1ff590263af946fa48b4f419914ff877550122f",
+  "github_functional_commit": "cae11feca0cc281096ae8da6583a15fa4f9393bb",
+  "production_version": 19,
+  "tests": {
+    "node": {
+      "passed": 196,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "output": "node-tests-v19.tap",
+      "format": "Node native spec transcript; legacy .tap filename"
+    },
+    "github_clone_node": {
+      "passed": 196,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "output": "github-node-tests.tap",
+      "dependencies": "Junction to already installed local dependencies; no clean reinstall claimed"
+    },
+    "pytest": {
+      "passed": 8,
+      "skipped": 0,
+      "exit_code": 0,
+      "output": "pytest-v18.txt",
+      "scope": "Financial code unchanged in version 19"
+    },
+    "typecheck": {
+      "exit_code": 0,
+      "output": "typecheck-v19.txt"
+    },
+    "targeted_lint": {
+      "exit_code": 0,
+      "output": "lint-v19.txt"
+    },
+    "build": {
+      "exit_code": 0,
+      "output": "build-v19.txt"
+    },
+    "isolated_http": {
+      "passed": 8,
+      "exit_code": 0,
+      "base_url": "http://127.0.0.1:5363",
+      "real_llm": false,
+      "server_stopped": true,
+      "output": "github-http.txt"
+    },
+    "fault_injection": {
+      "PASS": 14,
+      "FAIL": 0,
+      "real_provider": false,
+      "output": "fault-injection.json"
+    },
+    "semantic_history_replay": {
+      "PASS": 6,
+      "FAIL": 0,
+      "new_provider_calls": false,
+      "output": "semantic-replay.json"
+    },
+    "financial": {
+      "PASS": 190,
+      "FAIL": 0,
+      "UNVERIFIED": 7,
+      "output": "financial-verification.json"
+    },
+    "evidence_delivery": {
+      "PASS": 118,
+      "FAIL": 0,
+      "UNVERIFIED": 4,
+      "evidence": 81,
+      "nested_assertions": 1196,
+      "output": "evidence-delivery.json"
+    },
+    "public_boundaries": {
+      "passed": 8,
+      "entry_limit": "PASS",
+      "output": "http-boundaries.json"
+    },
+    "access_transport": {
+      "passed": 3,
+      "output": "access-transport.json"
+    },
+    "browser": {
+      "passed": 7,
+      "real_llm_ui": "UNVERIFIED",
+      "output": "ui-checks.json"
+    },
+    "public_llm": {
+      "PASS": 0,
+      "FAIL": 6,
+      "quota_kind": "TPD",
+      "successful_planning_calls": 1,
+      "failed_provider_interpretation": 1,
+      "shared_cooldown_cases": 5,
+      "output": "public-llm.json"
+    },
+    "log_correlation": {
+      "PASS": 6,
+      "matched_provider_attempts": 2,
+      "output": "log-correlation.json"
+    },
+    "extra_context_recovery": {
+      "status": "FAIL",
+      "successful_groq_responses": 2,
+      "failed_repair_http_status": 429,
+      "quota_kind": "TPD",
+      "selected_context_history": "PASS",
+      "provider_log_match": "2 matched, failed attempt UNVERIFIED",
+      "output": "public-context-recovery.json"
+    }
+  },
+  "limitations": [
+    "No overall financial semantic truth certificate",
+    "Historical platform log deletion unverified",
+    "No authorized live market/valuation/iFinD",
+    "Latest full Groq chain fails due daily provider quota",
+    "No candidate personal sign-off"
+  ],
+  "original_fault_record_note": "Original output accidentally overwritten by fixed harness; replayed exact frozen baseline in isolated checkout. Historical fault file is fresh baseline replay with actual timestamp, not the original run hash."
+}

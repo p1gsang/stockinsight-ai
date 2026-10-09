@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-09T08:00:07.933Z",
+  "case_status": "FAIL",
+  "ray_id": "a47bd801c9ece814",
+  "calls": [
+    {
+      "stage": "research_plan",
+      "response_id": "chatcmpl-061ada26-5f70-4c30-9009-be7bb3c4e385",
+      "http_status": 200,
+      "matched": true
+    },
+    {
+      "stage": "evidence_analysis",
+      "response_id": "chatcmpl-4d2a971b-5d77-4cd7-a691-a021a906aa20",
+      "http_status": 200,
+      "matched": true
+    },
+    {
+      "stage": "claim_repair",
+      "response_id": null,
+      "http_status": 429,
+      "matched": false
+    }
+  ],
+  "status": "UNVERIFIED",
+  "matched_successful_calls": 2,
+  "unverified_failed_call": 1,
+  "note": "Two successful provider response IDs matched. The failed claim_repair log was not returned in the sampled logs; absence does not prove no call or no logging."
+}

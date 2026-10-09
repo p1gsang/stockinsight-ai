@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-10-09T07:46:35.672Z",
+  "deployment_id": "appgdep_6ac89a335d348191a4246fafa82eec88",
+  "method": "Match client cf-ray to Worker ray/request ID and provider stage/response ID or failed HTTP status; inbound success is not full AI chain success",
+  "cases": [
+    {
+      "case": "利润与现金流",
+      "client_ray": "a47bbc848b576129",
+      "server_events": 3,
+      "provider_calls": [
+        {
+          "stage": "research_plan",
+          "response_id": "chatcmpl-fde92fa1-4bf5-425a-8e19-77d2743116f1",
+          "http_status": 200,
+          "matched": true
+        },
+        {
+          "stage": "evidence_analysis",
+          "response_id": null,
+          "http_status": 429,
+          "matched": true
+        }
+      ],
+      "status": "PASS",
+      "actual_llm_chain": "FAIL"
+    },
+    {
+      "case": "经营质量",
+      "client_ray": "a47bbe2728d6844d",
+      "server_events": 1,
+      "provider_calls": [],
+      "status": "PASS",
+      "actual_llm_chain": "FAIL"
+    },
+    {
+      "case": "估值缺失",
+      "client_ray": "a47bbfc53e1ceabe",
+      "server_events": 1,
+      "provider_calls": [],
+      "status": "PASS",
+      "actual_llm_chain": "FAIL"
+    },
+    {
+      "case": "行情缺失",
+      "client_ray": "a47bc161f9efb8c9",
+      "server_events": 1,
+      "provider_calls": [],
+      "status": "PASS",
+      "actual_llm_chain": "FAIL"
+    },
+    {
+      "case": "所选证据上下文追问",
+      "client_ray": "a47bc2fdbe9fcca4",
+      "server_events": 1,
+      "provider_calls": [],
+      "status": "PASS",
+      "actual_llm_chain": "FAIL"
+    },
+    {
+      "case": "计算口径上下文追问",
+      "client_ray": "a47bc49b2e83f151",
+      "server_events": 1,
+      "provider_calls": [],
+      "status": "PASS",
+      "actual_llm_chain": "FAIL"
+    }
+  ],
+  "status": "PASS"
+}

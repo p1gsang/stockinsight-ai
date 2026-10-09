@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-09T07:54:43.659Z",
+  "functional_version": 19,
+  "source_commit": "d1ff590263af946fa48b4f419914ff877550122f",
+  "method": "Actual background IAB reload and UI interactions; no browser-submitted LLM request",
+  "checks": [
+    {
+      "id": "public_workspace",
+      "status": "PASS"
+    },
+    {
+      "id": "groq_configured_status",
+      "status": "PASS"
+    },
+    {
+      "id": "evidence_original_amount_unit_period_page",
+      "status": "PASS",
+      "screenshot": "ui-evidence-v19.png"
+    },
+    {
+      "id": "selected_evidence_context",
+      "status": "PASS"
+    },
+    {
+      "id": "peer_financial_comparison",
+      "status": "PASS",
+      "screenshot": "ui-peer-v19.png"
+    },
+    {
+      "id": "valuation_market_missing_explicit",
+      "status": "PASS"
+    },
+    {
+      "id": "financial_trends_and_period_table",
+      "status": "PASS"
+    }
+  ],
+  "unverified": [
+    "Full real AI interaction through browser UI; formal API scenarios failed due TPD",
+    "All financial semantic truth",
+    "Cross-browser/mobile compatibility"
+  ]
+}
