@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-10-09T08:16:10.275Z",
   "timezone": "America/New_York",
-  "performed_by": "Codex and programs; candidate review remains unsigned",
+  "performed_by": "Codex and programs; candidate attestation recorded separately",
   "source_document_baseline": "20c4dac70882ca16228566a75a1e77c2febe5a43",
   "production_version": 19,
   "production_unchanged": true,
@@ -90,11 +90,13 @@
       "GitHub from-zero dependency install"
     ]
   },
-  "manual_acceptance": "NOT TESTED; checklist awaits candidate",
+  "manual_acceptance": "PASS: candidate overall confirmation, recorded by Codex",
   "limits": [
     "Financial semantics not universally proven",
     "No authorized live market/valuation/iFinD",
     "Historical platform log deletion unverified",
     "Optional video not recorded"
-  ]
+  ],
+  "manual_acceptance_at_test_time": "NOT TESTED; checklist awaits candidate",
+  "manual_acceptance_record": "../candidate-review-confirmation.json"
 }

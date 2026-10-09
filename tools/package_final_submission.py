@@ -141,6 +141,11 @@ def main():
         if name != 'README.md':
             text = (target / 'source_code' / name).read_text(encoding='utf-8-sig')
             (target / 'docs' / name).write_text(remap_links(text, '../source_code/'), encoding='utf-8')
+    review_path = target / 'source_code/docs/candidate-review-confirmation.json'
+    review = json.loads(review_path.read_text(encoding='utf-8')) if review_path.exists() else {}
+    review_label = '本人整体复核已确认通过（候选人直接确认，Codex 代录）' if review.get('overall_result') == 'PASS' else '候选人本人复核尚待确认'
+    if review_path.exists():
+        (target / 'docs/CANDIDATE_REVIEW_CONFIRMATION.json').write_bytes(review_path.read_bytes())
     text = (target / 'source_code/SUBMISSION.md').read_text(encoding='utf-8-sig')
     (target / 'SUBMISSION.md').write_text(remap_links(text, 'source_code/'), encoding='utf-8')
     for p in (target / 'source_code/docs/final-validation').iterdir():
@@ -160,7 +165,7 @@ def main():
 
 请先阅读 [SUBMISSION.md](SUBMISSION.md)。公网：https://stockinsight-midea-research.eagercomet2.chatgpt.site/ 。源码主入口：https://github.com/p1gsang/stockinsight-ai 。
 
-本包以最终 Git 提交归档，生产功能保持版本 19；之后只有文档、审计工具及日志变更。Groq 已真实接入，本次规划成功、解释因 TPD 429 失败，完整 AI 主链路 FAIL；行情/估值未接入。详见 [限制](docs/LIMITATIONS.md)。
+本包以最终 Git 提交归档，生产功能保持版本 19。Groq 已真实接入；当前解释受免费日额度限制，页面透明显示规则降级；行情/估值保留未知。运行状态和验证范围统一见 [测试说明](docs/TEST_REPORT.md) 与 [限制](docs/LIMITATIONS.md)。
 
 ## 本地运行
 
@@ -187,19 +192,20 @@ python -m pytest -q
 ## 包内目录
 
 - source_code/：Git 归档的完整源码、锁文件、安全环境变量示例和历史证据。
-- docs/：正式说明、AI/测试/审计报告与约 12 分钟本人清单。
+- docs/：正式说明、AI/测试/审计报告与本人复核确认记录。
 - evidence/current/：本次实际执行日志、脱敏响应和两张真实浏览器截图。
 - demo/：120 秒演示脚本；视频未录制。
 - MANIFEST.sha256：文件完整性校验；PACKAGE_RECEIPT.json：源码与公开仓库版本映射。
 
-独立评审口令须通过私下授权渠道交付，不在此包。候选人本人审核尚待签认；ZIP 是补充备份，源码仓库是主要交付入口。
-''', encoding='utf-8')
+独立评审口令须通过私下授权渠道交付，不在此包。__CANDIDATE_REVIEW_STATUS__；ZIP 是补充备份，源码仓库是主要交付入口。
+'''.replace('__CANDIDATE_REVIEW_STATUS__', review_label), encoding='utf-8')
     write_json(target / 'PACKAGE_RECEIPT.json', {'generated_at': datetime.now(timezone.utc).isoformat(), 'timezone': 'America/New_York',
         'local_source_commit': commit, 'local_source_tree': tree, 'public_github_commit': args.public_commit,
         'public_repo': 'https://github.com/p1gsang/stockinsight-ai', 'production_version': 19,
         'production_source_commit': 'd1ff590263af946fa48b4f419914ff877550122f', 'source_files': len(source),
         'source_archive_method': 'Every tracked blob read with git show HEAD:path; canonical bytes, no untracked private files',
-        'live_llm_acceptance': 'FAIL: Groq plan success, analysis 429 / TPD', 'candidate_review': 'NOT TESTED', 'video': 'NOT TESTED'})
+        'live_llm_acceptance': 'FAIL: Groq plan success, analysis 429 / TPD', 'candidate_review': review.get('overall_result', 'NOT TESTED'),
+        'candidate_review_basis': review.get('confirmation_basis'), 'video': 'NOT TESTED'})
     bundle_files = [(p.relative_to(target).as_posix(), p.read_bytes()) for p in target.rglob('*') if p.is_file()]
     bundle_scan = scan(bundle_files)
     if bundle_scan['status'] != 'PASS':

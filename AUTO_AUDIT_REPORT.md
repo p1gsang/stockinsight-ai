@@ -131,3 +131,8 @@ PASS 只证明对应断言；FAIL 表示实际观察失败；UNVERIFIED 表示�
 ## 最终交付整理补充（2026-10-09）
 
 产品功能保持版本 19；本次重新执行结果及失败处理见 [最终执行记录](docs/final-validation/final-results.json)，题目逐项 PASS/PARTIAL/FAIL/NOT TESTED 见 [SUBMISSION.md](SUBMISSION.md)。最新真实 Groq 追问规划成功、解释 TPD 429，仍 FAIL。原始审计与历史失败保留；未把本轮自动操作写成候选人本人验收。最终手工清单为 [CANDIDATE_REVIEW_CHECKLIST.md](CANDIDATE_REVIEW_CHECKLIST.md)，约12分钟。
+
+
+## 候选人整体复核状态更新
+
+2026-10-09，候选人在对话直接确认本人复核通过，由 Codex 代录至 [正式记录](CANDIDATE_REVIEW_CHECKLIST.md)。这一更新不改变本报告的自动测试及模型调用结果；没有新增测试执行。

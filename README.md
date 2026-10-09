@@ -1,12 +1,10 @@
-> **最终提交入口（2026-10-09）：** 请先阅读 [SUBMISSION.md](SUBMISSION.md)。本次重新执行的结果见 [最终执行记录](docs/final-validation/final-results.json)，完整 AI 主链路仍因 Groq 日额度 FAIL。必要本人复核以 [12 分钟清单](CANDIDATE_REVIEW_CHECKLIST.md) 为准。以下开发历史不覆盖最新失败。独立 PDF 审计额外安装 `python -m pip install -r requirements-audit.txt`。
-
 # StockInsight AI · 个股多维诊断与证据验证
 
-2026-10-09 最新验收：功能版本 19 已部署，196 项 Node、8 项 pytest、14 项故障注入及独立财报 190 项通过；财报仍有 7 项 UNVERIFIED。**最终六条真实 Groq 公网流程因日 Token 配额均未完成，验收为 FAIL，不能宣称全面通过。** 代码修复、原始失败和实际回归见 [AUTO_AUDIT_REPORT.md](AUTO_AUDIT_REPORT.md)；本人只需约 11 分钟必要确认，见 [HUMAN_REVIEW_CHECKLIST.md](HUMAN_REVIEW_CHECKLIST.md)。下文旧测试数量属于各次开发历史，以最新报告为准。
+面向需要核验公司经营信号的研究者，围绕美的集团 000333.SZ 提供自然语言诊断、确定性指标、可追溯证据与上下文追问；格力为公开财报参考同行。
 
-面向需要核验公司经营信号的研究者：从一个自然语言问题进入研究计划、确定性指标、可追溯证据与上下文追问。重点研究美的集团 000333.SZ，以格力作为公开财报参考同行。
+[Web 产品](https://stockinsight-midea-research.eagercomet2.chatgpt.site/) · [源码仓库](https://github.com/p1gsang/stockinsight-ai) · [最终提交入口](SUBMISSION.md)
 
-**当前交付是可运行的公开财报研究 MVP，已接入真实 Groq LLM。** [Web 产品](https://stockinsight-midea-research.eagercomet2.chatgpt.site/) · [源码仓库](https://github.com/p1gsang/stockinsight-ai)。行情、估值仍未接入；已补充现金流调节与部分营运资金证据，模型语义仍需人工复核。最终线上状态见 [DEPLOYMENT.md](DEPLOYMENT.md)。
+生产功能版本 19。本人整体复核已于 2026-10-09 确认通过，由 Codex 按候选人直接确认代录，见 [复核记录](CANDIDATE_REVIEW_CHECKLIST.md)。
 
 ## 核心产品
 
@@ -154,60 +152,20 @@ Worker 本地开发从 `.dev.vars` 读取私密运行配置；改配置后重启
 
 公开入口不会索取 API Key。配置模型或使用 live 数据时要求独立访问口令，口令只在浏览器内存保留。D1 在不同 Worker 请求间共享限制：每 IP 每分钟八次入口；模型研究每 IP 每分钟三次、UTC 每天四十次；全站同时一项、每分钟六项、每天一百项，并预留 Token 预算及共享提供商 429 冷却。窗口为固定分钟和 UTC 日，提供商账号额度仍是最终边界，未启用付费回退。
 
-## 验证
 
-```powershell
+## 验证与交付
+
+~~~powershell
 npm test
 python -m pytest -q
 npm run typecheck
 npm run build
-# 另开终端，服务保持运行：
-python tools/smoke_http.py
-```
+~~~
 
-本机实际结果：169 项 Node、8 项 pytest 通过（本轮含语义与全文勾稽）；其中 94 个问题路由用例覆盖全部 12 个页面快捷入口及历史真实模型追问。功能版本 13 对应的 GitHub 独立克隆也通过 169 项 Node、类型检查与 8 项无模型配置 HTTP 检查。真实原始 PDF 不在仓库，其他机器先运行两项采集器再完成四项原文核验。详细测试边界见 [TEST_REPORT.md](TEST_REPORT.md)。
+本次实际自动结果：196 项 Node、8 项 pytest、14 项故障注入通过；独立财报核验 190 项通过、7 项尚待验证。命令、日期、日志与题目逐项对照见 [TEST_REPORT.md](TEST_REPORT.md)。独立 PDF 审计依赖安装命令：python -m pip install -r requirements-audit.txt。
 
-历史版本的三项本地真实 Groq 验收见 [问题路由与模型验证](NEXT_STEP_VERIFICATION.md)。收到 HTTP 429 后，前端按 Retry-After 倒计时、禁用研究入口并保留成功结果；不会自动重试。模型追问也经过范围检查，移除项通过 warnings 明确说明。
+真实 Groq 已接入；当前解释阶段受免费日额度限制，页面透明显示规则降级。实时行情、估值与 iFinD 尚未接入，保留 UNKNOWN。完整覆盖范围见 [LIMITATIONS.md](LIMITATIONS.md)，自动验证与本人整体复核分别记录。
 
-历史功能版本 9 的三项公网真实 Groq 验收、公共源码与部署文件树一致性、独立克隆安装 / 启动 / HTTP 检查见 [历史交付验证](docs/delivery-verification.json)。本机过深的临时验证目录曾启动失败，移到较短隔离路径后成功；Windows 推荐使用较短的项目路径，该环境限制没有被隐瞒为普遍通过。
+正式材料见 [SUBMISSION.md](SUBMISSION.md)，包含产品设计、数据来源、AI 使用记录、测试说明、审计证据与演示脚本。完整 PDF、服务端 Secrets、依赖和缓存不进入公开仓库或 ZIP。评审口令通过私下授权渠道交付。
 
-历史功能版本 7 的公网四项真实 Groq 场景与九项授权 / 输入边界 / 限流检查全部通过，包括带证据追问、估值缺失、正确指标数值绑定、其他公司拒绝和伪造证据 HTTP 400。实际响应 ID、时间、模型和 usage 见 [历史公网验收记录](docs/llm-trust-public-verification.json)；失败与修正见 [研究边界记录](TRUST_BOUNDARIES.md)。
-
-## 部署、提交及已知限制
-
-已发布：[打开 StockInsight AI](https://stockinsight-midea-research.eagercomet2.chatgpt.site)。公开财报快照保留；填写独立访问口令开始研究后调用真实 Groq 模型，页面按本次实际结果显示成功或失败。首页初始摘要由规则生成。
-
-Sites 使用 `npm run build` 生成 Worker 输出，由托管工具打包 / 保存源码版本 / 发布。secret 应配置于站点服务端，不写 hosting.json。最终 Web URL 与发布状态见 [DEPLOYMENT.md](DEPLOYMENT.md)。本项目没有声称已部署到 Streamlit Community Cloud 或其他未测试平台。
-
-对外源码仓库：https://github.com/p1gsang/stockinsight-ai 。完整源码及交付文档在该仓库提供，源码一致性与独立克隆启动结果以本轮回执为准。不要提交 node_modules、凭证、完整受限金融数据或私人文件。
-
-未完成：扶摇授权成功取数、海尔数据、业务层面营运资金归因与持续影响、行业 / 基准行情、新闻事件库、演示视频、候选人本人复核。没有系统性模型质量评估、正式用户认证、持久会话数据库或负载 / 独立安全审计。
-
-本工具仅供研究辅助，不提供确定性涨跌预测、收益承诺或直接买卖建议。正负证据表达指标方向；不等同投资判断。
-
-## 交付材料
-
-- [AI 使用及验证记录](AI_USAGE_AND_VALIDATION.md)
-- [真实测试报告](TEST_REPORT.md)
-- [部署与授权状态](DEPLOYMENT.md)
-- [两分钟演示脚本](DEMO_SCRIPT.md)
-- [开发进度](PROGRESS.md)
-- [交付报告与人工操作](DELIVERY_REPORT.md)
-
-候选人需亲自核对主要报表行、复算比率、操作核心流程并评估 AI 语义，不能将自动检查记为本人复核。
-
-## 评审体验路径
-
-1. 打开公网产品，无需 API Key 即可查看公开财报、证据抽屉和来源。
-2. 在“连接设置”填写由提交者私下提供的独立站点访问口令；口令与 Groq 密钥不同，不应放入公开 README。
-3. 提问“美的最近利润增长是否得到现金流支持？”，查看本次 Groq 成功标记、维度和研究过程中的实际响应记录。
-4. 点击现金覆盖证据，核对两条原始财务输入与公式；加入上下文后追问原因，观察未验证原因独立标记 UNKNOWN。
-5. 间隔一分钟再研究估值，确认缺数据时明确未知；请求买卖建议时观察拦截。免费额度达到限制时依页面提示等待。
-
-当前口令只保护免费额度，不是完整用户账户体系。评审需要由提交者提前获得可用口令；刷新页面后需重新填写。
-
-## 本轮提交风险处理
-
-[逐项解决状态](SUBMISSION_RISK_RESOLUTION.md) · [评审操作说明](REVIEWER_GUIDE.md) · [候选人本人复核单](CANDIDATE_REVIEW.md)。新增交易所美的 2026 H1 全文第 96 / 97 / 177 / 204 页共 43 条字段，来源与勾稽保存在 data/report_supplement.json；完整 PDF 仍不入库。模型现在按问题筛选证据，并从范围校验过的相关问题库选择追问。四条历史真实不支持结论被新规则拦截，有限语义规则仍不能替代本人复核。
-
-最终功能版本 13 的四项真实公网 Groq 验证通过：财务规划与解释、所选证据扣非追问、事件入口、保留扣非主题的通用追问。共八次真实响应、16,585 Token，响应 ID 与 usage 保存在 docs/semantic-llm-public.json；这是一次有限场景验证，不是全面语义质量保证。历史预算、原因表述和数字绑定失败均保留，未写成全程成功。 最新汇总见 [本轮验收](docs/submission-risk-verification.json)。
+本工具仅供研究辅助，不输出确定性涨跌预测、收益承诺或直接买卖建议。
