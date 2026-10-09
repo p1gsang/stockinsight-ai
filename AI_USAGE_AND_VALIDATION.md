@@ -60,3 +60,7 @@
 Codex 发现固定页面按钮及历史真实模型追问被范围规则误拦；统一页面问题目录、修正财务主题 / 公司比较识别，并校验生成追问，移除项透明提示。新增 94 个问题用例，Node 总计 156 项通过，pytest 6 项通过。三项本地真实 Groq 验证及原始响应元信息见 NEXT_STEP_VERIFICATION.md / docs/question-routing-llm-local.json。新增 HTTP 429 倒计时，禁止自动重复调用。GitHub 交付仓库 URL 为 https://github.com/p1gsang/stockinsight-ai，上传与独立克隆验证以交付回执为准。此段是 AI 自动检查，不代替候选人本人复核。
 
 随后在功能版本 9 完成三项公网真实 Groq 验证，并上传完整 GitHub 源码；规范化行尾后与部署源码文件树一致。独立克隆安装、156 项 Node / TypeScript / 八项 HTTP 检查通过。深层 Windows 临时目录启动失败，移到较短隔离目录后成功；未编造根因或隐藏首次失败。浏览器验证了真实 429 的倒计时、禁用和恢复。原始模型验证及汇总在 docs/question-routing-llm-public.json / docs/delivery-verification.json。
+
+## 本轮语义与证据深度改进
+
+Codex 复查历史真实公网输出，发现扣非解释错引应收 / 存货 / 毛利率、UNKNOWN 仍断言原因，以及增速差推断流动性压力。新增有限主题及因果检查，四条实际输出进入回归；不把旧调用成功改称语义正确。新增交易所全文 43 条事实、两期现金流桥接及归母与扣非勾稽，169 项 Node / 8 项 pytest、类型和变更 lint 通过。第一次完整证据输入超过保护预算，随后改为按问题筛选模型上下文；失败记录保留。追问由模型从相关核验问题库选择，不能声称完全自由生成。详情见 SUBMISSION_RISK_RESOLUTION.md。候选人本人检查仍待 CANDIDATE_REVIEW.md 实际填写。

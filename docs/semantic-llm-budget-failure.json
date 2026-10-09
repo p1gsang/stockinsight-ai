@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-10-09T00:08:12.277Z",
+  "target": "local service with real Groq requests",
+  "cases": [
+    {
+      "label": "financial planning and interpretation",
+      "question": "利润增长是否得到了现金流支持？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "rules",
+      "model_state": "failed",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "not_validated",
+        "validated_at": null,
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-2be30093-ff21-4f98-8ab3-b01aebbbf3b4",
+            "called_at": "2026-10-09T00:08:13.034Z",
+            "usage": {
+              "prompt_tokens": 412,
+              "completion_tokens": 160,
+              "total_tokens": 572
+            }
+          }
+        ]
+      },
+      "selected_ids": [],
+      "history_length": 1,
+      "claims": [
+        {
+          "text": "经营现金流对归母利润的覆盖代理为 1.42倍。这反映当期现金规模；分子、分母的少数股东口径并不完全一致。",
+          "rendered_text": "经营现金流对归母利润的覆盖代理为 1.42倍。这反映当期现金规模；分子、分母的少数股东口径并不完全一致。",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-cash-coverage"
+          ],
+          "verification_status": "RULE_DERIVED",
+          "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+        },
+        {
+          "text": "利润同比增速高于经营现金流同比，差 0.93个百分点。覆盖水平与增速方向需同时观察，不能仅据此认定盈利失真。",
+          "rendered_text": "利润同比增速高于经营现金流同比，差 0.93个百分点。覆盖水平与增速方向需同时观察，不能仅据此认定盈利失真。",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-growth-tension"
+          ],
+          "verification_status": "RULE_DERIVED",
+          "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+        },
+        {
+          "text": "扣非归母净利润同比为 -25.31%，与归母利润表现存在分化。应进一步核对非经常性损益和会计分类。",
+          "rendered_text": "扣非归母净利润同比为 -25.31%，与归母利润表现存在分化。应进一步核对非经常性损益和会计分类。",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-adjusted_profit-yoy"
+          ],
+          "verification_status": "RULE_DERIVED",
+          "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+        },
+        {
+          "text": "尚缺少验证变化原因的完整证据；对未来的影响暂无法确认。",
+          "rendered_text": "尚缺少验证变化原因的完整证据；对未来的影响暂无法确认。",
+          "claim_type": "UNKNOWN",
+          "evidence_ids": [
+            "E-MD-20260630-cause"
+          ],
+          "verification_status": "RULE_DERIVED",
+          "validation_note": "由明确规则连接已计算证据；并非语言模型生成。"
+        }
+      ],
+      "followups": [
+        "经营性应收项目如何影响现金流调节？",
+        "存货与经营性应付项目的现金流调节方向是否一致？",
+        "现金覆盖使用合并净利润和归母净利润有什么差异？"
+      ],
+      "warnings": [
+        "AI 解读被拦截：证据上下文超过免费模型的单次保护预算，请缩短问题或开启新的研究。 以下为规则生成的研究说明。",
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "error": "AI 解读被拦截：证据上下文超过免费模型的单次保护预算，请缩短问题或开启新的研究。 以下为规则生成的研究说明。 使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。\n\n'rules' !== 'llm'\n"
+}

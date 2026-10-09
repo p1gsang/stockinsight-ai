@@ -30,6 +30,9 @@ try {
     const next=await run("previously rejected UI event followup",{question:EVENT_QUESTION,context:{question:first.question,dimensions:first.plan.dimensions,selected_ids:["E-MD-20260630-cash-coverage"],history:first.history}});
     assert.equal(next.history.length,2);assert.ok(next.selected_ids.includes("E-MD-20260630-cash-coverage"));assert.ok(next.analysis.claims.some(c=>c.claim_type==="UNKNOWN"));
     await windowReset();await run("previously rejected event dimension shortcut",{question:dimensionQuestion("events")});
+    if(args.includes("--deep")){
+      await windowReset();await run("generic followup retains nonrecurring topic",{question:"还需要哪些材料才能验证原因？",context:{question:next.question,dimensions:next.plan.dimensions,selected_ids:["E-MD-20260630-profit-reconciliation"],history:next.history}});
+    }
   }
   report.passed=true;report.finished_at=new Date().toISOString();await save();console.log(JSON.stringify({passed:true,cases:report.cases.length,output}));
 } catch(error){report.error=String(error.message).replaceAll(env.LLM_API_KEY,"[REDACTED]").replaceAll(env.RESEARCH_ACCESS_CODE,"[REDACTED]");await save();console.error(JSON.stringify({passed:false,error:report.error,output}));process.exitCode=1;}

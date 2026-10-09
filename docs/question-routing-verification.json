@@ -1,12 +1,12 @@
 {
-  "verified_at": "2026-10-08T23:10:38.220Z",
+  "verified_at": "2026-10-09T00:11:32.985Z",
   "mode": "offline_rules_with_real_public_snapshot",
   "model_calls": 0,
   "network_calls": 0,
   "source_sha256": {
-    "lib/research/planner.mjs": "d48ba3b2d0aa28c00fb29529186527f4981ffe98a6fad4c3a5afc09345be0cf9",
-    "lib/research/question-catalog.mjs": "620d52df60505ddbc88259282be1b75394b88492c2f7cecd6f524626574d982a",
-    "lib/research/service.mjs": "95c73019a84fdcd05b84c4c8b2a1adf17d5f3b9c4ece1fdf5f0da7761537b23b",
+    "lib/research/planner.mjs": "838ac00778bb7259244cfaed111503d1973676cab9f0e344dae58c988e0b735e",
+    "lib/research/question-catalog.mjs": "dd7cf2070bf3e8b3adc04080b044c4ed5d13704c5f8dcc8189129698e3d1f1d9",
+    "lib/research/service.mjs": "8db9edf7eba6f7db5bf4082fb836c70730fa1fa1ccf0f889d2ad860e743793f8",
     "tests/fixtures/question-routing.mjs": "0453840e37ce2e0859b51fb5a87d7139e1c884c71828e5bfaedf6a988fd79412"
   },
   "total": 94,
