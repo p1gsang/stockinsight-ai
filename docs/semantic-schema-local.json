@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-10-09T00:25:26.265Z",
+  "target": "local service with real Groq requests",
+  "cases": [
+    {
+      "label": "financial planning and interpretation",
+      "question": "利润增长是否得到了现金流支持？",
+      "http_status": 200,
+      "status": "ok",
+      "engine": "llm",
+      "model_state": "active",
+      "dimensions": [
+        "quality",
+        "trend"
+      ],
+      "model_usage": {
+        "provider": "Groq",
+        "model": "openai/gpt-oss-120b",
+        "planning": "validated",
+        "interpretation": "validated",
+        "validated_at": "2026-10-09T00:25:29.916Z",
+        "calls": [
+          {
+            "stage": "research_plan",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-9d3616c3-f4e9-4117-a1ae-bb5ed9b927f9",
+            "called_at": "2026-10-09T00:25:27.466Z",
+            "usage": {
+              "prompt_tokens": 412,
+              "completion_tokens": 167,
+              "total_tokens": 579
+            }
+          },
+          {
+            "stage": "evidence_analysis",
+            "provider": "Groq",
+            "model": "openai/gpt-oss-120b",
+            "response_id": "chatcmpl-6ef093f1-d7f4-4919-b265-93b48311eaa5",
+            "called_at": "2026-10-09T00:25:29.913Z",
+            "usage": {
+              "prompt_tokens": 2392,
+              "completion_tokens": 1053,
+              "total_tokens": 3445
+            }
+          }
+        ],
+        "validation_failures": []
+      },
+      "selected_ids": [],
+      "history_length": 1,
+      "claims": [
+        {
+          "text": "利润的增长速度高于经营现金流的增长速度，二者不同步。",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-parent_profit-yoy",
+            "E-MD-20260630-ocf-yoy",
+            "E-MD-20260630-growth-tension"
+          ],
+          "rendered_text": "利润的增长速度高于经营现金流的增长速度，二者不同步。",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        },
+        {
+          "text": "现金流对归母利润的覆盖率虽超过基准，但分子分母口径不同，需结合股东口径理解。",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-cash-coverage"
+          ],
+          "rendered_text": "现金流对归母利润的覆盖率虽超过基准，但分子分母口径不同，需结合股东口径理解。",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。现金覆盖是合并经营现金流对归母利润的代理，分子与分母的股东口径不完全一致。"
+        },
+        {
+          "text": "经营性应收增加对现金流产生负向调节，而应付增加提供正向调节，整体现金转换对利润的支持存在缺口。",
+          "claim_type": "INFERENCE",
+          "evidence_ids": [
+            "E-MD-20260630-bridge-receivables",
+            "E-MD-20260630-bridge-payables"
+          ],
+          "rendered_text": "经营性应收增加对现金流产生负向调节，而应付增加提供正向调节，整体现金转换对利润的支持存在缺口。",
+          "verification_status": "REFERENCE_AND_NUMBER_CHECKED",
+          "validation_note": "通过引用、数字绑定及已覆盖的主题、未知原因、风险和财务关系规则检查；这些有限规则不能证明全部语义或因果，仍需人工复核。"
+        }
+      ],
+      "followups": [
+        "经营性应收项目如何影响现金流调节？",
+        "存货与经营性应付项目的现金流调节方向是否一致？",
+        "现金覆盖使用合并净利润和归母净利润有什么差异？"
+      ],
+      "warnings": [
+        "使用公开财报快照，行情和估值不在覆盖范围。期末日期与采集时间分别显示；快照不会自动更新。"
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-10-09T00:25:29.919Z"
+}

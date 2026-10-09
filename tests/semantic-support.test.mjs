@@ -35,6 +35,7 @@ test("unrelated extra IDs cannot make a valid citation look stronger",()=>{
 });
 test("known report observations and unverified sustainability stay separate",()=>{
   check("归母与扣非归母差额与非经常性损益净额一致。",["profit-reconciliation"]);
+  check("归母与扣非利润差异源于非经常性损益差额。",["profit-reconciliation"]);
   check("公司披露扣非利润变化主要归因于汇兑和衍生工具会计分类差异。",["event-fx"]);
   assert.throws(()=>check("扣非利润变化归因于汇兑损失。",["event-fx"]),/归属/);
   assert.throws(()=>check("非经常性损益持续影响尚待核验。",["nonrecurring-parent"],"UNKNOWN"),/待验证信息/);
@@ -70,7 +71,7 @@ test("a generic followup retains the prior nonrecurring topic and verified facts
     {LLM_API_KEY:"TEST_ONLY",LLM_MODEL:"TEST_ONLY",RESEARCH_ACCESS_CODE:"TEST_ONLY"},
     {fetcher:async(url,init)=>{
       const body=JSON.parse(init.body);calls++;
-      if(calls===1)return Response.json({choices:[{message:{content:JSON.stringify({intent:"延续扣非研究",dimensions:["quality","events"],rationale:"核对持续影响。",questions:[]})}}]});
+      if(calls===1)return Response.json({choices:[{message:{content:JSON.stringify({intent:"延续扣非研究",dimensions:["events"],rationale:"核对持续影响。",questions:[]})}}]});
       const message=JSON.parse(body.messages[1].content);
       assert.ok(message.followup_candidates.every(q=>/扣非|非经常/.test(q)));
       assert.ok(message.evidence.some(e=>e.evidence_id===id("profit-reconciliation")));

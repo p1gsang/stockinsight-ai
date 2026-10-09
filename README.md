@@ -67,7 +67,8 @@ lib/research/
   llm.mjs               两阶段模型及输出校验
   service.mjs           研究编排与追问上下文
 lib/runtime-env.ts      请求级服务端凭证上下文
-data/public_reports.json    少量真实公开会计事实与来源
+data/public_reports.json    主要指标与来源
+data/report_supplement.json  原始全文字段、页码与勾稽
 tools/                  采集、私密本地配置、HTTP 检查
 tests/                  Node 与 pytest
 build/, scripts/        Sites 构建和兼容运行脚本

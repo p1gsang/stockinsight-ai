@@ -55,6 +55,9 @@ test("Groq requests preserve strict schemas, bounded questions, and compatible t
   assert.ok(unknownSchema.evidence_ids.items.enum.includes("E-MD-20260630-cause"));
   assert.ok(!unknownSchema.evidence_ids.items.enum.includes("E-MD-20260630-cash-coverage"));
   assert.equal(new RegExp(unknownSchema.text.pattern).test("原因为{{E-MD-20260630-cause}}。"),false);
+  for(const text of ["现金覆盖超过一倍。","上一年已发生。","增长百分之三。"])
+    assert.equal(new RegExp(unknownSchema.text.pattern).test(text),false);
+  assert.equal(new RegExp(unknownSchema.text.pattern).test("股东口径不完全一致，仍需进一步核验。"),true);
 });
 test("model truncation cannot count as successful JSON output",async()=>{
   await assert.rejects(callJSON(env,[],{},"t",async()=>response({choices:[{finish_reason:"length",message:{content:"{}"}}]})),/截断/);
